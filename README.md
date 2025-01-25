@@ -60,9 +60,6 @@ virtualenv venv && source venv/bin/activate
 # Install federated learning and privacy tools
 pip install syft==0.8.0 tensorflow-federated tensorflow==2.12.0 \
   diffprivlib torch torchvision
-
-# Install ABAC policy engine (e.g., PyABAC)
-pip install pyabac
 ```
 
 
