@@ -62,35 +62,17 @@ pip install syft==0.8.0 tensorflow-federated tensorflow==2.12.0 \
   diffprivlib torch torchvision
 ```
 
+### Reference Setup Diagram
+┌───────────────────┐       ┌──────────────────────────┐
+│ Raspberry Pi      │       │ Hyperledger Fabric       │
+│ (IoT Device)      │       │ (Server/Cloud)           │
+│                   │       │                          │
+│  - Sensor (DHT11) │──────▶│  - Peer Nodes            │
+│  - ABAC Client    │ REST/ │  - Orderer               │
+│  - FL Client      │ gRPC  │  - Chaincode (ABAC/FL)   │
+└───────────────────┘       └──────────────────────────┘
 
 
-```sh
-blockchain-iot-abac-fl/  
-├── blockchain/                 # Blockchain network setup (Hyperledger Fabric)  
-│   ├── chaincode/              # Smart contracts for ABAC policies  
-│   └── config/                 # Network configuration files  
-├── abac-policies/              # XACML/JSON attribute-based policies  
-│   ├── smart_home_policies.xacml  
-│   └── policy_enforcer.py      # AuthZForce/OpenPolicyAgent integration  
-├── federated-learning/         # FL client/server code  
-│   ├── clients/                # IoT device code (Raspberry Pi/ESP32)  
-│   │   ├── dp_noise.py         # Differential privacy module  
-│   │   └── local_train.py      # Local model training script  
-│   └── aggregator/             # Blockchain/Edge-based aggregation logic  
-├── testbed-simulation/         # Hardware/IoT device simulations  
-│   ├── docker-compose.yml      # Simulate IoT nodes  
-│   └── sensor_data/            # Sample datasets (N-BaIoT, CASAS)  
-├── docs/                       # Research papers, diagrams, test plans  
-├── scripts/                    # Utility scripts (deployment, monitoring)  
-├── .github/                    # CI/CD workflows (e.g., automated testing)  
-├── requirements.txt            # Python dependencies  
-├── Dockerfile                  # Containerized testbed setup  
-└── README.md                   # Project overview, setup instructions  
-```
 
-### Challenges and Solutions
-Challenge	Solution
-High RAM usage on RPi	Offload peers to edge servers; limit CouchDB use
-Slow FL training	Use TensorFlow Lite or quantized models
-ABAC policy conflicts	Implement policy mining (e.g., AuthZForce)
-Sensor data latency	Batch data submissions to HLF
+
+
