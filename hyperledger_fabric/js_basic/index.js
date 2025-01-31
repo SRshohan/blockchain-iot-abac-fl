@@ -1,3 +1,6 @@
+import today from "../node_js/mymodule.js";
+
+
 let name = "John";
 const firstName = "John";
 
@@ -32,11 +35,14 @@ let multiply = async (a, b) => {
     return a * b;
 };
 
-const result = multiply(10, 20);
+multiply(10, 20)
+    .then(result => console.log(result));  // 200
 
 Object.entries(person).forEach(([key, value]) => {
-    console.log(value); 
+    console.log(key+ ":" + value); 
   });
 
+
+
 // Can not be contain space or hyphen (-)
-// console.log(person1);
+console.log(today());
