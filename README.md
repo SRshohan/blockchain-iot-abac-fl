@@ -38,7 +38,6 @@ pip3 install virtualenv
 brew install curl openssl
 ```
 
-
 2. Set Up Blockchain Network (Hyperledger Fabric)
 ```bash
 # Create a project directory
