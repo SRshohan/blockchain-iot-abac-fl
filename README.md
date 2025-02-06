@@ -39,26 +39,27 @@ brew install curl openssl
 ```
 
 2. Set Up Blockchain Network (Hyperledger Fabric)
+
 ```bash
 # Create a project directory
 mkdir iot-blockchain && cd iot-blockchain
 
 # Clone Hyperledger Fabric samples (simplified setup)
 git clone https://github.com/hyperledger/fabric-samples.git
+
 cd fabric-samples/test-network
 
 # Start a minimal Fabric network (adjust as needed)
 ./network.sh up createChannel -c mychannel -s couchdb
-
 ```
+
 3. Install Privacy-Preserving Libraries
 ```bash
 # Create a Python virtual environment
 virtualenv venv && source venv/bin/activate
 
 # Install federated learning and privacy tools
-pip install syft==0.8.0 tensorflow-federated tensorflow==2.12.0 \
-  diffprivlib torch torchvision
+pip install syft==0.8.0 tensorflow-federated tensorflow==2.12.0 \diffprivlib torch torchvision
 ```
 
 ### Reference Setup Diagram
@@ -74,4 +75,7 @@ pip install syft==0.8.0 tensorflow-federated tensorflow==2.12.0 \
 
 
 
-
+### Path to Dataset
+```sh
+/Users/sohanurrahman/.cache/kagglehub/datasets/jessicali9530/celeba-dataset/versions/2
+```
