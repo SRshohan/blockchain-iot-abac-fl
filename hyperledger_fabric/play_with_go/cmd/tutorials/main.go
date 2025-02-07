@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"math"
+	"reflect"
+	"time"
 )
 
 
@@ -10,8 +12,9 @@ func main() {
 
 	printMe()
 	
+	start := time.TimeOnly
 
-	fmt.Println("My last name is Rahman")
+	fmt.Println(reflect.TypeOf(start))
 
 	fmt.Println(intDivsion(3, 3))
 	fmt.Println(floatDivision(56.7, 30.7))

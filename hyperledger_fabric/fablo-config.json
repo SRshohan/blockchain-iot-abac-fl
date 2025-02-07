@@ -51,9 +51,9 @@
     {
       "name": "chaincode1",
       "version": "0.0.1",
-      "lang": "node",
+      "lang": "golang",
       "channel": "my-channel1",
-      "directory": "./chaincodes/chaincode-kv-node"
+      "directory": "./chaincodes/chaincode-abac-go/smartcontract-go"
     }
   ]
 }
