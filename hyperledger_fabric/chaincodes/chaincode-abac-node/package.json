@@ -1,0 +1,14 @@
+{
+  "name": "chaincode-abac-node",
+  "version": "1.0.0",
+  "description": "Attribuate based smart-contract",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js"
+  },
+  "author": "Sohanur Rahman",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
