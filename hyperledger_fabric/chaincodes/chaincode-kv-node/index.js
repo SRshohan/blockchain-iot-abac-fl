@@ -3,7 +3,7 @@ const crypto = require("crypto");
 
 class KVContract extends Contract {
   constructor() {
-    super("KVContract");
+    super("KVcontract");
   }
 
   async instantiate() {

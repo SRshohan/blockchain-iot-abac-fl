@@ -61,6 +61,23 @@ channelQuery() {
 
     peerChannelFetchBlockTls "my-channel1" "cli.org1.example.com" "${BLOCK_NAME}" "peer1.org1.example.com:7042" "crypto-orderer/tlsca.orderer.example.com-cert.pem" "$TARGET_FILE"
 
+  elif
+    [ "$1" = "getinfo" ] && [ "$2" = "my-channel1" ] && [ "$3" = "org1" ] && [ "$4" = "peer2" ]
+  then
+
+    peerChannelGetInfoTls "my-channel1" "cli.org1.example.com" "peer2.org1.example.com:7043" "crypto-orderer/tlsca.orderer.example.com-cert.pem"
+
+  elif [ "$1" = "fetch" ] && [ "$2" = "config" ] && [ "$3" = "my-channel1" ] && [ "$4" = "org1" ] && [ "$5" = "peer2" ]; then
+    TARGET_FILE=${6:-"$channel-config.json"}
+
+    peerChannelFetchConfigTls "my-channel1" "cli.org1.example.com" "$TARGET_FILE" "peer2.org1.example.com:7043" "crypto-orderer/tlsca.orderer.example.com-cert.pem"
+
+  elif [ "$1" = "fetch" ] && [ "$3" = "my-channel1" ] && [ "$4" = "org1" ] && [ "$5" = "peer2" ]; then
+    BLOCK_NAME=$2
+    TARGET_FILE=${6:-"$BLOCK_NAME.block"}
+
+    peerChannelFetchBlockTls "my-channel1" "cli.org1.example.com" "${BLOCK_NAME}" "peer2.org1.example.com:7043" "crypto-orderer/tlsca.orderer.example.com-cert.pem" "$TARGET_FILE"
+
   else
 
     echo "$@"
@@ -104,6 +121,16 @@ printChannelsHelp() {
   echo ""
   echo "fablo channel fetch <newest|oldest|block-number> my-channel1 org1 peer1 [file name]"
   echo -e "\t Fetch a block with given number and save it. Uses first peer 'peer1' of 'Org1'".
+  echo ""
+
+  echo "fablo channel getinfo my-channel1 org1 peer2"
+  echo -e "\t Get channel info on 'peer2' of 'Org1'".
+  echo ""
+  echo "fablo channel fetch config my-channel1 org1 peer2 [file-name.json]"
+  echo -e "\t Download latest config block and save it. Uses first peer 'peer2' of 'Org1'".
+  echo ""
+  echo "fablo channel fetch <newest|oldest|block-number> my-channel1 org1 peer2 [file name]"
+  echo -e "\t Fetch a block with given number and save it. Uses first peer 'peer2' of 'Org1'".
   echo ""
 
 }

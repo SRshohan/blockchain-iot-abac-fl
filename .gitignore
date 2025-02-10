@@ -1,3 +1,4 @@
 myenv/
 papers/
 hyperledger_fabric/fabric_samples/
+hyperledger_fabric/chaincodes/chaincode-abac-node/node_modules
