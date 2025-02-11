@@ -3,6 +3,6 @@ PeerOrgs:
     Domain: org1.example.com
     Specs:
     Template:
-      Count: 3
+      Count: 2
     Users:
       Count: 1

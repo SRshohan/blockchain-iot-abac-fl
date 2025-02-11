@@ -3,7 +3,7 @@ const crypto = require("crypto");
 
 class KVContract extends Contract {
   constructor() {
-    super("KVcontract");
+    super("KVContract");
   }
 
   async instantiate() {
@@ -12,11 +12,13 @@ class KVContract extends Contract {
 
   async put(ctx, key, value) {
     await ctx.stub.putState(key, Buffer.from(value));
+    console.log(key)
     return { success: "OK" };
   }
 
   async get(ctx, key) {
     const buffer = await ctx.stub.getState(key);
+    console.log(key)
     if (!buffer || !buffer.length) return { error: "NOT_FOUND" };
     return { success: buffer.toString() };
   }
