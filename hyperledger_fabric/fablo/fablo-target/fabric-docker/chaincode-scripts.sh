@@ -7,13 +7,13 @@ chaincodeList() {
 
   elif [ "$1" = "peer0.org1.example.com" ]; then
 
-    peerChaincodeList "cli.org1.example.com" "peer0.org1.example.com:7041" "$2" # $2 is channel name
+    peerChaincodeListTls "cli.org1.example.com" "peer0.org1.example.com:7041" "$2" "crypto-orderer/tlsca.orderer.example.com-cert.pem" # Third argument is channel name
 
   elif
     [ "$1" = "peer1.org1.example.com" ]
   then
 
-    peerChaincodeList "cli.org1.example.com" "peer1.org1.example.com:7042" "$2" # $2 is channel name
+    peerChaincodeListTls "cli.org1.example.com" "peer1.org1.example.com:7042" "$2" "crypto-orderer/tlsca.orderer.example.com-cert.pem" # Third argument is channel name
 
   else
 
@@ -38,14 +38,20 @@ chaincodeInvoke() {
   cli=""
   peer_addresses=""
 
+  peer_certs=""
+
   if [[ "$1" == *"peer0.org1.example.com"* ]]; then
     cli="cli.org1.example.com"
     peer_addresses="$peer_addresses,peer0.org1.example.com:7041"
+
+    peer_certs="$peer_certs,crypto/peers/peer0.org1.example.com/tls/ca.crt"
 
   fi
   if [[ "$1" == *"peer1.org1.example.com"* ]]; then
     cli="cli.org1.example.com"
     peer_addresses="$peer_addresses,peer1.org1.example.com:7042"
+
+    peer_certs="$peer_certs,crypto/peers/peer1.org1.example.com/tls/ca.crt"
 
   fi
   if [ -z "$peer_addresses" ]; then
@@ -53,6 +59,10 @@ chaincodeInvoke() {
     exit 1
   fi
 
-  peerChaincodeInvoke "$cli" "${peer_addresses:1}" "$2" "$3" "$4" "$5"
+  if [ "$2" = "my-channel1" ]; then
+    ca_cert="crypto-orderer/tlsca.orderer.example.com-cert.pem"
+  fi
+
+  peerChaincodeInvokeTls "$cli" "${peer_addresses:1}" "$2" "$3" "$4" "$5" "${peer_certs:1}" "$ca_cert"
 
 }

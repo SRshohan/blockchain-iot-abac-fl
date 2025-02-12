@@ -3,6 +3,7 @@
 __getOrdererAndPeerNodes() {
   echo "
       orderer0.group1.orderer.example.com
+      orderer1.group1.orderer.example.com
       peer0.org1.example.com
       peer1.org1.example.com
   "
