@@ -30,3 +30,7 @@ docker system prune -a --volumes
 # Bring the network back up
 ./network.sh up createChannel -s couchdb
 ```
+
+```sh
+./network.sh deployCC -ccn ledger -ccp ../asset-transfer-ledger-queries/chaincode-javascript/ -ccl javascript -ccep "OR('Org1MSP.peer','Org2MSP.peer')"
+```
