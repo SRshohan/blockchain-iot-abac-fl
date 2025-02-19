@@ -43,27 +43,57 @@ docker system prune -a --volumes
 
 ```
 
-### General Step
-Register identities with attributes:
+### General Step for ABAC
 
-```bash
+FireUp the network & Deploy the Chaincode:
+```sh
+./network.sh up createChannel -ca -s couchdb
+./network.sh deployCC -ccn abac -ccp ../asset-transfer-abac/chaincode-go/ -ccl go
+```
+
+1. Setup Environment Variables to Setup Fabric CA Client:
+```sh
 export PATH=${PWD}/../bin:${PWD}:$PATH
 export FABRIC_CFG_PATH=$PWD/../config/
+```
+
+2. Setup Fabric CA client home to the MSP of the Org1 CA admin:
+```bash
 export FABRIC_CA_CLIENT_HOME=${PWD}/organizations/peerOrganizations/org1.example.com/
 ```
 
-Step 1: For registration
-```bash
-fabric-ca-client register --id.name creator3 --id.secret creator1pw --id.type client --id.affiliation org1 --id.attrs 'abac.location=home1:ecert, abac.time=14001900' --tls.certfiles "${PWD}/organizations/fabric-ca/org1/tls-cert.pem"
-```
+### Register identities with attributes
 
+1. Step 1: For registration
+```bash
+fabric-ca-client register --id.name creator3 --id.secret creator1pw --id.type client --id.affiliation org1 --id.attrs 'abac.location=home1backyard:ecert,abac.creator=true:ecert,abac.status=true:ecert' --tls.certfiles "${PWD}/organizations/fabric-ca/org1/tls-cert.pem"
+```
 
 Step 2: For Enrollment: 
 ```bash
 fabric-ca-client enroll -u https://creator3:creator1pw@localhost:7054 --caname ca-org1 -M "${PWD}/organizations/peerOrganizations/org1.example.com/users/creator3@org1.example.com/msp" --tls.certfiles "${PWD}/organizations/fabric-ca/org1/tls-cert.pem"
 ```
 
-Step 3: Copy it
+1. Step 3: Copy it
 ```bash
-cp "${PWD}/organizations/peerOrganizations/org1.example.com/msp/config.yaml" "${PWD}/organizations/peerOrganizations/org1.example.com/users/creator1@org1.example.com/msp/config.yaml"
+cp "${PWD}/organizations/peerOrganizations/org1.example.com/msp/config.yaml" "${PWD}/organizations/peerOrganizations/org1.example.com/users/creator3@org1.example.com/msp/config.yaml"
+```
+
+#### Use an User Identity to Create a Asset
+
+1. Set Up Environment Variables for User Identity
+
+```bash
+export CORE_PEER_TLS_ENABLED=true
+export CORE_PEER_LOCALMSPID=Org1MSP
+export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org1.example.com/users/creator3@org1.example.com/msp
+export CORE_PEER_TLS_ROOTCERT_FILE=${PWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
+export CORE_PEER_ADDRESS=localhost:7051
+export TARGET_TLS_OPTIONS=(-o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile "${PWD}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem" --peerAddresses localhost:7051 --tlsRootCertFiles "${PWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt" --peerAddresses localhost:9051 --tlsRootCertFiles "${PWD}/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt")
+```
+
+2. Run to invoke Specific Chaincode Function (eg: CreateDeviceAsset):
+
+```bash
+peer chaincode invoke "${TARGET_TLS_OPTIONS[@]}" -C mychannel -n abac -c '{"function":"CreateDeviceAsset","Args":["device1", "home1", "true"]}'
 ```
