@@ -50,7 +50,8 @@ def client_fn(context: Context):
     return FlowerClient(net, trainloader, valloader, local_epochs).to_client()
 
 
-# Flower ClientApp
-app = ClientApp(
+if __name__ == "__main__":
+    # Flower ClientApp
+    app = ClientApp(
     client_fn,
-)
+    )
