@@ -1,4 +1,32 @@
+# Hyperledger Fabric ABAC Asset Management 🔒⛓️
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![FireFly Version](https://img.shields.io/badge/FireFly-1.2.0-blue)](https://hyperledger.github.io/firefly/)
+
+A secure asset management system implementing Attribute-Based Access Control (ABAC) using Hyperledger Fabric and FireFly. Manages device assets with granular permissions through blockchain smart contracts.
+
+![Network Demo](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2U3OWY1M2U0Y2Y5YzQ4YTQ3YjM0YjQ0YzU0ZTA5YzM0YjQ3YjM0NSZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/9Pxt0gC8HkzRmqU4sR/giphy.gif) 
+*(Example: Network Startup & Chaincode Deployment)*
+
+## Features ✨
+- ABAC implementation with custom attributes
+- CouchDB state database for rich queries
+- FireFly integration for REST APIs
+- Multi-organization channel setup
+- Attribute-based asset creation rules
+
+## Prerequisites 📋
+- [Hyperledger Fabric Samples v2.4+](https://github.com/hyperledger/fabric-samples)
+- [FireFly CLI v1.2+](https://hyperledger.github.io/firefly/)
+- Docker 20.10+
+- Node.js 16.x
+- Go 1.18+
+
+## Installation ⚙️
+```bash
+git clone https://github.com/your-org/fabric-abac-demo.git
+cd fabric-abac-demo
+npm install
 
 
 Examples:
@@ -255,7 +283,7 @@ Create this Http API: `http://127.0.0.1:5108`
 Follow the link: `http://127.0.0.1:5007/ui`
 
 - Go to `Blockchain`
-- Then Go to `APIs`
+- Then Go to `API`
 
 Then check the link
 
