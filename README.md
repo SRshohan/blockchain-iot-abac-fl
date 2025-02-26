@@ -1,81 +1,280 @@
-# Setup Guide: Blockchain-ABAC-FL Integration for IoT
 
-This guide outlines steps to set up the development environment on **macOS** and deploy the system on **Raspberry Pi (RPi)** for testing with real IoT sensors.
 
----
 
-## Prerequisites
+Examples:
+   network.sh up createChannel -ca -c mychannel -s couchdb
+   network.sh createChannel -c channelName
+   network.sh deployCC -ccn basic -ccp ../asset-transfer-basic/chaincode-javascript/ -ccl javascript
+   network.sh deployCC -ccn mychaincode -ccp ./user/mychaincode -ccv 1 -ccl javascript
 
-### Hardware
-- macOS machine (for development)
-- Raspberry Pi (4B or newer recommended)
-- IoT sensors (e.g., DHT11/DHT22 for temperature/humidity, PIR motion sensor, camera module)
-- Breadboard, jumper wires, resistors (for sensor connections)
 
-### Software
-- macOS Terminal or iTerm2
-- Xcode Command Line Tools (for macOS dependencies)
-- Python 3.8+ and Node.js 16.x (LTS)
-- Docker Desktop for macOS
-- Raspberry Pi OS (64-bit) installed on RPi SD card
 
----
-
-## Part 1: macOS Development Setup
-
-### 1. Install Dependencies
-```bash
-# Install Homebrew (package manager)
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-# Install Python, Node.js, and tools
-brew install python@3.10 node git docker docker-compose
-
-# Install Python virtualenv
-pip3 install virtualenv
-
-# Install Hyperledger Fabric dependencies (for permissioned blockchain)
-brew install curl openssl
-```
-
-2. Set Up Blockchain Network (Hyperledger Fabric)
+### Instead of Go use javascript ( because needs to run the module first)
 
 ```bash
-# Create a project directory
-mkdir iot-blockchain && cd iot-blockchain
-
-# Clone Hyperledger Fabric samples (simplified setup)
-git clone https://github.com/hyperledger/fabric-samples.git
-
-cd fabric-samples/test-network
-
-# Start a minimal Fabric network (adjust as needed)
-./network.sh up createChannel -c mychannel -s couchdb
+./network.sh deployCC -ccn basic -ccp ../asset-transfer-basic/chaincode-javascript -ccl javascript
 ```
 
-3. Install Privacy-Preserving Libraries
-```bash
-# Create a Python virtual environment
-virtualenv venv && source venv/bin/activate
-
-# Install federated learning and privacy tools
-pip install syft==0.8.0 tensorflow-federated tensorflow==2.12.0 \diffprivlib torch torchvision
-```
-
-### Reference Setup Diagram
-┌───────────────────┐       ┌──────────────────────────┐
-│ Raspberry Pi      │       │ Hyperledger Fabric       │
-│ (IoT Device)      │       │ (Server/Cloud)           │
-│                   │       │                          │
-│  - Sensor (DHT11) │──────▶│  - Peer Nodes            │
-│  - ABAC Client    │ REST/ │  - Orderer               │
-│  - FL Client      │ gRPC  │  - Chaincode (ABAC/FL)   │
-└───────────────────┘       └──────────────────────────┘
-
-
-
-
-### Path to Dataset
+# Facing error
 ```sh
-/Users/sohanurrahman/.cache/kagglehub/datasets/jessicali9530/celeba-dataset/versions/2
+Error: error getting endorser client for channel: endorser client failed to connect to localhost:7051: failed to create new connection: context deadline exceeded
+After 5 attempts, peer0.org1 has failed to join channel 'mychannel'
 ```
+
+
+
+Solution:
+
+```bash
+# Tear down any existing containers/volumes
+./network.sh down
+docker system prune -a --volumes
+
+# Bring the network back up
+./network.sh up createChannel -s couchdb
+```
+
+```sh
+./network.sh deployCC -ccn ledger -ccp ../asset-transfer-ledger-queries/chaincode-javascript/ -ccl javascript -ccep "OR('Org1MSP.peer','Org2MSP.peer')"
+```
+
+## Follow the step
+### Start the network and Deploy the chaincode
+```sh
+./network.sh up createChannel -ca
+./network.sh deployCC -ccn abac -ccp ../asset-transfer-abac/chaincode-go/ -ccl go
+
+```
+
+### General Step for ABAC
+
+FireUp the network & Deploy the Chaincode:
+```sh
+./network.sh up createChannel -ca -s couchdb
+./network.sh deployCC -ccn abac -ccp ../asset-transfer-abac/chaincode-go/ -ccl go
+```
+
+1. Setup Environment Variables to Setup Fabric CA Client:
+```sh
+export PATH=${PWD}/../bin:${PWD}:$PATH
+export FABRIC_CFG_PATH=$PWD/../config/
+```
+
+2. Setup Fabric CA client home to the MSP of the Org1 CA admin:
+```bash
+export FABRIC_CA_CLIENT_HOME=${PWD}/organizations/peerOrganizations/org1.example.com/
+```
+
+### Register identities with attributes
+
+1. Step 1: For registration
+```bash
+fabric-ca-client register --id.name creator3 --id.secret creator1pw --id.type client --id.affiliation org1 --id.attrs 'abac.location=home1backyard:ecert,abac.creator=true:ecert,abac.status=true:ecert' --tls.certfiles "${PWD}/organizations/fabric-ca/org1/tls-cert.pem"
+```
+
+Step 2: For Enrollment: 
+```bash
+fabric-ca-client enroll -u https://creator3:creator1pw@localhost:7054 --caname ca-org1 -M "${PWD}/organizations/peerOrganizations/org1.example.com/users/creator3@org1.example.com/msp" --tls.certfiles "${PWD}/organizations/fabric-ca/org1/tls-cert.pem"
+```
+
+1. Step 3: Copy it
+```bash
+cp "${PWD}/organizations/peerOrganizations/org1.example.com/msp/config.yaml" "${PWD}/organizations/peerOrganizations/org1.example.com/users/creator3@org1.example.com/msp/config.yaml"
+```
+
+#### Use an User Identity to Create a Asset
+
+1. Set Up Environment Variables for User Identity
+
+```bash
+export CORE_PEER_TLS_ENABLED=true
+export CORE_PEER_LOCALMSPID=Org1MSP
+export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org1.example.com/users/creator3@org1.example.com/msp
+export CORE_PEER_TLS_ROOTCERT_FILE=${PWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
+export CORE_PEER_ADDRESS=localhost:7051
+export TARGET_TLS_OPTIONS=(-o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile "${PWD}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem" --peerAddresses localhost:7051 --tlsRootCertFiles "${PWD}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt" --peerAddresses localhost:9051 --tlsRootCertFiles "${PWD}/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt")
+```
+
+2. Run to invoke Specific Chaincode Function (eg: CreateDeviceAsset):
+
+```bash
+peer chaincode invoke "${TARGET_TLS_OPTIONS[@]}" -C mychannel -n abac -c '{"function":"CreateDeviceAsset","Args":["device1", "home1", "true"]}'
+```
+
+
+## Todo
+
+Checkout the FireFly with favric-samples test-network
+
+[FireFly](https://hyperledger.github.io/firefly/latest/tutorials/chains/fabric_test_network/#start-firefly-stack)
+
+
+## install firefly
+
+### Initialize and setup Firefly
+Make sure to use the right port, The default port is 5000 and default channel is firefly which automatically setup in firefly config
+
+```bash
+ff init fabric dev -p  5006 --channel mychannel --chaincode asset_transfer
+```
+
+### Start the FireFly
+```bash
+ff start dev
+```
+
+#### Remove the dev and Stop the dev
+
+```bash
+ff remove dev
+```
+
+```bash
+ff stop dev
+```
+
+### To Zip the chaincode
+To use the chaincode from the Fabric-samples need the Following setup:
+
+```bash
+cd fabric-samples/asset-transfer-basic/chaincode-go
+touch core.yaml
+peer lifecycle chaincode package -p . --label asset_transfer ./asset_transfer.zip
+```
+
+Make sure to activate `peer` from `test-network`. To do that we need to set those Environment variables:
+
+```bash
+export PATH=${PWD}/../bin:${PWD}:$PATH
+export FABRIC_CFG_PATH=$PWD/../config/
+```
+
+### Deploy Chaincode
+```bash
+ff deploy fabric dev asset_transfer.zip firefly asset_transfer 1.0
+```
+
+### Follow steps to create the following
+
+Go to the UI link for FireFly Sandbox: `http://127.0.0.1:5108`
+
+- Go to the `Contracts` Section
+- Click on Define a `Contract Interface`
+- Select `FFI - FireFly` Interface in the `Interface Fromat` dropdown
+- Copy the `FFI JSON` crafted by you into the `Schema` Field
+- Click on `Run`
+
+```bash
+{
+  "namespace": "default",
+  "name": "asset_transfer",
+  "description": "Spec interface for the asset-transfer-basic golang chaincode",
+  "version": "1.0",
+  "methods": [
+    {
+      "name": "GetAllAssets",
+      "pathname": "",
+      "description": "",
+      "params": [],
+      "returns": [
+        {
+          "name": "",
+          "schema": {
+            "type": "array",
+            "details": {
+              "type": "object",
+              "properties": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "CreateAsset",
+      "pathname": "",
+      "description": "",
+      "params": [
+        {
+          "name": "id",
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "color",
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "size",
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "owner",
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "value",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "returns": []
+    }
+  ],
+  "events": [
+    {
+      "name": "AssetCreated"
+    }
+  ]
+}
+
+```
+
+#### Create an HTTP API for the contract
+Create this Http API: `http://127.0.0.1:5108`
+
+- Go to the `Contracts` Section
+- Click on `Register a Contract API`
+- Select the `name` of your broadcasted FFI in the `Contract Interface` dropdown
+- In the `Name` Field, give a name that will be part of the URL for your Http API
+- In the `Chaincode` Field, give your `chaincode name` for which you wrote the FFI
+- In the `Channel` Field, give the channel name where your `chaincode` is deployed
+- Click on `Run`
+
+### Check from THE FIREFLY UI
+
+Follow the link: `http://127.0.0.1:5007/ui`
+
+- Go to `Blockchain`
+- Then Go to `APIs`
+
+Then check the link
+
+### Invoke the chaincode¶
+Now that we've got everything set up, it's time to use our chaincode! We're going to make a POST request to the `invoke/CreateAsset` endpoint to create a new asset.
+
+Request¶
+POST `http://localhost:5000/api/v1/namespaces/default/apis/asset_transfer/invoke/CreateAsset`
+
+
+```bash
+{
+  "input": {
+    "color": "blue",
+    "id": "asset-01",
+    "owner": "Harry",
+    "size": "30",
+    "value": "23400"
+  }
+}
+```
+
