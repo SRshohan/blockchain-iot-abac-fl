@@ -1,11 +1,11 @@
-# Hyperledger Fabric ABAC Asset Management 🔒⛓️
+# Hyperledger Fabric ABAC Based Access For Different User 🔒⛓️
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![FireFly Version](https://img.shields.io/badge/FireFly-1.2.0-blue)](https://hyperledger.github.io/firefly/)
 
 A secure asset management system implementing Attribute-Based Access Control (ABAC) using Hyperledger Fabric and FireFly. Manages device assets with granular permissions through blockchain smart contracts.
 
-![Network Demo](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExY2U3OWY1M2U0Y2Y5YzQ4YTQ3YjM0YjQ0YzU0ZTA5YzM0YjQ3YjM0NSZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/9Pxt0gC8HkzRmqU4sR/giphy.gif) 
+![Network Demo](https://media.giphy.com/media/cF2ITQKdxDUChJlYRx/giphy.gif?cid=790b76117663sbo8hjd4vsuqa28yf752zos1t3se8rg4yrgr&ep=v1_gifs_search&rid=giphy.gif&ct=g) 
 *(Example: Network Startup & Chaincode Deployment)*
 
 ## Features ✨
@@ -24,16 +24,15 @@ A secure asset management system implementing Attribute-Based Access Control (AB
 
 ## Installation ⚙️
 ```bash
-git clone https://github.com/your-org/fabric-abac-demo.git
-cd fabric-abac-demo
-npm install
+git clone https://github.com/SRshohan/blockchain-iot-abac-fl.git
+cd blockchain-iot-abac-fl
+```
 
-
-Examples:
-   network.sh up createChannel -ca -c mychannel -s couchdb
-   network.sh createChannel -c channelName
-   network.sh deployCC -ccn basic -ccp ../asset-transfer-basic/chaincode-javascript/ -ccl javascript
-   network.sh deployCC -ccn mychaincode -ccp ./user/mychaincode -ccv 1 -ccl javascript
+`Examples:`
+   `network.sh up createChannel -ca -c mychannel -s couchdb`
+   `network.sh createChannel -c channelName`
+   `network.sh deployCC -ccn basic -ccp ../asset-transfer-basic/chaincode-javascript/ -ccl javascript`
+   `network.sh deployCC -ccn mychaincode -ccp ./user/mychaincode -ccv 1 -ccl javascript`
 
 
 
@@ -161,7 +160,7 @@ ff remove dev
 ff stop dev
 ```
 
-### To Zip the chaincode
+### Zip the chaincode
 To use the chaincode from the Fabric-samples need the Following setup:
 
 ```bash
@@ -287,10 +286,10 @@ Follow the link: `http://127.0.0.1:5007/ui`
 
 Then check the link
 
-### Invoke the chaincode¶
+### Invoke the chaincode
 Now that we've got everything set up, it's time to use our chaincode! We're going to make a POST request to the `invoke/CreateAsset` endpoint to create a new asset.
 
-Request¶
+Request
 POST `http://localhost:5000/api/v1/namespaces/default/apis/asset_transfer/invoke/CreateAsset`
 
 
