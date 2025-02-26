@@ -1,3 +1,6 @@
+
+
+
 Examples:
    network.sh up createChannel -ca -c mychannel -s couchdb
    network.sh createChannel -c channelName
@@ -107,3 +110,171 @@ Checkout the FireFly with favric-samples test-network
 
 
 ## install firefly
+
+### Initialize and setup Firefly
+Make sure to use the right port, The default port is 5000 and default channel is firefly which automatically setup in firefly config
+
+```bash
+ff init fabric dev -p  5006 --channel mychannel --chaincode asset_transfer
+```
+
+### Start the FireFly
+```bash
+ff start dev
+```
+
+#### Remove the dev and Stop the dev
+
+```bash
+ff remove dev
+```
+
+```bash
+ff stop dev
+```
+
+### To Zip the chaincode
+To use the chaincode from the Fabric-samples need the Following setup:
+
+```bash
+cd fabric-samples/asset-transfer-basic/chaincode-go
+touch core.yaml
+peer lifecycle chaincode package -p . --label asset_transfer ./asset_transfer.zip
+```
+
+Make sure to activate `peer` from `test-network`. To do that we need to set those Environment variables:
+
+```bash
+export PATH=${PWD}/../bin:${PWD}:$PATH
+export FABRIC_CFG_PATH=$PWD/../config/
+```
+
+### Deploy Chaincode
+```bash
+ff deploy fabric dev asset_transfer.zip firefly asset_transfer 1.0
+```
+
+### Follow steps to create the following
+
+Go to the UI link for FireFly Sandbox: `http://127.0.0.1:5108`
+
+- Go to the `Contracts` Section
+- Click on Define a `Contract Interface`
+- Select `FFI - FireFly` Interface in the `Interface Fromat` dropdown
+- Copy the `FFI JSON` crafted by you into the `Schema` Field
+- Click on `Run`
+
+```bash
+{
+  "namespace": "default",
+  "name": "asset_transfer",
+  "description": "Spec interface for the asset-transfer-basic golang chaincode",
+  "version": "1.0",
+  "methods": [
+    {
+      "name": "GetAllAssets",
+      "pathname": "",
+      "description": "",
+      "params": [],
+      "returns": [
+        {
+          "name": "",
+          "schema": {
+            "type": "array",
+            "details": {
+              "type": "object",
+              "properties": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "CreateAsset",
+      "pathname": "",
+      "description": "",
+      "params": [
+        {
+          "name": "id",
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "color",
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "size",
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "owner",
+          "schema": {
+            "type": "string"
+          }
+        },
+        {
+          "name": "value",
+          "schema": {
+            "type": "string"
+          }
+        }
+      ],
+      "returns": []
+    }
+  ],
+  "events": [
+    {
+      "name": "AssetCreated"
+    }
+  ]
+}
+
+```
+
+#### Create an HTTP API for the contract
+Create this Http API: `http://127.0.0.1:5108`
+
+- Go to the `Contracts` Section
+- Click on `Register a Contract API`
+- Select the `name` of your broadcasted FFI in the `Contract Interface` dropdown
+- In the `Name` Field, give a name that will be part of the URL for your Http API
+- In the `Chaincode` Field, give your `chaincode name` for which you wrote the FFI
+- In the `Channel` Field, give the channel name where your `chaincode` is deployed
+- Click on `Run`
+
+### Check from THE FIREFLY UI
+
+Follow the link: `http://127.0.0.1:5007/ui`
+
+- Go to `Blockchain`
+- Then Go to `APIs`
+
+Then check the link
+
+### Invoke the chaincode¶
+Now that we've got everything set up, it's time to use our chaincode! We're going to make a POST request to the `invoke/CreateAsset` endpoint to create a new asset.
+
+Request¶
+POST `http://localhost:5000/api/v1/namespaces/default/apis/asset_transfer/invoke/CreateAsset`
+
+
+```bash
+{
+  "input": {
+    "color": "blue",
+    "id": "asset-01",
+    "owner": "Harry",
+    "size": "30",
+    "value": "23400"
+  }
+}
+```
+
