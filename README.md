@@ -28,11 +28,14 @@ git clone https://github.com/SRshohan/blockchain-iot-abac-fl.git
 cd blockchain-iot-abac-fl
 ```
 
-`Examples:`
-   `network.sh up createChannel -ca -c mychannel -s couchdb`
-   `network.sh createChannel -c channelName`
-   `network.sh deployCC -ccn basic -ccp ../asset-transfer-basic/chaincode-javascript/ -ccl javascript`
-   `network.sh deployCC -ccn mychaincode -ccp ./user/mychaincode -ccv 1 -ccl javascript`
+```sh
+Examples:
+   network.sh up createChannel -ca -c mychannel -s couchdb
+   network.sh createChannel -c channelName
+   network.sh deployCC -ccn basic -ccp ../asset-transfer-basic/chaincode-javascript/ -ccl javascript
+   network.sh deployCC -ccn mychaincode -ccp ./user/mychaincode -ccv 1 -ccl javascript
+
+```
 
 
 
@@ -142,7 +145,7 @@ Checkout the FireFly with favric-samples test-network
 Make sure to use the right port, The default port is 5000 and default channel is firefly which automatically setup in firefly config
 
 ```bash
-ff init fabric dev -p  5006 --channel mychannel --chaincode asset_transfer
+ff init fabric dev -p  5006 --channel firefly --chaincode asset_transfer
 ```
 
 ### Start the FireFly
@@ -305,3 +308,4 @@ POST `http://localhost:5000/api/v1/namespaces/default/apis/asset_transfer/invoke
 }
 ```
 
+Contribution
