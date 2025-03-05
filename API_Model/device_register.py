@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 from flask_restful import Resource, Api
 import subprocess
+import os
 
 
 class DeviceRegister(Resource):
@@ -11,11 +12,12 @@ class DeviceRegister(Resource):
             device_id = data.get("device_id")
 
             if not location or not device_id:
-                return jsonify({"error": "Missing location or device_id"}), 400
+                return jsonify({"error": "Missing location or device_id"})
 
-            network_directory = "hyperledger_fabric/fabric-samples/test-network"
+            # Convert to absolute path
+            network_directory = os.path.abspath("../hyperledger_fabric/fabric-samples/test-network")
 
-            # Run commands inside the test-network directory
+            # Run commands inside the test-network director 
             env = {
                 "PATH": f"{network_directory}/../bin:{network_directory}:${{PATH}}",
                 "FABRIC_CFG_PATH": f"{network_directory}/../config/",
@@ -33,9 +35,6 @@ class DeviceRegister(Resource):
                 "--tls.certfiles", f"{network_directory}/organizations/fabric-ca/org1/tls-cert.pem"
             ]
 
-            subprocess.run(register_device, cwd=network_directory, env=env, check=True)
-
-            # Enroll the device
             enroll_device = [
                 "fabric-ca-client", "enroll",
                 "-u", "https://creator3:creator1pw@localhost:7054",
@@ -43,21 +42,36 @@ class DeviceRegister(Resource):
                 "-M", f"{network_directory}/organizations/peerOrganizations/org1.example.com/users/creator3@org1.example.com/msp",
                 "--tls.certfiles", f"{network_directory}/organizations/fabric-ca/org1/tls-cert.pem"
             ]
-
+            
+            subprocess.run(register_device, cwd=network_directory, env=env, check=True)
             subprocess.run(enroll_device, cwd=network_directory, env=env, check=True)
 
-            # Copy the certificate
-            copy_cert = [
+            copy_config = [
                 "cp",
                 f"{network_directory}/organizations/peerOrganizations/org1.example.com/msp/config.yaml",
                 f"{network_directory}/organizations/peerOrganizations/org1.example.com/users/creator3@org1.example.com/msp/config.yaml"
             ]
 
-            subprocess.run(copy_cert, cwd=network_directory, check=True)
+            subprocess.run(copy_config, cwd=network_directory, env=env, check=True)
 
-            return jsonify({"message": "Device registered successfully"})
+            # Check if directory exists
+            if not os.path.exists(network_directory):
+                return jsonify({"error": f"Directory does not exist: {network_directory}"})
+
+            # Run command in that directory
+            result = subprocess.run(register_device, shell=True, cwd=network_directory, check=True, capture_output=True, text=True)
+
+            return jsonify({
+                "message": f"Device registered successfully",
+                "return_code": result.returncode,
+                "stdout": result.stdout.strip(),
+                "stderr": result.stderr.strip()
+            })
 
         except subprocess.CalledProcessError as e:
             return jsonify({"error": "Hyperledger Fabric command failed", "details": str(e)})
         except Exception as e:
             return jsonify({"error": str(e)})
+
+
+
