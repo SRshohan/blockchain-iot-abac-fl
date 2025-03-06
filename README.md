@@ -131,6 +131,12 @@ export TARGET_TLS_OPTIONS=(-o localhost:7050 --ordererTLSHostnameOverride ordere
 peer chaincode invoke "${TARGET_TLS_OPTIONS[@]}" -C mychannel -n abac -c '{"function":"CreateDeviceAsset","Args":["device1", "home1", "true"]}'
 ```
 
+3. Decode certificate using Openssl
+
+```bash
+openssl x509 -in organizations/peerOrganizations/org1.example.com/users/creator3@org1.example.com/msp/signcerts/cert.pem -text -noout
+```
+
 
 ## Todo
 
