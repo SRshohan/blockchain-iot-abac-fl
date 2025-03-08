@@ -27,7 +27,7 @@ class DeviceRegister(Resource):
             # Register the device
             register_device = [
                 "fabric-ca-client", "register",
-                "--id.name", "creator3",
+                "--id.name", "creator1",
                 "--id.secret", "creator1pw",
                 "--id.type", "client",
                 "--id.affiliation", "org1",
@@ -37,14 +37,28 @@ class DeviceRegister(Resource):
 
             enroll_device = [
                 "fabric-ca-client", "enroll",
-                "-u", "https://creator3:creator1pw@localhost:7054",
+                "-u", "https://creator1:creator1pw@localhost:7054",
                 "--caname", "ca-org1",
                 "-M", f"{network_directory}/organizations/peerOrganizations/org1.example.com/users/creator3@org1.example.com/msp",
                 "--tls.certfiles", f"{network_directory}/organizations/fabric-ca/org1/tls-cert.pem"
             ]
             
-            subprocess.run(register_device, cwd=network_directory, env=env, check=True)
-            subprocess.run(enroll_device, cwd=network_directory, env=env, check=True)
+            # Register the device
+            register_device = subprocess.run(register_device, cwd=network_directory, env=env, capture_output=True, check=True)
+
+            # Check if registration was successful
+            get_output, get_error = register_device.stdout
+
+            if register_device.returncode != 0:
+                return jsonify({"error": "Failed to register device"})
+            
+
+            # Enroll the device
+            enroll_device = subprocess.run(enroll_device, cwd=network_directory, env=env, capture_output=True, check=True)
+
+            # Check if enrollment was successful
+            if enroll_device.returncode != 0:
+                return jsonify({"error": "Failed to enroll device"})
 
             copy_config = [
                 "cp",
@@ -52,7 +66,10 @@ class DeviceRegister(Resource):
                 f"{network_directory}/organizations/peerOrganizations/org1.example.com/users/creator3@org1.example.com/msp/config.yaml"
             ]
 
-            subprocess.run(copy_config, cwd=network_directory, env=env, check=True)
+            check = subprocess.run(copy_config, cwd=network_directory, env=env, check=True)
+
+            if check.returncode != 0:
+                return jsonify({"error": "Failed to copy config file"})
 
             # Check if directory exists
             if not os.path.exists(network_directory):
@@ -63,15 +80,15 @@ class DeviceRegister(Resource):
 
             return jsonify({
                 "message": f"Device registered successfully",
-                "return_code": result.returncode,
-                "stdout": result.stdout.strip(),
-                "stderr": result.stderr.strip()
+                "register_device": get_output
             })
 
         except subprocess.CalledProcessError as e:
-            return jsonify({"error": "Hyperledger Fabric command failed", "details": str(e)})
+            return jsonify({"error": f"Command failed with exit code {e.returncode}: {str(e)}"})
         except Exception as e:
             return jsonify({"error": str(e)})
+        
+    
 
 
 
