@@ -13,9 +13,7 @@ class DeviceAccess(Resource):
                 return jsonify({"error": "Missing location or device_id"})
 
             network_directory = "../hyperledger_fabric/fabric-samples/test-network"
-
-           
-
+            
             # Setup variables for device identity
             identity_variables = {
                 "PATH": f"{network_directory}/../bin:{network_directory}:${{PATH}}",
