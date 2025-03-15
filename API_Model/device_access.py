@@ -29,7 +29,7 @@ class DeviceAccess(Resource):
             
             #Access device
             access_device = [
-                "peer", "chaincode", "invoke", "mychannel", "abac", '{"function":"AccessDevice", "Args":["device1"]}'
+                "peer", "chaincode", "invoke", "mychannel", "abac", '{"function":"AccessDevice", "Args":[f"{device_id}"]}'
             ]
             
             subprocess.run(access_device, cwd=network_directory, env=identity_variables, check=True)
