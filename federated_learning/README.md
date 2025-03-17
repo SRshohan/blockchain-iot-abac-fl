@@ -43,9 +43,9 @@ python generate_dataset.py --num-supernodes=2
 ```
 
 ### Copy one partition to a device
-Run this command from the home terminal and find out the IP address of the embedded device 
+Run this command from the home terminal of Mac/Linux and find out the IP address of the embedded device 
 ```bash
-scp -r datasets/fashionmnist_part_1 <user>@<device-ip>:/path/to/home
+scp -r datasets/fashionmnist_part_1 sr@192.168.1.249:/home/sr/Desktop/fl_sys
 ```
 
 ### Run the superlink server
@@ -58,6 +58,11 @@ flower-superlink --insecure
 pip install -U flwr
 pip install torch torchvision datasets
 ```
+### Severe the SuperLink startup
+```bash
+flower-superlink --insecure
+```
+
 
 ### Run the client
 Repeat for each embedded device (adjust SuperLink IP and dataset-path)
