@@ -13,7 +13,6 @@ from embeddedexample.task import (
     train,
 )
 
-
 # Define Flower Client
 class FlowerClient(NumPyClient):
     def __init__(self, trainloader, valloader, local_epochs, learning_rate):

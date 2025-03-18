@@ -67,7 +67,7 @@ flower-superlink --insecure
 ### Run the client
 Repeat for each embedded device (adjust SuperLink IP and dataset-path)
 ```bash
-flower-supernode --insecure --superlink="SUPERLINK_IP:9092" \
+flower-supernode --insecure --superlink="192.168.1.14:9092" \
                  --node-config="dataset-path='path/to/fashionmnist_part_1'"
 ```
 
