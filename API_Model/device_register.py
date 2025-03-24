@@ -3,10 +3,8 @@ from flask_restful import Resource, Api
 import subprocess
 import os
 
-
 class DeviceRegister(Resource):
     def post(self):
-        # try:
         data = request.get_json()
         location = data.get("location")
         device_id = data.get("device_id")
@@ -20,17 +18,30 @@ class DeviceRegister(Resource):
         if not os.path.exists(network_directory):
             return jsonify({"error": f"Directory does not exist: {network_directory}"})
 
-        # Run commands inside the test-network director 
-        env = {
-            "PATH": f"{network_directory}/../bin:{network_directory}:${{PATH}}",
+        # Set up environment variables
+        env = os.environ.copy()
+        env.update({
+            "PATH": f"{network_directory}/../bin:{network_directory}:{env['PATH']}",
             "FABRIC_CFG_PATH": f"{network_directory}/../config/",
             "FABRIC_CA_CLIENT_HOME": f"{network_directory}/organizations/peerOrganizations/org1.example.com/"
-        }
+        })
+
+        # Define paths
+        source_config_path = f"{network_directory}/organizations/peerOrganizations/org1.example.com/msp/config.yaml"
+        target_directory = f"{network_directory}/organizations/peerOrganizations/org1.example.com/users/creator3@org1.example.com/msp"
+        target_config_path = f"{target_directory}/config.yaml"
+
+        # Ensure the target directory exists
+        os.makedirs(target_directory, exist_ok=True)
+
+        # Ensure source config exists
+        if not os.path.exists(source_config_path):
+            return jsonify({"error": f"Source config.yaml does not exist: {source_config_path}"})
 
         # Register the device
         register_device = [
             "fabric-ca-client", "register",
-            "--id.name", "creator1",
+            "--id.name", "creator3",
             "--id.secret", "creator1pw",
             "--id.type", "client",
             "--id.affiliation", "org1",
@@ -40,48 +51,37 @@ class DeviceRegister(Resource):
 
         enroll_device = [
             "fabric-ca-client", "enroll",
-            "-u", "https://creator1:creator1pw@localhost:7054",
+            "-u", "https://creator3:creator1pw@localhost:7054",
             "--caname", "ca-org1",
-            "-M", f"{network_directory}/organizations/peerOrganizations/org1.example.com/users/creator3@org1.example.com/msp",
+            "-M", target_directory,
             "--tls.certfiles", f"{network_directory}/organizations/fabric-ca/org1/tls-cert.pem"
         ]
 
+        copy_config = ["cp", source_config_path, target_config_path]
 
-        copy_config = [
-            "cp",
-            f"{network_directory}/organizations/peerOrganizations/org1.example.com/msp/config.yaml",
-            f"{network_directory}/organizations/peerOrganizations/org1.example.com/users/creator1@org1.example.com/msp/config.yaml"
-        ]
-        
-        # Register the device
-        register_device = subprocess.run(register_device, shell=True, cwd=network_directory, env=env, capture_output=True)
+        # Execute Register Command
+        register_result = subprocess.run(register_device, cwd=network_directory, env=env, capture_output=True, text=True)
 
-        # Check if registration was successful
-        if register_device.returncode != 0:
-            return jsonify({"error": f"Failed to register device: {register_device.stderr}"})
-        
+        if register_result.returncode != 0:
+            return jsonify({"error": f"Failed to register device: {register_result.stderr}"})
 
-        # Enroll the device
-        enroll_device = subprocess.run(enroll_device, cwd=network_directory, env=env, capture_output=True)
+        # Execute Enroll Command
+        enroll_result = subprocess.run(enroll_device, cwd=network_directory, env=env, capture_output=True, text=True)
 
-        # Check if enrollment was successful
-        if enroll_device.returncode != 0:
-            return jsonify({"error": "Failed to enroll device: {enroll_device.stderr}"})
+        if enroll_result.returncode != 0:
+            return jsonify({"error": f"Failed to enroll device: {enroll_result.stderr}"})
 
-        # Copy config file
-        check = subprocess.run(copy_config, shell=True, cwd=network_directory, env=env, capture_output=True)
+        # Copy Config File
+        copy_result = subprocess.run(copy_config, cwd=network_directory, env=env, capture_output=True, text=True)
 
-        if check.returncode != 0:
-            return jsonify({"error": f"Failed to copy config file {check.stderr}"})
+        if copy_result.returncode != 0:
+            return jsonify({"error": f"Failed to copy config file: {copy_result.stderr}"})
+
+        return jsonify({"message": "Device registered successfully"})
 
 
-        return jsonify({
-            "message": f"Device registered successfully"
-        })
-        # except subprocess.CalledProcessError as e:
-        #     return jsonify({"error": f"Command failed with exit code {e.returncode}: {str(e)}"})
-        # except Exception as e:
-        #     return jsonify({"error": str(e)})
+
+
         
     
 

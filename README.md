@@ -37,6 +37,12 @@ Examples:
 
 ```
 
+### Notes
+
+```sh
+openssl x509 -in cert.pem -text -noout
+
+```
 
 
 ### Instead of Go use javascript ( because needs to run the module first)
