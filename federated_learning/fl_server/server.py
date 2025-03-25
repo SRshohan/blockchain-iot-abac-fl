@@ -3,6 +3,8 @@ import flwr as fl
 
 strategy = fl.server.strategy.FedAvg(
     min_available_clients=2,
+    min_evaluate_clients=2, 
+    min_fit_clients=2
 )
 
 
