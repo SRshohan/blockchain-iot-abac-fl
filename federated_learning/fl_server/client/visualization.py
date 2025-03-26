@@ -145,7 +145,7 @@ def visualize_federated_results():
                              color='white' if heatmap_data[i, j] > 0.5 else 'black')
         
         plt.tight_layout()
-        plt.savefig("visualizations/accuracy_heatmap.png", dpi=300)
+        plt.savefig("visualizations/accuracy_heatmap.png", dpi=200)
         plt.close()
     
     print("Visualizations generated in the 'visualizations' directory.")

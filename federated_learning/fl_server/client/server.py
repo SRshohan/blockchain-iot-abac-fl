@@ -156,7 +156,7 @@ class ServerMetricsTracker:
         
         # Plot loss
         plt.subplot(1, 2, 1)
-        plt.plot(rounds[:len(losses)], losses, 'o-')
+        plt.plot(rounds[:len(losses)], losses, 'o-', color='blue')
         plt.title('Global Model Loss')
         plt.xlabel('Round')
         plt.ylabel('Loss')
@@ -291,9 +291,7 @@ class MetricsStrategy(fl.server.strategy.FedAvg):
 # Create an instance of the custom strategy with initial parameters
 strategy = MetricsStrategy(
     min_available_clients=2,
-    evaluate_fn=None,
-    on_fit_config_fn=fit_config,
-    on_evaluate_config_fn=evaluate_config,
+    min_fit_clients=2,
 )
 
 # Start the server

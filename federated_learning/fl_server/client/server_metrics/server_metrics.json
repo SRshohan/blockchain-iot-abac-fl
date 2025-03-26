@@ -1,143 +1,143 @@
 {
-  "start_time": "2025-03-24T16:58:28.756976",
+  "start_time": "2025-03-25T22:46:23.340951",
   "rounds": [
     {
       "round": 1,
-      "start_time": "2025-03-24T17:02:34.038861",
+      "start_time": "2025-03-25T22:50:47.978622",
       "client_metrics": [
         {
-          "client_id": "client_1785b6c5808248e0b6c049018621aa46",
+          "client_id": "client_adca0b6b5b0045f390bd20956ce79607",
           "num_examples": 50000,
           "metrics": {}
         },
         {
-          "client_id": "client_78958df8273a425a91725710ed7eb955",
+          "client_id": "client_7ca2be4668da49c3a3a420f5dec0ab52",
           "num_examples": 50000,
           "metrics": {}
         }
       ],
       "aggregated_metrics": {
-        "mean_loss": 1.655599594116211,
+        "mean_loss": 1.5745209455490112,
         "std_loss": 0.0,
-        "mean_accuracy": 0.39559999108314514,
+        "mean_accuracy": 0.43470001220703125,
         "std_accuracy": 0.0
       },
       "evaluation_metrics": [
         {
-          "client_id": "client_1785b6c5808248e0b6c049018621aa46",
-          "loss": 1.655599594116211,
+          "client_id": "client_adca0b6b5b0045f390bd20956ce79607",
+          "loss": 1.5745209455490112,
           "num_examples": 10000,
           "metrics": {
-            "accuracy": 0.39559999108314514
+            "accuracy": 0.43470001220703125
           }
         },
         {
-          "client_id": "client_78958df8273a425a91725710ed7eb955",
-          "loss": 1.655599594116211,
+          "client_id": "client_7ca2be4668da49c3a3a420f5dec0ab52",
+          "loss": 1.5745209455490112,
           "num_examples": 10000,
           "metrics": {
-            "accuracy": 0.39559999108314514
+            "accuracy": 0.43470001220703125
           }
         }
       ],
-      "end_time": "2025-03-24T17:02:35.724482",
-      "duration_seconds": 1.685621
+      "end_time": "2025-03-25T22:50:49.466606",
+      "duration_seconds": 1.487984
     },
     {
       "round": 2,
-      "start_time": "2025-03-24T17:06:27.936175",
+      "start_time": "2025-03-25T22:54:47.770411",
       "client_metrics": [
         {
-          "client_id": "client_78958df8273a425a91725710ed7eb955",
+          "client_id": "client_adca0b6b5b0045f390bd20956ce79607",
           "num_examples": 50000,
           "metrics": {}
         },
         {
-          "client_id": "client_1785b6c5808248e0b6c049018621aa46",
+          "client_id": "client_7ca2be4668da49c3a3a420f5dec0ab52",
           "num_examples": 50000,
           "metrics": {}
         }
       ],
       "aggregated_metrics": {
-        "mean_loss": 1.3358588218688965,
+        "mean_loss": 1.3448481559753418,
         "std_loss": 0.0,
-        "mean_accuracy": 0.6895999908447266,
+        "mean_accuracy": 0.7087000012397766,
         "std_accuracy": 0.0
       },
       "evaluation_metrics": [
         {
-          "client_id": "client_78958df8273a425a91725710ed7eb955",
-          "loss": 1.3358588218688965,
+          "client_id": "client_7ca2be4668da49c3a3a420f5dec0ab52",
+          "loss": 1.3448481559753418,
           "num_examples": 10000,
           "metrics": {
-            "accuracy": 0.6895999908447266
+            "accuracy": 0.7087000012397766
           }
         },
         {
-          "client_id": "client_1785b6c5808248e0b6c049018621aa46",
-          "loss": 1.3358588218688965,
+          "client_id": "client_adca0b6b5b0045f390bd20956ce79607",
+          "loss": 1.3448481559753418,
           "num_examples": 10000,
           "metrics": {
-            "accuracy": 0.6895999908447266
+            "accuracy": 0.7087000012397766
           }
         }
       ],
-      "end_time": "2025-03-24T17:06:29.129602",
-      "duration_seconds": 1.193427
+      "end_time": "2025-03-25T22:54:48.962919",
+      "duration_seconds": 1.192508
     },
     {
       "round": 3,
-      "start_time": "2025-03-24T17:10:11.072393",
+      "start_time": "2025-03-25T22:58:41.974299",
       "client_metrics": [
         {
-          "client_id": "client_78958df8273a425a91725710ed7eb955",
+          "client_id": "client_7ca2be4668da49c3a3a420f5dec0ab52",
           "num_examples": 50000,
           "metrics": {}
         },
         {
-          "client_id": "client_1785b6c5808248e0b6c049018621aa46",
+          "client_id": "client_adca0b6b5b0045f390bd20956ce79607",
           "num_examples": 50000,
           "metrics": {}
         }
       ],
       "aggregated_metrics": {
-        "mean_loss": 2.210157632827759,
+        "mean_loss": 2.1052494049072266,
         "std_loss": 0.0,
-        "mean_accuracy": 0.678600013256073,
+        "mean_accuracy": 0.6901999711990356,
         "std_accuracy": 0.0
       },
       "evaluation_metrics": [
         {
-          "client_id": "client_78958df8273a425a91725710ed7eb955",
-          "loss": 2.210157632827759,
+          "client_id": "client_adca0b6b5b0045f390bd20956ce79607",
+          "loss": 2.1052494049072266,
           "num_examples": 10000,
           "metrics": {
-            "accuracy": 0.678600013256073
+            "accuracy": 0.6901999711990356
           }
         },
         {
-          "client_id": "client_1785b6c5808248e0b6c049018621aa46",
-          "loss": 2.210157632827759,
+          "client_id": "client_7ca2be4668da49c3a3a420f5dec0ab52",
+          "loss": 2.1052494049072266,
           "num_examples": 10000,
           "metrics": {
-            "accuracy": 0.678600013256073
+            "accuracy": 0.6901999711990356
           }
         }
       ],
-      "end_time": "2025-03-24T17:10:12.190434",
-      "duration_seconds": 1.118041
+      "end_time": "2025-03-25T22:58:43.224241",
+      "duration_seconds": 1.249942
     }
   ],
   "clients": {
-    "client_1785b6c5808248e0b6c049018621aa46": [
+    "client_adca0b6b5b0045f390bd20956ce79607": [
       {
         "round": 1,
         "fit_metrics": {},
         "num_examples": 50000,
         "evaluation": {
-          "loss": 1.655599594116211,
+          "loss": 1.5745209455490112,
           "metrics": {
-            "accuracy": 0.39559999108314514
+            "accuracy": 0.43470001220703125
           }
         }
       },
@@ -146,9 +146,9 @@
         "fit_metrics": {},
         "num_examples": 50000,
         "evaluation": {
-          "loss": 1.3358588218688965,
+          "loss": 1.3448481559753418,
           "metrics": {
-            "accuracy": 0.6895999908447266
+            "accuracy": 0.7087000012397766
           }
         }
       },
@@ -157,22 +157,22 @@
         "fit_metrics": {},
         "num_examples": 50000,
         "evaluation": {
-          "loss": 2.210157632827759,
+          "loss": 2.1052494049072266,
           "metrics": {
-            "accuracy": 0.678600013256073
+            "accuracy": 0.6901999711990356
           }
         }
       }
     ],
-    "client_78958df8273a425a91725710ed7eb955": [
+    "client_7ca2be4668da49c3a3a420f5dec0ab52": [
       {
         "round": 1,
         "fit_metrics": {},
         "num_examples": 50000,
         "evaluation": {
-          "loss": 1.655599594116211,
+          "loss": 1.5745209455490112,
           "metrics": {
-            "accuracy": 0.39559999108314514
+            "accuracy": 0.43470001220703125
           }
         }
       },
@@ -181,9 +181,9 @@
         "fit_metrics": {},
         "num_examples": 50000,
         "evaluation": {
-          "loss": 1.3358588218688965,
+          "loss": 1.3448481559753418,
           "metrics": {
-            "accuracy": 0.6895999908447266
+            "accuracy": 0.7087000012397766
           }
         }
       },
@@ -192,9 +192,9 @@
         "fit_metrics": {},
         "num_examples": 50000,
         "evaluation": {
-          "loss": 2.210157632827759,
+          "loss": 2.1052494049072266,
           "metrics": {
-            "accuracy": 0.678600013256073
+            "accuracy": 0.6901999711990356
           }
         }
       }
@@ -203,21 +203,21 @@
   "global_metrics": [
     {
       "round": 1,
-      "timestamp": "2025-03-24T17:02:35.496950",
-      "mean_loss": 1.655599594116211,
-      "mean_accuracy": 0.39559999108314514
+      "timestamp": "2025-03-25T22:50:49.171014",
+      "mean_loss": 1.5745209455490112,
+      "mean_accuracy": 0.43470001220703125
     },
     {
       "round": 2,
-      "timestamp": "2025-03-24T17:06:29.002591",
-      "mean_loss": 1.3358588218688965,
-      "mean_accuracy": 0.6895999908447266
+      "timestamp": "2025-03-25T22:54:48.839658",
+      "mean_loss": 1.3448481559753418,
+      "mean_accuracy": 0.7087000012397766
     },
     {
       "round": 3,
-      "timestamp": "2025-03-24T17:10:12.057745",
-      "mean_loss": 2.210157632827759,
-      "mean_accuracy": 0.678600013256073
+      "timestamp": "2025-03-25T22:58:43.088909",
+      "mean_loss": 2.1052494049072266,
+      "mean_accuracy": 0.6901999711990356
     }
   ]
 }
