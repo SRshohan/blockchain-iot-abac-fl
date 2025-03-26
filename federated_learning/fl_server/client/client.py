@@ -26,6 +26,7 @@ model = tf.keras.models.Sequential([
     tf.keras.layers.Dense(64, activation='relu'),
     tf.keras.layers.Dense(10, activation='softmax')
 ])
+
 model.compile(
     'adam',
     "sparse_categorical_crossentropy",
@@ -103,6 +104,13 @@ class MetricsTracker:
         
         # Save metrics after each round
         self._save_metrics()
+
+    def resource_usage(self):
+        import psutil
+        return {
+            "cpu_percent": psutil.cpu_percent(),
+            "ram_gb": round(psutil.virtual_memory().total / (1024**3), 2)
+        }
     
     def _plot_training_curves(self, history, round_num):
         """Generate and save training curve plots"""
@@ -110,14 +118,14 @@ class MetricsTracker:
         
         # Plot accuracy
         plt.subplot(1, 2, 1)
-        plt.plot(history['accuracy'])
+        plt.plot(history['accuracy'], color='blue')
         plt.title(f'Model Accuracy - Round {round_num}')
         plt.ylabel('Accuracy')
         plt.xlabel('Epoch')
         
         # Plot loss
         plt.subplot(1, 2, 2)
-        plt.plot(history['loss'])
+        plt.plot(history['loss'], color='red')
         plt.title(f'Model Loss - Round {round_num}')
         plt.ylabel('Loss')
         plt.xlabel('Epoch')
