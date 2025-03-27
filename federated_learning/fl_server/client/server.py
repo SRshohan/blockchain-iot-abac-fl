@@ -1,7 +1,5 @@
 import flwr as fl
-import tensorflow as tf
 import numpy as np
-import matplotlib.pyplot as plt
 import os
 import json
 from datetime import datetime
@@ -123,9 +121,6 @@ class ServerMetricsTracker:
             "mean_loss": round_metrics["aggregated_metrics"].get("mean_loss"),
             "mean_accuracy": round_metrics["aggregated_metrics"].get("mean_accuracy")
         })
-        
-        # Generate and save plots
-        self._generate_plots()
     
     def log_round_end(self, rnd: int):
         """Log the end of a federated round"""
@@ -141,78 +136,6 @@ class ServerMetricsTracker:
         # Save metrics after each round
         self._save_metrics()
     
-    def _generate_plots(self):
-        """Generate and save plots from collected metrics"""
-        # Extract data for plotting
-        rounds = [m["round"] for m in self.metrics["global_metrics"]]
-        losses = [m["mean_loss"] for m in self.metrics["global_metrics"] if m["mean_loss"] is not None]
-        accuracies = [m["mean_accuracy"] for m in self.metrics["global_metrics"] if m["mean_accuracy"] is not None]
-        
-        if not rounds or not losses or not accuracies:
-            return  # Not enough data yet
-        
-        # Create plot
-        plt.figure(figsize=(12, 5))
-        
-        # Plot loss
-        plt.subplot(1, 2, 1)
-        plt.plot(rounds[:len(losses)], losses, 'o-', color='blue')
-        plt.title('Global Model Loss')
-        plt.xlabel('Round')
-        plt.ylabel('Loss')
-        plt.grid(True)
-        
-        # Plot accuracy
-        plt.subplot(1, 2, 2)
-        plt.plot(rounds[:len(accuracies)], accuracies, 'o-')
-        plt.title('Global Model Accuracy')
-        plt.xlabel('Round')
-        plt.ylabel('Accuracy')
-        plt.grid(True)
-        
-        plt.tight_layout()
-        plt.savefig("server_metrics/global_metrics.png")
-        plt.close()
-        
-        # If we have client-specific data, plot per-client metrics
-        if self.metrics["clients"]:
-            self._plot_client_comparison()
-    
-    def _plot_client_comparison(self):
-        """Plot comparison between clients"""
-        plt.figure(figsize=(10, 6))
-        
-        # Collect data per client
-        client_data = {}
-        for client_id, history in self.metrics["clients"].items():
-            rounds = []
-            accuracies = []
-            
-            for entry in history:
-                if "evaluation" in entry and "metrics" in entry["evaluation"]:
-                    rounds.append(entry["round"])
-                    accuracies.append(entry["evaluation"]["metrics"].get("accuracy", 0.0))
-            
-            if rounds and accuracies:
-                client_data[client_id] = {
-                    "rounds": rounds,
-                    "accuracies": accuracies
-                }
-        
-        # Plot client accuracies
-        for client_id, data in client_data.items():
-            plt.plot(data["rounds"], data["accuracies"], 'o-', label=f'Client {client_id}')
-        
-        plt.title('Client Evaluation Accuracy')
-        plt.xlabel('Round')
-        plt.ylabel('Accuracy')
-        plt.legend()
-        plt.grid(True)
-        
-        plt.tight_layout()
-        plt.savefig("server_metrics/client_comparison.png")
-        plt.close()
-    
     def _save_metrics(self):
         """Save metrics to a JSON file"""
         filename = "server_metrics/server_metrics.json"
@@ -222,30 +145,13 @@ class ServerMetricsTracker:
 # Create metrics tracker
 server_metrics = ServerMetricsTracker()
 
-# Define callbacks for the strategy
-def fit_config(server_round: int):
-    """Return training configuration dict for each round."""
-    config = {
-        "batch_size": 32,
-        "epochs": 5,
-        "round": server_round,
-    }
-    return config
-
-def evaluate_config(server_round: int):
-    """Return evaluation configuration dict for each round."""
-    return {"round": server_round}
-
 # Function to get client IDs
 def get_client_id(client_proxy: ClientProxy) -> str:
     """Extract client ID from client proxy."""
     return f"client_{client_proxy.cid}"
 
-# Custom strategy with metrics logging
+# Custom strategy with callbacks for metrics tracking
 class MetricsStrategy(fl.server.strategy.FedAvg):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-    
     def aggregate_fit(
         self,
         server_round: int,
@@ -288,15 +194,42 @@ class MetricsStrategy(fl.server.strategy.FedAvg):
         
         return loss, metrics
 
-# Create an instance of the custom strategy with initial parameters
+# Define fit configuration to send to clients
+def fit_config(server_round: int):
+    """Return training configuration dict for each round."""
+    config = {
+        "batch_size": 32,
+        "epochs": 5,
+        "round": server_round,
+    }
+    return config
+
+def evaluate_config(server_round: int):
+    """Return evaluation configuration dict for each round."""
+    return {"round": server_round}
+
+# Create an instance of the custom strategy
 strategy = MetricsStrategy(
     min_available_clients=2,
     min_fit_clients=2,
+    min_evaluate_clients=2,
+    on_fit_config_fn=fit_config,
+    on_evaluate_config_fn=evaluate_config
 )
 
 # Start the server
-fl.server.start_server(
-    server_address="127.0.0.1:8080",
-    config=fl.server.ServerConfig(num_rounds=3),
-    strategy=strategy
-)
+if __name__ == "__main__":
+    try:
+        # Start the server
+        fl.server.start_server(
+            server_address="127.0.0.1:8080",
+            config=fl.server.ServerConfig(num_rounds=3),
+            strategy=strategy
+        )
+        
+    except KeyboardInterrupt:
+        print("\nServer stopped by user")
+    except Exception as e:
+        print(f"\nError: {e}")
+    finally:
+        print("\nServer shutdown complete")
