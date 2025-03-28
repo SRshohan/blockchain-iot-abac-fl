@@ -184,6 +184,7 @@ class MetricsStrategy(fl.server.strategy.FedAvg):
         
         # Log evaluation metrics
         eval_results = [eval_res for _, eval_res in results]
+        print(eval_results)
         server_metrics.log_evaluate_metrics(server_round, eval_results, client_ids)
         
         # Aggregate loss and metrics using the parent method
@@ -199,7 +200,7 @@ def fit_config(server_round: int):
     """Return training configuration dict for each round."""
     config = {
         "batch_size": 32,
-        "epochs": 5,
+        "epochs": 15,
         "round": server_round,
     }
     return config
@@ -211,10 +212,6 @@ def evaluate_config(server_round: int):
 # Create an instance of the custom strategy
 strategy = MetricsStrategy(
     min_available_clients=2,
-    min_fit_clients=2,
-    min_evaluate_clients=2,
-    on_fit_config_fn=fit_config,
-    on_evaluate_config_fn=evaluate_config
 )
 
 # Start the server
@@ -223,7 +220,7 @@ if __name__ == "__main__":
         # Start the server
         fl.server.start_server(
             server_address="127.0.0.1:8080",
-            config=fl.server.ServerConfig(num_rounds=3),
+            config=fl.server.ServerConfig(num_rounds=1),
             strategy=strategy
         )
         
