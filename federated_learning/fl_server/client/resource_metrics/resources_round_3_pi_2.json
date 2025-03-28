@@ -1,0 +1,2445 @@
+{
+  "client_id": "pi_2",
+  "round": 3,
+  "system_info": {
+    "platform": "macOS-15.2-arm64-arm-64bit",
+    "processor": "arm",
+    "python_version": "3.11.6",
+    "ram_gb": 18.0,
+    "tf_version": "2.17.1",
+    "cpu_count": 11
+  },
+  "round_duration_seconds": 243.9425070285797,
+  "resource_data": [
+    {
+      "timestamp": 0.0004169940948486328,
+      "round": 3,
+      "cpu_percent": 0.0,
+      "memory_percent": 82.1,
+      "memory_used_mb": 6675.046875,
+      "disk_percent": 6.7,
+      "network_sent_mb": 660.1982421875,
+      "network_recv_mb": 4351.0302734375
+    },
+    {
+      "timestamp": 1.0059709548950195,
+      "round": 3,
+      "cpu_percent": 60.3,
+      "memory_percent": 82.4,
+      "memory_used_mb": 6765.15625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 660.24609375,
+      "network_recv_mb": 4351.0869140625
+    },
+    {
+      "timestamp": 2.0104498863220215,
+      "round": 3,
+      "cpu_percent": 52.2,
+      "memory_percent": 85.0,
+      "memory_used_mb": 6296.21875,
+      "disk_percent": 6.7,
+      "network_sent_mb": 660.2626953125,
+      "network_recv_mb": 4351.1201171875
+    },
+    {
+      "timestamp": 3.0137269496917725,
+      "round": 3,
+      "cpu_percent": 70.7,
+      "memory_percent": 79.9,
+      "memory_used_mb": 5672.703125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 660.29296875,
+      "network_recv_mb": 4351.1513671875
+    },
+    {
+      "timestamp": 4.016963720321655,
+      "round": 3,
+      "cpu_percent": 74.0,
+      "memory_percent": 80.8,
+      "memory_used_mb": 5959.03125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 660.3095703125,
+      "network_recv_mb": 4351.1728515625
+    },
+    {
+      "timestamp": 5.019297122955322,
+      "round": 3,
+      "cpu_percent": 71.6,
+      "memory_percent": 81.4,
+      "memory_used_mb": 6170.265625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 660.32421875,
+      "network_recv_mb": 4351.1923828125
+    },
+    {
+      "timestamp": 6.022063970565796,
+      "round": 3,
+      "cpu_percent": 71.8,
+      "memory_percent": 82.1,
+      "memory_used_mb": 6353.9375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 660.33984375,
+      "network_recv_mb": 4351.2109375
+    },
+    {
+      "timestamp": 7.027252912521362,
+      "round": 3,
+      "cpu_percent": 72.8,
+      "memory_percent": 81.8,
+      "memory_used_mb": 6486.078125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 660.3583984375,
+      "network_recv_mb": 4351.234375
+    },
+    {
+      "timestamp": 8.029948949813843,
+      "round": 3,
+      "cpu_percent": 72.3,
+      "memory_percent": 80.7,
+      "memory_used_mb": 6609.21875,
+      "disk_percent": 6.7,
+      "network_sent_mb": 660.3720703125,
+      "network_recv_mb": 4351.25390625
+    },
+    {
+      "timestamp": 9.035322904586792,
+      "round": 3,
+      "cpu_percent": 74.1,
+      "memory_percent": 81.3,
+      "memory_used_mb": 6820.171875,
+      "disk_percent": 6.7,
+      "network_sent_mb": 660.3876953125,
+      "network_recv_mb": 4351.2744140625
+    },
+    {
+      "timestamp": 10.040603876113892,
+      "round": 3,
+      "cpu_percent": 77.3,
+      "memory_percent": 80.8,
+      "memory_used_mb": 6903.453125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 660.6220703125,
+      "network_recv_mb": 4351.380859375
+    },
+    {
+      "timestamp": 11.041677713394165,
+      "round": 3,
+      "cpu_percent": 75.6,
+      "memory_percent": 80.7,
+      "memory_used_mb": 6962.203125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 660.6376953125,
+      "network_recv_mb": 4351.400390625
+    },
+    {
+      "timestamp": 12.047060012817383,
+      "round": 3,
+      "cpu_percent": 72.4,
+      "memory_percent": 80.5,
+      "memory_used_mb": 7011.015625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 660.6572265625,
+      "network_recv_mb": 4351.4306640625
+    },
+    {
+      "timestamp": 13.052350997924805,
+      "round": 3,
+      "cpu_percent": 75.3,
+      "memory_percent": 81.7,
+      "memory_used_mb": 6825.171875,
+      "disk_percent": 6.7,
+      "network_sent_mb": 660.67578125,
+      "network_recv_mb": 4351.455078125
+    },
+    {
+      "timestamp": 14.054844856262207,
+      "round": 3,
+      "cpu_percent": 73.5,
+      "memory_percent": 81.7,
+      "memory_used_mb": 6832.484375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 660.7060546875,
+      "network_recv_mb": 4351.4951171875
+    },
+    {
+      "timestamp": 15.060179948806763,
+      "round": 3,
+      "cpu_percent": 74.3,
+      "memory_percent": 81.9,
+      "memory_used_mb": 6787.515625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 660.7197265625,
+      "network_recv_mb": 4351.5166015625
+    },
+    {
+      "timestamp": 16.065064907073975,
+      "round": 3,
+      "cpu_percent": 78.3,
+      "memory_percent": 82.2,
+      "memory_used_mb": 6569.734375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 660.787109375,
+      "network_recv_mb": 4351.58984375
+    },
+    {
+      "timestamp": 17.07027006149292,
+      "round": 3,
+      "cpu_percent": 72.9,
+      "memory_percent": 83.0,
+      "memory_used_mb": 6561.5625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 660.8037109375,
+      "network_recv_mb": 4351.61328125
+    },
+    {
+      "timestamp": 18.072746992111206,
+      "round": 3,
+      "cpu_percent": 72.7,
+      "memory_percent": 82.2,
+      "memory_used_mb": 6485.203125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 660.822265625,
+      "network_recv_mb": 4351.634765625
+    },
+    {
+      "timestamp": 19.07691502571106,
+      "round": 3,
+      "cpu_percent": 74.2,
+      "memory_percent": 83.1,
+      "memory_used_mb": 6554.140625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 660.8369140625,
+      "network_recv_mb": 4351.654296875
+    },
+    {
+      "timestamp": 20.08013081550598,
+      "round": 3,
+      "cpu_percent": 74.8,
+      "memory_percent": 84.3,
+      "memory_used_mb": 6341.75,
+      "disk_percent": 6.7,
+      "network_sent_mb": 660.853515625,
+      "network_recv_mb": 4351.6796875
+    },
+    {
+      "timestamp": 21.0818088054657,
+      "round": 3,
+      "cpu_percent": 71.8,
+      "memory_percent": 83.5,
+      "memory_used_mb": 6251.59375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 660.87109375,
+      "network_recv_mb": 4351.7021484375
+    },
+    {
+      "timestamp": 22.083419799804688,
+      "round": 3,
+      "cpu_percent": 73.2,
+      "memory_percent": 84.2,
+      "memory_used_mb": 6339.09375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 660.8857421875,
+      "network_recv_mb": 4351.7216796875
+    },
+    {
+      "timestamp": 23.08868980407715,
+      "round": 3,
+      "cpu_percent": 72.1,
+      "memory_percent": 84.3,
+      "memory_used_mb": 6324.3125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 660.9013671875,
+      "network_recv_mb": 4351.7451171875
+    },
+    {
+      "timestamp": 24.093917846679688,
+      "round": 3,
+      "cpu_percent": 73.8,
+      "memory_percent": 84.0,
+      "memory_used_mb": 6370.3125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 660.9169921875,
+      "network_recv_mb": 4351.7666015625
+    },
+    {
+      "timestamp": 25.09781789779663,
+      "round": 3,
+      "cpu_percent": 72.7,
+      "memory_percent": 84.0,
+      "memory_used_mb": 6361.265625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 660.943359375,
+      "network_recv_mb": 4351.794921875
+    },
+    {
+      "timestamp": 26.09818387031555,
+      "round": 3,
+      "cpu_percent": 74.0,
+      "memory_percent": 83.9,
+      "memory_used_mb": 6404.546875,
+      "disk_percent": 6.7,
+      "network_sent_mb": 660.9609375,
+      "network_recv_mb": 4351.8154296875
+    },
+    {
+      "timestamp": 27.1035897731781,
+      "round": 3,
+      "cpu_percent": 72.9,
+      "memory_percent": 83.6,
+      "memory_used_mb": 6399.125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 660.978515625,
+      "network_recv_mb": 4351.8359375
+    },
+    {
+      "timestamp": 28.105519771575928,
+      "round": 3,
+      "cpu_percent": 74.3,
+      "memory_percent": 82.8,
+      "memory_used_mb": 6413.234375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 660.9931640625,
+      "network_recv_mb": 4351.8564453125
+    },
+    {
+      "timestamp": 29.109143018722534,
+      "round": 3,
+      "cpu_percent": 74.3,
+      "memory_percent": 83.5,
+      "memory_used_mb": 6429.015625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 661.013671875,
+      "network_recv_mb": 4351.8857421875
+    },
+    {
+      "timestamp": 30.1143639087677,
+      "round": 3,
+      "cpu_percent": 72.3,
+      "memory_percent": 83.2,
+      "memory_used_mb": 6293.9375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 661.029296875,
+      "network_recv_mb": 4351.904296875
+    },
+    {
+      "timestamp": 31.114693880081177,
+      "round": 3,
+      "cpu_percent": 71.2,
+      "memory_percent": 83.0,
+      "memory_used_mb": 6301.53125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 661.044921875,
+      "network_recv_mb": 4351.923828125
+    },
+    {
+      "timestamp": 32.11785078048706,
+      "round": 3,
+      "cpu_percent": 72.1,
+      "memory_percent": 83.6,
+      "memory_used_mb": 6424.953125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 661.0595703125,
+      "network_recv_mb": 4351.9443359375
+    },
+    {
+      "timestamp": 33.12267184257507,
+      "round": 3,
+      "cpu_percent": 72.9,
+      "memory_percent": 83.1,
+      "memory_used_mb": 6330.59375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 661.07421875,
+      "network_recv_mb": 4351.9658203125
+    },
+    {
+      "timestamp": 34.12806987762451,
+      "round": 3,
+      "cpu_percent": 74.4,
+      "memory_percent": 83.5,
+      "memory_used_mb": 6435.375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 661.0927734375,
+      "network_recv_mb": 4351.98828125
+    },
+    {
+      "timestamp": 35.133387088775635,
+      "round": 3,
+      "cpu_percent": 73.3,
+      "memory_percent": 83.3,
+      "memory_used_mb": 6320.65625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 661.107421875,
+      "network_recv_mb": 4352.0078125
+    },
+    {
+      "timestamp": 36.13862490653992,
+      "round": 3,
+      "cpu_percent": 75.2,
+      "memory_percent": 83.9,
+      "memory_used_mb": 6401.171875,
+      "disk_percent": 6.7,
+      "network_sent_mb": 661.1259765625,
+      "network_recv_mb": 4352.029296875
+    },
+    {
+      "timestamp": 37.14323091506958,
+      "round": 3,
+      "cpu_percent": 78.3,
+      "memory_percent": 84.1,
+      "memory_used_mb": 6371.515625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 661.142578125,
+      "network_recv_mb": 4352.052734375
+    },
+    {
+      "timestamp": 38.14607286453247,
+      "round": 3,
+      "cpu_percent": 74.9,
+      "memory_percent": 84.3,
+      "memory_used_mb": 6482.078125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 661.16015625,
+      "network_recv_mb": 4352.07421875
+    },
+    {
+      "timestamp": 39.148271799087524,
+      "round": 3,
+      "cpu_percent": 74.4,
+      "memory_percent": 83.1,
+      "memory_used_mb": 6356.96875,
+      "disk_percent": 6.7,
+      "network_sent_mb": 661.17578125,
+      "network_recv_mb": 4352.0927734375
+    },
+    {
+      "timestamp": 40.150453090667725,
+      "round": 3,
+      "cpu_percent": 72.7,
+      "memory_percent": 82.5,
+      "memory_used_mb": 6318.703125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 661.19140625,
+      "network_recv_mb": 4352.1123046875
+    },
+    {
+      "timestamp": 41.150975942611694,
+      "round": 3,
+      "cpu_percent": 72.8,
+      "memory_percent": 83.3,
+      "memory_used_mb": 6460.90625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 661.2060546875,
+      "network_recv_mb": 4352.1298828125
+    },
+    {
+      "timestamp": 42.15619778633118,
+      "round": 3,
+      "cpu_percent": 74.4,
+      "memory_percent": 82.4,
+      "memory_used_mb": 6325.234375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 661.2265625,
+      "network_recv_mb": 4352.15234375
+    },
+    {
+      "timestamp": 43.160106897354126,
+      "round": 3,
+      "cpu_percent": 73.7,
+      "memory_percent": 82.4,
+      "memory_used_mb": 6353.828125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 661.24609375,
+      "network_recv_mb": 4352.1748046875
+    },
+    {
+      "timestamp": 44.1649169921875,
+      "round": 3,
+      "cpu_percent": 73.7,
+      "memory_percent": 83.0,
+      "memory_used_mb": 6521.78125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 661.263671875,
+      "network_recv_mb": 4352.1923828125
+    },
+    {
+      "timestamp": 45.17015290260315,
+      "round": 3,
+      "cpu_percent": 72.9,
+      "memory_percent": 81.9,
+      "memory_used_mb": 6424.5625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 661.28515625,
+      "network_recv_mb": 4352.2177734375
+    },
+    {
+      "timestamp": 46.171797037124634,
+      "round": 3,
+      "cpu_percent": 71.1,
+      "memory_percent": 82.6,
+      "memory_used_mb": 6614.625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 661.3017578125,
+      "network_recv_mb": 4352.2373046875
+    },
+    {
+      "timestamp": 47.17750597000122,
+      "round": 3,
+      "cpu_percent": 73.1,
+      "memory_percent": 82.0,
+      "memory_used_mb": 6523.140625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 661.31640625,
+      "network_recv_mb": 4352.255859375
+    },
+    {
+      "timestamp": 48.18198204040527,
+      "round": 3,
+      "cpu_percent": 72.3,
+      "memory_percent": 82.3,
+      "memory_used_mb": 6592.09375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 661.3310546875,
+      "network_recv_mb": 4352.2744140625
+    },
+    {
+      "timestamp": 49.18422985076904,
+      "round": 3,
+      "cpu_percent": 71.0,
+      "memory_percent": 81.8,
+      "memory_used_mb": 6512.46875,
+      "disk_percent": 6.7,
+      "network_sent_mb": 661.34765625,
+      "network_recv_mb": 4352.294921875
+    },
+    {
+      "timestamp": 50.18947100639343,
+      "round": 3,
+      "cpu_percent": 71.3,
+      "memory_percent": 82.3,
+      "memory_used_mb": 6637.3125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 661.3642578125,
+      "network_recv_mb": 4352.314453125
+    },
+    {
+      "timestamp": 51.19471216201782,
+      "round": 3,
+      "cpu_percent": 72.6,
+      "memory_percent": 81.7,
+      "memory_used_mb": 6515.875,
+      "disk_percent": 6.7,
+      "network_sent_mb": 661.384765625,
+      "network_recv_mb": 4352.3369140625
+    },
+    {
+      "timestamp": 52.19995594024658,
+      "round": 3,
+      "cpu_percent": 72.1,
+      "memory_percent": 82.4,
+      "memory_used_mb": 6645.28125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 661.40234375,
+      "network_recv_mb": 4352.357421875
+    },
+    {
+      "timestamp": 53.20524072647095,
+      "round": 3,
+      "cpu_percent": 71.8,
+      "memory_percent": 81.7,
+      "memory_used_mb": 6537.140625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 661.4169921875,
+      "network_recv_mb": 4352.380859375
+    },
+    {
+      "timestamp": 54.21041679382324,
+      "round": 3,
+      "cpu_percent": 73.3,
+      "memory_percent": 82.2,
+      "memory_used_mb": 6634.9375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 661.431640625,
+      "network_recv_mb": 4352.4033203125
+    },
+    {
+      "timestamp": 55.21578598022461,
+      "round": 3,
+      "cpu_percent": 74.1,
+      "memory_percent": 81.5,
+      "memory_used_mb": 6575.453125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 661.462890625,
+      "network_recv_mb": 4352.44140625
+    },
+    {
+      "timestamp": 56.22114586830139,
+      "round": 3,
+      "cpu_percent": 72.6,
+      "memory_percent": 82.1,
+      "memory_used_mb": 6661.5625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 661.4970703125,
+      "network_recv_mb": 4352.546875
+    },
+    {
+      "timestamp": 57.22233700752258,
+      "round": 3,
+      "cpu_percent": 71.1,
+      "memory_percent": 81.5,
+      "memory_used_mb": 6565.265625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 661.5390625,
+      "network_recv_mb": 4352.603515625
+    },
+    {
+      "timestamp": 58.22765493392944,
+      "round": 3,
+      "cpu_percent": 71.7,
+      "memory_percent": 81.0,
+      "memory_used_mb": 6483.984375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 661.55859375,
+      "network_recv_mb": 4352.6943359375
+    },
+    {
+      "timestamp": 59.23068594932556,
+      "round": 3,
+      "cpu_percent": 75.1,
+      "memory_percent": 82.9,
+      "memory_used_mb": 6554.375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 661.58203125,
+      "network_recv_mb": 4352.724609375
+    },
+    {
+      "timestamp": 60.23414206504822,
+      "round": 3,
+      "cpu_percent": 75.2,
+      "memory_percent": 82.0,
+      "memory_used_mb": 6428.75,
+      "disk_percent": 6.7,
+      "network_sent_mb": 661.5966796875,
+      "network_recv_mb": 4352.744140625
+    },
+    {
+      "timestamp": 61.23446083068848,
+      "round": 3,
+      "cpu_percent": 74.9,
+      "memory_percent": 83.1,
+      "memory_used_mb": 6509.234375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 661.6123046875,
+      "network_recv_mb": 4352.7646484375
+    },
+    {
+      "timestamp": 62.23983907699585,
+      "round": 3,
+      "cpu_percent": 73.3,
+      "memory_percent": 82.6,
+      "memory_used_mb": 6401.109375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 661.62890625,
+      "network_recv_mb": 4352.78515625
+    },
+    {
+      "timestamp": 63.243512868881226,
+      "round": 3,
+      "cpu_percent": 85.1,
+      "memory_percent": 83.4,
+      "memory_used_mb": 6366.5625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 661.689453125,
+      "network_recv_mb": 4352.8798828125
+    },
+    {
+      "timestamp": 64.2442398071289,
+      "round": 3,
+      "cpu_percent": 76.6,
+      "memory_percent": 83.7,
+      "memory_used_mb": 6419.34375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 661.7060546875,
+      "network_recv_mb": 4352.9013671875
+    },
+    {
+      "timestamp": 65.24951505661011,
+      "round": 3,
+      "cpu_percent": 77.5,
+      "memory_percent": 83.4,
+      "memory_used_mb": 6362.828125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 661.759765625,
+      "network_recv_mb": 4352.958984375
+    },
+    {
+      "timestamp": 66.2549159526825,
+      "round": 3,
+      "cpu_percent": 77.8,
+      "memory_percent": 83.8,
+      "memory_used_mb": 6433.828125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 661.791015625,
+      "network_recv_mb": 4353.06640625
+    },
+    {
+      "timestamp": 67.25688195228577,
+      "round": 3,
+      "cpu_percent": 74.4,
+      "memory_percent": 83.2,
+      "memory_used_mb": 6354.140625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 661.8115234375,
+      "network_recv_mb": 4353.08984375
+    },
+    {
+      "timestamp": 68.26144886016846,
+      "round": 3,
+      "cpu_percent": 74.8,
+      "memory_percent": 82.3,
+      "memory_used_mb": 6306.921875,
+      "disk_percent": 6.7,
+      "network_sent_mb": 661.85546875,
+      "network_recv_mb": 4353.1611328125
+    },
+    {
+      "timestamp": 69.26299810409546,
+      "round": 3,
+      "cpu_percent": 77.3,
+      "memory_percent": 83.1,
+      "memory_used_mb": 6466.625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 661.8984375,
+      "network_recv_mb": 4353.185546875
+    },
+    {
+      "timestamp": 70.26359701156616,
+      "round": 3,
+      "cpu_percent": 78.9,
+      "memory_percent": 82.4,
+      "memory_used_mb": 6380.734375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 661.9140625,
+      "network_recv_mb": 4353.2060546875
+    },
+    {
+      "timestamp": 71.26517796516418,
+      "round": 3,
+      "cpu_percent": 71.2,
+      "memory_percent": 82.0,
+      "memory_used_mb": 6368.734375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 661.931640625,
+      "network_recv_mb": 4353.232421875
+    },
+    {
+      "timestamp": 72.26991391181946,
+      "round": 3,
+      "cpu_percent": 74.4,
+      "memory_percent": 82.8,
+      "memory_used_mb": 6610.5625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 661.951171875,
+      "network_recv_mb": 4353.2958984375
+    },
+    {
+      "timestamp": 73.27294182777405,
+      "round": 3,
+      "cpu_percent": 72.0,
+      "memory_percent": 82.1,
+      "memory_used_mb": 6545.640625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 661.9658203125,
+      "network_recv_mb": 4353.314453125
+    },
+    {
+      "timestamp": 74.27785396575928,
+      "round": 3,
+      "cpu_percent": 77.5,
+      "memory_percent": 82.9,
+      "memory_used_mb": 6664.765625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 661.982421875,
+      "network_recv_mb": 4353.3427734375
+    },
+    {
+      "timestamp": 75.28024077415466,
+      "round": 3,
+      "cpu_percent": 75.5,
+      "memory_percent": 82.2,
+      "memory_used_mb": 6570.3125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 662.052734375,
+      "network_recv_mb": 4353.419921875
+    },
+    {
+      "timestamp": 76.28148412704468,
+      "round": 3,
+      "cpu_percent": 82.7,
+      "memory_percent": 83.2,
+      "memory_used_mb": 6506.359375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 662.134765625,
+      "network_recv_mb": 4353.4970703125
+    },
+    {
+      "timestamp": 77.28474807739258,
+      "round": 3,
+      "cpu_percent": 73.7,
+      "memory_percent": 82.6,
+      "memory_used_mb": 6377.890625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 662.1533203125,
+      "network_recv_mb": 4353.5234375
+    },
+    {
+      "timestamp": 78.28505182266235,
+      "round": 3,
+      "cpu_percent": 79.5,
+      "memory_percent": 82.6,
+      "memory_used_mb": 6499.171875,
+      "disk_percent": 6.7,
+      "network_sent_mb": 662.1728515625,
+      "network_recv_mb": 4353.5478515625
+    },
+    {
+      "timestamp": 79.28533792495728,
+      "round": 3,
+      "cpu_percent": 84.0,
+      "memory_percent": 84.1,
+      "memory_used_mb": 6386.375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 662.23046875,
+      "network_recv_mb": 4353.619140625
+    },
+    {
+      "timestamp": 80.28853607177734,
+      "round": 3,
+      "cpu_percent": 75.1,
+      "memory_percent": 83.3,
+      "memory_used_mb": 6307.484375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 662.255859375,
+      "network_recv_mb": 4353.64453125
+    },
+    {
+      "timestamp": 81.29152393341064,
+      "round": 3,
+      "cpu_percent": 75.5,
+      "memory_percent": 83.0,
+      "memory_used_mb": 6368.609375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 662.271484375,
+      "network_recv_mb": 4353.6669921875
+    },
+    {
+      "timestamp": 82.29693698883057,
+      "round": 3,
+      "cpu_percent": 75.0,
+      "memory_percent": 83.7,
+      "memory_used_mb": 6426.578125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 662.2900390625,
+      "network_recv_mb": 4353.6884765625
+    },
+    {
+      "timestamp": 83.30147290229797,
+      "round": 3,
+      "cpu_percent": 74.4,
+      "memory_percent": 83.3,
+      "memory_used_mb": 6298.5,
+      "disk_percent": 6.7,
+      "network_sent_mb": 662.3125,
+      "network_recv_mb": 4353.71484375
+    },
+    {
+      "timestamp": 84.3053228855133,
+      "round": 3,
+      "cpu_percent": 72.9,
+      "memory_percent": 83.5,
+      "memory_used_mb": 6373.046875,
+      "disk_percent": 6.7,
+      "network_sent_mb": 662.328125,
+      "network_recv_mb": 4353.7353515625
+    },
+    {
+      "timestamp": 85.30855894088745,
+      "round": 3,
+      "cpu_percent": 72.9,
+      "memory_percent": 82.7,
+      "memory_used_mb": 6303.8125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 662.3466796875,
+      "network_recv_mb": 4353.7568359375
+    },
+    {
+      "timestamp": 86.31375217437744,
+      "round": 3,
+      "cpu_percent": 72.9,
+      "memory_percent": 83.2,
+      "memory_used_mb": 6432.359375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 662.365234375,
+      "network_recv_mb": 4353.7802734375
+    },
+    {
+      "timestamp": 87.31874799728394,
+      "round": 3,
+      "cpu_percent": 73.1,
+      "memory_percent": 82.4,
+      "memory_used_mb": 6363.375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 662.3837890625,
+      "network_recv_mb": 4353.8037109375
+    },
+    {
+      "timestamp": 88.32361602783203,
+      "round": 3,
+      "cpu_percent": 77.3,
+      "memory_percent": 83.6,
+      "memory_used_mb": 6368.640625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 662.400390625,
+      "network_recv_mb": 4353.826171875
+    },
+    {
+      "timestamp": 89.32539486885071,
+      "round": 3,
+      "cpu_percent": 73.2,
+      "memory_percent": 81.6,
+      "memory_used_mb": 6226.328125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 662.4150390625,
+      "network_recv_mb": 4353.8447265625
+    },
+    {
+      "timestamp": 90.33072996139526,
+      "round": 3,
+      "cpu_percent": 73.5,
+      "memory_percent": 81.5,
+      "memory_used_mb": 6263.4375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 662.4306640625,
+      "network_recv_mb": 4353.8642578125
+    },
+    {
+      "timestamp": 91.3318178653717,
+      "round": 3,
+      "cpu_percent": 76.8,
+      "memory_percent": 82.5,
+      "memory_used_mb": 6589.265625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 662.4453125,
+      "network_recv_mb": 4353.8837890625
+    },
+    {
+      "timestamp": 92.33547496795654,
+      "round": 3,
+      "cpu_percent": 73.1,
+      "memory_percent": 82.0,
+      "memory_used_mb": 6561.0,
+      "disk_percent": 6.7,
+      "network_sent_mb": 662.4609375,
+      "network_recv_mb": 4353.9033203125
+    },
+    {
+      "timestamp": 93.34073185920715,
+      "round": 3,
+      "cpu_percent": 72.1,
+      "memory_percent": 81.6,
+      "memory_used_mb": 6588.828125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 662.4765625,
+      "network_recv_mb": 4353.9248046875
+    },
+    {
+      "timestamp": 94.34292197227478,
+      "round": 3,
+      "cpu_percent": 73.1,
+      "memory_percent": 82.1,
+      "memory_used_mb": 6670.5625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 662.4951171875,
+      "network_recv_mb": 4353.9453125
+    },
+    {
+      "timestamp": 95.34733295440674,
+      "round": 3,
+      "cpu_percent": 73.2,
+      "memory_percent": 81.5,
+      "memory_used_mb": 6566.984375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 662.509765625,
+      "network_recv_mb": 4353.966796875
+    },
+    {
+      "timestamp": 96.35025477409363,
+      "round": 3,
+      "cpu_percent": 73.1,
+      "memory_percent": 82.0,
+      "memory_used_mb": 6671.921875,
+      "disk_percent": 6.7,
+      "network_sent_mb": 662.5283203125,
+      "network_recv_mb": 4353.9873046875
+    },
+    {
+      "timestamp": 97.35564804077148,
+      "round": 3,
+      "cpu_percent": 71.3,
+      "memory_percent": 81.5,
+      "memory_used_mb": 6634.1875,
+      "disk_percent": 6.7,
+      "network_sent_mb": 662.55859375,
+      "network_recv_mb": 4354.013671875
+    },
+    {
+      "timestamp": 98.35659289360046,
+      "round": 3,
+      "cpu_percent": 70.4,
+      "memory_percent": 81.2,
+      "memory_used_mb": 6590.46875,
+      "disk_percent": 6.7,
+      "network_sent_mb": 662.5810546875,
+      "network_recv_mb": 4354.0361328125
+    },
+    {
+      "timestamp": 99.36162304878235,
+      "round": 3,
+      "cpu_percent": 72.8,
+      "memory_percent": 81.8,
+      "memory_used_mb": 6731.65625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 662.5986328125,
+      "network_recv_mb": 4354.0556640625
+    },
+    {
+      "timestamp": 100.3638858795166,
+      "round": 3,
+      "cpu_percent": 72.5,
+      "memory_percent": 81.2,
+      "memory_used_mb": 6631.75,
+      "disk_percent": 6.7,
+      "network_sent_mb": 662.6142578125,
+      "network_recv_mb": 4354.076171875
+    },
+    {
+      "timestamp": 101.36591005325317,
+      "round": 3,
+      "cpu_percent": 73.2,
+      "memory_percent": 81.1,
+      "memory_used_mb": 6611.015625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 662.630859375,
+      "network_recv_mb": 4354.095703125
+    },
+    {
+      "timestamp": 102.37118005752563,
+      "round": 3,
+      "cpu_percent": 72.7,
+      "memory_percent": 81.9,
+      "memory_used_mb": 6706.28125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 662.6474609375,
+      "network_recv_mb": 4354.1142578125
+    },
+    {
+      "timestamp": 103.37477898597717,
+      "round": 3,
+      "cpu_percent": 72.8,
+      "memory_percent": 81.4,
+      "memory_used_mb": 6615.0,
+      "disk_percent": 6.7,
+      "network_sent_mb": 662.6640625,
+      "network_recv_mb": 4354.13671875
+    },
+    {
+      "timestamp": 104.3802239894867,
+      "round": 3,
+      "cpu_percent": 75.2,
+      "memory_percent": 81.9,
+      "memory_used_mb": 6713.46875,
+      "disk_percent": 6.7,
+      "network_sent_mb": 662.69140625,
+      "network_recv_mb": 4354.162109375
+    },
+    {
+      "timestamp": 105.38549494743347,
+      "round": 3,
+      "cpu_percent": 71.7,
+      "memory_percent": 81.3,
+      "memory_used_mb": 6615.859375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 662.7060546875,
+      "network_recv_mb": 4354.1845703125
+    },
+    {
+      "timestamp": 106.39085698127747,
+      "round": 3,
+      "cpu_percent": 71.5,
+      "memory_percent": 81.5,
+      "memory_used_mb": 6763.609375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 662.72265625,
+      "network_recv_mb": 4354.2041015625
+    },
+    {
+      "timestamp": 107.39359283447266,
+      "round": 3,
+      "cpu_percent": 70.1,
+      "memory_percent": 80.9,
+      "memory_used_mb": 6661.421875,
+      "disk_percent": 6.7,
+      "network_sent_mb": 662.7509765625,
+      "network_recv_mb": 4354.23828125
+    },
+    {
+      "timestamp": 108.3990888595581,
+      "round": 3,
+      "cpu_percent": 81.4,
+      "memory_percent": 81.6,
+      "memory_used_mb": 6769.359375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 662.765625,
+      "network_recv_mb": 4354.2568359375
+    },
+    {
+      "timestamp": 109.40433597564697,
+      "round": 3,
+      "cpu_percent": 76.6,
+      "memory_percent": 81.5,
+      "memory_used_mb": 6666.203125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 662.779296875,
+      "network_recv_mb": 4354.2744140625
+    },
+    {
+      "timestamp": 110.40957808494568,
+      "round": 3,
+      "cpu_percent": 73.2,
+      "memory_percent": 81.7,
+      "memory_used_mb": 6754.03125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 662.802734375,
+      "network_recv_mb": 4354.3291015625
+    },
+    {
+      "timestamp": 111.41124105453491,
+      "round": 3,
+      "cpu_percent": 73.1,
+      "memory_percent": 80.9,
+      "memory_used_mb": 6646.828125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 662.8203125,
+      "network_recv_mb": 4354.3515625
+    },
+    {
+      "timestamp": 112.41654086112976,
+      "round": 3,
+      "cpu_percent": 72.0,
+      "memory_percent": 81.6,
+      "memory_used_mb": 6761.40625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 662.833984375,
+      "network_recv_mb": 4354.3701171875
+    },
+    {
+      "timestamp": 113.41826891899109,
+      "round": 3,
+      "cpu_percent": 73.8,
+      "memory_percent": 80.9,
+      "memory_used_mb": 6681.015625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 662.8505859375,
+      "network_recv_mb": 4354.3916015625
+    },
+    {
+      "timestamp": 114.42397809028625,
+      "round": 3,
+      "cpu_percent": 73.1,
+      "memory_percent": 81.4,
+      "memory_used_mb": 6795.015625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 662.869140625,
+      "network_recv_mb": 4354.412109375
+    },
+    {
+      "timestamp": 115.4250659942627,
+      "round": 3,
+      "cpu_percent": 72.6,
+      "memory_percent": 80.8,
+      "memory_used_mb": 6711.296875,
+      "disk_percent": 6.7,
+      "network_sent_mb": 662.8896484375,
+      "network_recv_mb": 4354.4345703125
+    },
+    {
+      "timestamp": 116.43030405044556,
+      "round": 3,
+      "cpu_percent": 72.7,
+      "memory_percent": 80.4,
+      "memory_used_mb": 6691.046875,
+      "disk_percent": 6.7,
+      "network_sent_mb": 662.923828125,
+      "network_recv_mb": 4354.4638671875
+    },
+    {
+      "timestamp": 117.43198585510254,
+      "round": 3,
+      "cpu_percent": 75.0,
+      "memory_percent": 81.2,
+      "memory_used_mb": 6782.203125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 662.939453125,
+      "network_recv_mb": 4354.4833984375
+    },
+    {
+      "timestamp": 118.43481183052063,
+      "round": 3,
+      "cpu_percent": 72.8,
+      "memory_percent": 80.7,
+      "memory_used_mb": 6697.890625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 662.9560546875,
+      "network_recv_mb": 4354.50390625
+    },
+    {
+      "timestamp": 119.43635892868042,
+      "round": 3,
+      "cpu_percent": 72.5,
+      "memory_percent": 80.3,
+      "memory_used_mb": 6680.671875,
+      "disk_percent": 6.7,
+      "network_sent_mb": 662.970703125,
+      "network_recv_mb": 4354.5234375
+    },
+    {
+      "timestamp": 120.44161105155945,
+      "round": 3,
+      "cpu_percent": 72.7,
+      "memory_percent": 81.2,
+      "memory_used_mb": 6816.453125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 662.986328125,
+      "network_recv_mb": 4354.54296875
+    },
+    {
+      "timestamp": 121.44294595718384,
+      "round": 3,
+      "cpu_percent": 73.5,
+      "memory_percent": 80.7,
+      "memory_used_mb": 6704.5,
+      "disk_percent": 6.7,
+      "network_sent_mb": 663.001953125,
+      "network_recv_mb": 4354.564453125
+    },
+    {
+      "timestamp": 122.44421982765198,
+      "round": 3,
+      "cpu_percent": 72.9,
+      "memory_percent": 81.2,
+      "memory_used_mb": 6810.84375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 663.015625,
+      "network_recv_mb": 4354.5859375
+    },
+    {
+      "timestamp": 123.44669008255005,
+      "round": 3,
+      "cpu_percent": 71.3,
+      "memory_percent": 80.6,
+      "memory_used_mb": 6733.703125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 663.0341796875,
+      "network_recv_mb": 4354.6142578125
+    },
+    {
+      "timestamp": 124.45170307159424,
+      "round": 3,
+      "cpu_percent": 72.8,
+      "memory_percent": 81.1,
+      "memory_used_mb": 6840.453125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 663.0517578125,
+      "network_recv_mb": 4354.640625
+    },
+    {
+      "timestamp": 125.45241808891296,
+      "round": 3,
+      "cpu_percent": 72.7,
+      "memory_percent": 80.6,
+      "memory_used_mb": 6746.0625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 663.0654296875,
+      "network_recv_mb": 4354.66015625
+    },
+    {
+      "timestamp": 126.45455002784729,
+      "round": 3,
+      "cpu_percent": 72.9,
+      "memory_percent": 81.1,
+      "memory_used_mb": 6834.921875,
+      "disk_percent": 6.7,
+      "network_sent_mb": 663.0810546875,
+      "network_recv_mb": 4354.6826171875
+    },
+    {
+      "timestamp": 127.45552206039429,
+      "round": 3,
+      "cpu_percent": 71.7,
+      "memory_percent": 80.8,
+      "memory_used_mb": 6752.71875,
+      "disk_percent": 6.7,
+      "network_sent_mb": 663.0966796875,
+      "network_recv_mb": 4354.703125
+    },
+    {
+      "timestamp": 128.4580819606781,
+      "round": 3,
+      "cpu_percent": 71.5,
+      "memory_percent": 81.0,
+      "memory_used_mb": 6818.6875,
+      "disk_percent": 6.7,
+      "network_sent_mb": 663.111328125,
+      "network_recv_mb": 4354.72265625
+    },
+    {
+      "timestamp": 129.4633719921112,
+      "round": 3,
+      "cpu_percent": 72.9,
+      "memory_percent": 80.4,
+      "memory_used_mb": 6736.015625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 663.1767578125,
+      "network_recv_mb": 4354.74609375
+    },
+    {
+      "timestamp": 130.46390199661255,
+      "round": 3,
+      "cpu_percent": 72.3,
+      "memory_percent": 80.1,
+      "memory_used_mb": 6687.421875,
+      "disk_percent": 6.7,
+      "network_sent_mb": 663.193359375,
+      "network_recv_mb": 4354.7666015625
+    },
+    {
+      "timestamp": 131.4676489830017,
+      "round": 3,
+      "cpu_percent": 72.9,
+      "memory_percent": 81.0,
+      "memory_used_mb": 6857.453125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 663.208984375,
+      "network_recv_mb": 4354.787109375
+    },
+    {
+      "timestamp": 132.53062295913696,
+      "round": 3,
+      "cpu_percent": 87.5,
+      "memory_percent": 82.4,
+      "memory_used_mb": 6537.890625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 663.2353515625,
+      "network_recv_mb": 4354.849609375
+    },
+    {
+      "timestamp": 133.53612899780273,
+      "round": 3,
+      "cpu_percent": 84.9,
+      "memory_percent": 83.0,
+      "memory_used_mb": 6225.140625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 663.267578125,
+      "network_recv_mb": 4354.9072265625
+    },
+    {
+      "timestamp": 134.54435086250305,
+      "round": 3,
+      "cpu_percent": 78.3,
+      "memory_percent": 83.9,
+      "memory_used_mb": 6345.8125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 663.3154296875,
+      "network_recv_mb": 4354.9814453125
+    },
+    {
+      "timestamp": 135.54490089416504,
+      "round": 3,
+      "cpu_percent": 80.3,
+      "memory_percent": 83.3,
+      "memory_used_mb": 6228.859375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 663.365234375,
+      "network_recv_mb": 4355.0576171875
+    },
+    {
+      "timestamp": 136.54744601249695,
+      "round": 3,
+      "cpu_percent": 79.4,
+      "memory_percent": 83.3,
+      "memory_used_mb": 6405.953125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 663.4609375,
+      "network_recv_mb": 4355.1767578125
+    },
+    {
+      "timestamp": 137.55102491378784,
+      "round": 3,
+      "cpu_percent": 76.0,
+      "memory_percent": 82.5,
+      "memory_used_mb": 6346.515625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 663.5048828125,
+      "network_recv_mb": 4355.2451171875
+    },
+    {
+      "timestamp": 138.55558609962463,
+      "round": 3,
+      "cpu_percent": 74.1,
+      "memory_percent": 82.0,
+      "memory_used_mb": 6363.171875,
+      "disk_percent": 6.7,
+      "network_sent_mb": 663.55859375,
+      "network_recv_mb": 4355.3310546875
+    },
+    {
+      "timestamp": 139.56081581115723,
+      "round": 3,
+      "cpu_percent": 76.1,
+      "memory_percent": 82.7,
+      "memory_used_mb": 6504.203125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 663.595703125,
+      "network_recv_mb": 4355.39453125
+    },
+    {
+      "timestamp": 140.56394290924072,
+      "round": 3,
+      "cpu_percent": 75.3,
+      "memory_percent": 82.2,
+      "memory_used_mb": 6481.375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 663.63671875,
+      "network_recv_mb": 4355.4609375
+    },
+    {
+      "timestamp": 141.5684459209442,
+      "round": 3,
+      "cpu_percent": 86.0,
+      "memory_percent": 82.7,
+      "memory_used_mb": 6452.171875,
+      "disk_percent": 6.7,
+      "network_sent_mb": 663.693359375,
+      "network_recv_mb": 4355.529296875
+    },
+    {
+      "timestamp": 142.57348775863647,
+      "round": 3,
+      "cpu_percent": 79.7,
+      "memory_percent": 83.9,
+      "memory_used_mb": 6432.390625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 663.7099609375,
+      "network_recv_mb": 4355.5625
+    },
+    {
+      "timestamp": 143.5788459777832,
+      "round": 3,
+      "cpu_percent": 78.0,
+      "memory_percent": 83.2,
+      "memory_used_mb": 6377.015625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 663.76171875,
+      "network_recv_mb": 4355.599609375
+    },
+    {
+      "timestamp": 144.58130311965942,
+      "round": 3,
+      "cpu_percent": 75.7,
+      "memory_percent": 84.1,
+      "memory_used_mb": 6389.4375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 663.77734375,
+      "network_recv_mb": 4355.6220703125
+    },
+    {
+      "timestamp": 145.5866539478302,
+      "round": 3,
+      "cpu_percent": 75.6,
+      "memory_percent": 83.5,
+      "memory_used_mb": 6333.328125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 663.79296875,
+      "network_recv_mb": 4355.640625
+    },
+    {
+      "timestamp": 146.58894991874695,
+      "round": 3,
+      "cpu_percent": 82.4,
+      "memory_percent": 84.3,
+      "memory_used_mb": 6335.796875,
+      "disk_percent": 6.7,
+      "network_sent_mb": 663.84765625,
+      "network_recv_mb": 4355.69921875
+    },
+    {
+      "timestamp": 147.59422492980957,
+      "round": 3,
+      "cpu_percent": 77.6,
+      "memory_percent": 83.5,
+      "memory_used_mb": 6268.640625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 663.8935546875,
+      "network_recv_mb": 4355.8056640625
+    },
+    {
+      "timestamp": 148.5997130870819,
+      "round": 3,
+      "cpu_percent": 74.7,
+      "memory_percent": 82.9,
+      "memory_used_mb": 6262.921875,
+      "disk_percent": 6.7,
+      "network_sent_mb": 663.91015625,
+      "network_recv_mb": 4355.828125
+    },
+    {
+      "timestamp": 149.60492086410522,
+      "round": 3,
+      "cpu_percent": 72.1,
+      "memory_percent": 83.7,
+      "memory_used_mb": 6353.0,
+      "disk_percent": 6.7,
+      "network_sent_mb": 663.927734375,
+      "network_recv_mb": 4355.8486328125
+    },
+    {
+      "timestamp": 150.60585808753967,
+      "round": 3,
+      "cpu_percent": 86.6,
+      "memory_percent": 83.5,
+      "memory_used_mb": 6380.796875,
+      "disk_percent": 6.7,
+      "network_sent_mb": 663.9775390625,
+      "network_recv_mb": 4355.9013671875
+    },
+    {
+      "timestamp": 151.60622096061707,
+      "round": 3,
+      "cpu_percent": 75.2,
+      "memory_percent": 83.2,
+      "memory_used_mb": 6363.15625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 663.9921875,
+      "network_recv_mb": 4355.927734375
+    },
+    {
+      "timestamp": 152.61186695098877,
+      "round": 3,
+      "cpu_percent": 74.1,
+      "memory_percent": 84.3,
+      "memory_used_mb": 6305.453125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.0234375,
+      "network_recv_mb": 4355.95703125
+    },
+    {
+      "timestamp": 153.61707592010498,
+      "round": 3,
+      "cpu_percent": 74.4,
+      "memory_percent": 83.7,
+      "memory_used_mb": 6282.265625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.0380859375,
+      "network_recv_mb": 4355.9765625
+    },
+    {
+      "timestamp": 154.61820793151855,
+      "round": 3,
+      "cpu_percent": 73.4,
+      "memory_percent": 82.9,
+      "memory_used_mb": 6262.453125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.0546875,
+      "network_recv_mb": 4355.9970703125
+    },
+    {
+      "timestamp": 155.61996793746948,
+      "round": 3,
+      "cpu_percent": 72.1,
+      "memory_percent": 83.8,
+      "memory_used_mb": 6361.71875,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.0693359375,
+      "network_recv_mb": 4356.013671875
+    },
+    {
+      "timestamp": 156.62546682357788,
+      "round": 3,
+      "cpu_percent": 72.9,
+      "memory_percent": 82.8,
+      "memory_used_mb": 6288.484375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.0859375,
+      "network_recv_mb": 4356.033203125
+    },
+    {
+      "timestamp": 157.62610793113708,
+      "round": 3,
+      "cpu_percent": 70.4,
+      "memory_percent": 82.5,
+      "memory_used_mb": 6312.96875,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.1025390625,
+      "network_recv_mb": 4356.0556640625
+    },
+    {
+      "timestamp": 158.6290397644043,
+      "round": 3,
+      "cpu_percent": 71.9,
+      "memory_percent": 83.5,
+      "memory_used_mb": 6403.125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.1171875,
+      "network_recv_mb": 4356.076171875
+    },
+    {
+      "timestamp": 159.6305627822876,
+      "round": 3,
+      "cpu_percent": 70.8,
+      "memory_percent": 82.6,
+      "memory_used_mb": 6341.765625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.140625,
+      "network_recv_mb": 4356.1005859375
+    },
+    {
+      "timestamp": 160.63287782669067,
+      "round": 3,
+      "cpu_percent": 71.1,
+      "memory_percent": 83.1,
+      "memory_used_mb": 6458.515625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.1572265625,
+      "network_recv_mb": 4356.12109375
+    },
+    {
+      "timestamp": 161.63550114631653,
+      "round": 3,
+      "cpu_percent": 70.3,
+      "memory_percent": 82.5,
+      "memory_used_mb": 6384.953125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.1728515625,
+      "network_recv_mb": 4356.142578125
+    },
+    {
+      "timestamp": 162.6360478401184,
+      "round": 3,
+      "cpu_percent": 69.9,
+      "memory_percent": 82.9,
+      "memory_used_mb": 6514.328125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.1875,
+      "network_recv_mb": 4356.162109375
+    },
+    {
+      "timestamp": 163.64125990867615,
+      "round": 3,
+      "cpu_percent": 72.0,
+      "memory_percent": 82.2,
+      "memory_used_mb": 6431.34375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.2060546875,
+      "network_recv_mb": 4356.1826171875
+    },
+    {
+      "timestamp": 164.64654111862183,
+      "round": 3,
+      "cpu_percent": 71.1,
+      "memory_percent": 82.9,
+      "memory_used_mb": 6493.859375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.220703125,
+      "network_recv_mb": 4356.19921875
+    },
+    {
+      "timestamp": 165.65195989608765,
+      "round": 3,
+      "cpu_percent": 70.4,
+      "memory_percent": 82.3,
+      "memory_used_mb": 6401.828125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.2353515625,
+      "network_recv_mb": 4356.21875
+    },
+    {
+      "timestamp": 166.654217004776,
+      "round": 3,
+      "cpu_percent": 72.4,
+      "memory_percent": 82.8,
+      "memory_used_mb": 6561.734375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.25390625,
+      "network_recv_mb": 4356.2392578125
+    },
+    {
+      "timestamp": 167.65951585769653,
+      "round": 3,
+      "cpu_percent": 72.2,
+      "memory_percent": 82.5,
+      "memory_used_mb": 6479.71875,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.26953125,
+      "network_recv_mb": 4356.259765625
+    },
+    {
+      "timestamp": 168.6600730419159,
+      "round": 3,
+      "cpu_percent": 70.8,
+      "memory_percent": 82.8,
+      "memory_used_mb": 6525.359375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.2841796875,
+      "network_recv_mb": 4356.27734375
+    },
+    {
+      "timestamp": 169.66553401947021,
+      "round": 3,
+      "cpu_percent": 72.9,
+      "memory_percent": 82.6,
+      "memory_used_mb": 6475.0625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.310546875,
+      "network_recv_mb": 4356.310546875
+    },
+    {
+      "timestamp": 170.66847491264343,
+      "round": 3,
+      "cpu_percent": 72.0,
+      "memory_percent": 82.9,
+      "memory_used_mb": 6532.9375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.3251953125,
+      "network_recv_mb": 4356.330078125
+    },
+    {
+      "timestamp": 171.67373275756836,
+      "round": 3,
+      "cpu_percent": 73.8,
+      "memory_percent": 82.5,
+      "memory_used_mb": 6472.1875,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.341796875,
+      "network_recv_mb": 4356.3505859375
+    },
+    {
+      "timestamp": 172.67911505699158,
+      "round": 3,
+      "cpu_percent": 72.1,
+      "memory_percent": 82.1,
+      "memory_used_mb": 6411.71875,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.35546875,
+      "network_recv_mb": 4356.369140625
+    },
+    {
+      "timestamp": 173.68432998657227,
+      "round": 3,
+      "cpu_percent": 71.4,
+      "memory_percent": 83.0,
+      "memory_used_mb": 6554.953125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.37109375,
+      "network_recv_mb": 4356.392578125
+    },
+    {
+      "timestamp": 174.6897909641266,
+      "round": 3,
+      "cpu_percent": 71.3,
+      "memory_percent": 82.5,
+      "memory_used_mb": 6481.90625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.3935546875,
+      "network_recv_mb": 4356.4169921875
+    },
+    {
+      "timestamp": 175.6901707649231,
+      "round": 3,
+      "cpu_percent": 73.1,
+      "memory_percent": 81.9,
+      "memory_used_mb": 6429.453125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.4169921875,
+      "network_recv_mb": 4356.44921875
+    },
+    {
+      "timestamp": 176.69361305236816,
+      "round": 3,
+      "cpu_percent": 75.0,
+      "memory_percent": 83.2,
+      "memory_used_mb": 6484.875,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.435546875,
+      "network_recv_mb": 4356.4697265625
+    },
+    {
+      "timestamp": 177.6949770450592,
+      "round": 3,
+      "cpu_percent": 73.0,
+      "memory_percent": 82.7,
+      "memory_used_mb": 6359.859375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.4619140625,
+      "network_recv_mb": 4356.4990234375
+    },
+    {
+      "timestamp": 178.70018005371094,
+      "round": 3,
+      "cpu_percent": 71.7,
+      "memory_percent": 83.4,
+      "memory_used_mb": 6407.390625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.4775390625,
+      "network_recv_mb": 4356.51953125
+    },
+    {
+      "timestamp": 179.70173382759094,
+      "round": 3,
+      "cpu_percent": 71.9,
+      "memory_percent": 83.0,
+      "memory_used_mb": 6327.609375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.501953125,
+      "network_recv_mb": 4356.5458984375
+    },
+    {
+      "timestamp": 180.7069718837738,
+      "round": 3,
+      "cpu_percent": 74.2,
+      "memory_percent": 83.4,
+      "memory_used_mb": 6446.84375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.5322265625,
+      "network_recv_mb": 4356.5771484375
+    },
+    {
+      "timestamp": 181.71174097061157,
+      "round": 3,
+      "cpu_percent": 73.4,
+      "memory_percent": 82.9,
+      "memory_used_mb": 6382.53125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.548828125,
+      "network_recv_mb": 4356.5986328125
+    },
+    {
+      "timestamp": 182.71713304519653,
+      "round": 3,
+      "cpu_percent": 73.5,
+      "memory_percent": 83.5,
+      "memory_used_mb": 6421.15625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.564453125,
+      "network_recv_mb": 4356.6318359375
+    },
+    {
+      "timestamp": 183.71899604797363,
+      "round": 3,
+      "cpu_percent": 73.4,
+      "memory_percent": 83.0,
+      "memory_used_mb": 6333.875,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.578125,
+      "network_recv_mb": 4356.6533203125
+    },
+    {
+      "timestamp": 184.72134685516357,
+      "round": 3,
+      "cpu_percent": 72.9,
+      "memory_percent": 82.5,
+      "memory_used_mb": 6442.65625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.6005859375,
+      "network_recv_mb": 4356.6748046875
+    },
+    {
+      "timestamp": 185.72374987602234,
+      "round": 3,
+      "cpu_percent": 73.2,
+      "memory_percent": 83.4,
+      "memory_used_mb": 6423.53125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.6240234375,
+      "network_recv_mb": 4356.6962890625
+    },
+    {
+      "timestamp": 186.72674679756165,
+      "round": 3,
+      "cpu_percent": 71.7,
+      "memory_percent": 82.5,
+      "memory_used_mb": 6297.84375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.640625,
+      "network_recv_mb": 4356.71875
+    },
+    {
+      "timestamp": 187.72847700119019,
+      "round": 3,
+      "cpu_percent": 70.6,
+      "memory_percent": 82.4,
+      "memory_used_mb": 6311.4375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.6572265625,
+      "network_recv_mb": 4356.7412109375
+    },
+    {
+      "timestamp": 188.73421597480774,
+      "round": 3,
+      "cpu_percent": 73.2,
+      "memory_percent": 83.1,
+      "memory_used_mb": 6474.546875,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.6728515625,
+      "network_recv_mb": 4356.763671875
+    },
+    {
+      "timestamp": 189.73965191841125,
+      "round": 3,
+      "cpu_percent": 74.1,
+      "memory_percent": 82.3,
+      "memory_used_mb": 6366.65625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.7021484375,
+      "network_recv_mb": 4356.7900390625
+    },
+    {
+      "timestamp": 190.7433898448944,
+      "round": 3,
+      "cpu_percent": 72.6,
+      "memory_percent": 82.8,
+      "memory_used_mb": 6508.890625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.7177734375,
+      "network_recv_mb": 4356.810546875
+    },
+    {
+      "timestamp": 191.74668502807617,
+      "round": 3,
+      "cpu_percent": 70.4,
+      "memory_percent": 82.0,
+      "memory_used_mb": 6399.84375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.7333984375,
+      "network_recv_mb": 4356.8330078125
+    },
+    {
+      "timestamp": 192.75021696090698,
+      "round": 3,
+      "cpu_percent": 70.8,
+      "memory_percent": 82.6,
+      "memory_used_mb": 6540.796875,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.7509765625,
+      "network_recv_mb": 4356.86328125
+    },
+    {
+      "timestamp": 193.75564908981323,
+      "round": 3,
+      "cpu_percent": 71.8,
+      "memory_percent": 81.8,
+      "memory_used_mb": 6455.09375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.767578125,
+      "network_recv_mb": 4356.8837890625
+    },
+    {
+      "timestamp": 194.76069569587708,
+      "round": 3,
+      "cpu_percent": 74.4,
+      "memory_percent": 82.8,
+      "memory_used_mb": 6511.984375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.78515625,
+      "network_recv_mb": 4356.904296875
+    },
+    {
+      "timestamp": 195.766459941864,
+      "round": 3,
+      "cpu_percent": 73.1,
+      "memory_percent": 81.5,
+      "memory_used_mb": 6582.234375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.806640625,
+      "network_recv_mb": 4356.927734375
+    },
+    {
+      "timestamp": 196.7720010280609,
+      "round": 3,
+      "cpu_percent": 74.1,
+      "memory_percent": 83.4,
+      "memory_used_mb": 6397.28125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.8642578125,
+      "network_recv_mb": 4356.994140625
+    },
+    {
+      "timestamp": 197.77320194244385,
+      "round": 3,
+      "cpu_percent": 70.8,
+      "memory_percent": 82.9,
+      "memory_used_mb": 6256.5,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.8828125,
+      "network_recv_mb": 4357.015625
+    },
+    {
+      "timestamp": 198.7766878604889,
+      "round": 3,
+      "cpu_percent": 72.4,
+      "memory_percent": 82.3,
+      "memory_used_mb": 6274.6875,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.8974609375,
+      "network_recv_mb": 4357.037109375
+    },
+    {
+      "timestamp": 199.78092908859253,
+      "round": 3,
+      "cpu_percent": 75.4,
+      "memory_percent": 83.7,
+      "memory_used_mb": 6336.34375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.951171875,
+      "network_recv_mb": 4357.1689453125
+    },
+    {
+      "timestamp": 200.78561902046204,
+      "round": 3,
+      "cpu_percent": 73.2,
+      "memory_percent": 82.8,
+      "memory_used_mb": 6293.421875,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.9677734375,
+      "network_recv_mb": 4357.1923828125
+    },
+    {
+      "timestamp": 201.78692889213562,
+      "round": 3,
+      "cpu_percent": 74.3,
+      "memory_percent": 83.5,
+      "memory_used_mb": 6381.09375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 664.990234375,
+      "network_recv_mb": 4357.2216796875
+    },
+    {
+      "timestamp": 202.7872598171234,
+      "round": 3,
+      "cpu_percent": 72.7,
+      "memory_percent": 82.7,
+      "memory_used_mb": 6283.59375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 665.0048828125,
+      "network_recv_mb": 4357.2431640625
+    },
+    {
+      "timestamp": 203.79094982147217,
+      "round": 3,
+      "cpu_percent": 73.2,
+      "memory_percent": 82.3,
+      "memory_used_mb": 6292.59375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 665.021484375,
+      "network_recv_mb": 4357.265625
+    },
+    {
+      "timestamp": 204.79550004005432,
+      "round": 3,
+      "cpu_percent": 73.1,
+      "memory_percent": 83.0,
+      "memory_used_mb": 6450.0,
+      "disk_percent": 6.7,
+      "network_sent_mb": 665.0380859375,
+      "network_recv_mb": 4357.287109375
+    },
+    {
+      "timestamp": 205.79945397377014,
+      "round": 3,
+      "cpu_percent": 72.1,
+      "memory_percent": 82.3,
+      "memory_used_mb": 6351.8125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 665.0537109375,
+      "network_recv_mb": 4357.306640625
+    },
+    {
+      "timestamp": 206.80055785179138,
+      "round": 3,
+      "cpu_percent": 73.0,
+      "memory_percent": 82.9,
+      "memory_used_mb": 6474.96875,
+      "disk_percent": 6.7,
+      "network_sent_mb": 665.072265625,
+      "network_recv_mb": 4357.3271484375
+    },
+    {
+      "timestamp": 207.80538082122803,
+      "round": 3,
+      "cpu_percent": 74.9,
+      "memory_percent": 81.8,
+      "memory_used_mb": 6470.015625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 665.0888671875,
+      "network_recv_mb": 4357.349609375
+    },
+    {
+      "timestamp": 208.80591106414795,
+      "round": 3,
+      "cpu_percent": 76.4,
+      "memory_percent": 83.1,
+      "memory_used_mb": 6455.265625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 665.115234375,
+      "network_recv_mb": 4357.376953125
+    },
+    {
+      "timestamp": 209.81030774116516,
+      "round": 3,
+      "cpu_percent": 71.3,
+      "memory_percent": 82.1,
+      "memory_used_mb": 6347.4375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 665.130859375,
+      "network_recv_mb": 4357.3935546875
+    },
+    {
+      "timestamp": 210.81566500663757,
+      "round": 3,
+      "cpu_percent": 72.6,
+      "memory_percent": 83.0,
+      "memory_used_mb": 6471.125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 665.1474609375,
+      "network_recv_mb": 4357.4140625
+    },
+    {
+      "timestamp": 211.8194477558136,
+      "round": 3,
+      "cpu_percent": 71.3,
+      "memory_percent": 82.2,
+      "memory_used_mb": 6365.578125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 665.1630859375,
+      "network_recv_mb": 4357.4345703125
+    },
+    {
+      "timestamp": 212.82469987869263,
+      "round": 3,
+      "cpu_percent": 72.9,
+      "memory_percent": 82.7,
+      "memory_used_mb": 6507.421875,
+      "disk_percent": 6.7,
+      "network_sent_mb": 665.177734375,
+      "network_recv_mb": 4357.4560546875
+    },
+    {
+      "timestamp": 213.8271119594574,
+      "round": 3,
+      "cpu_percent": 71.4,
+      "memory_percent": 82.0,
+      "memory_used_mb": 6398.09375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 665.1953125,
+      "network_recv_mb": 4357.4775390625
+    },
+    {
+      "timestamp": 214.82843279838562,
+      "round": 3,
+      "cpu_percent": 70.2,
+      "memory_percent": 81.9,
+      "memory_used_mb": 6390.203125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 665.2099609375,
+      "network_recv_mb": 4357.498046875
+    },
+    {
+      "timestamp": 215.8318428993225,
+      "round": 3,
+      "cpu_percent": 73.6,
+      "memory_percent": 82.7,
+      "memory_used_mb": 6493.140625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 665.224609375,
+      "network_recv_mb": 4357.5166015625
+    },
+    {
+      "timestamp": 216.83244585990906,
+      "round": 3,
+      "cpu_percent": 74.0,
+      "memory_percent": 81.9,
+      "memory_used_mb": 6401.328125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 665.2412109375,
+      "network_recv_mb": 4357.5361328125
+    },
+    {
+      "timestamp": 217.83643913269043,
+      "round": 3,
+      "cpu_percent": 70.2,
+      "memory_percent": 81.8,
+      "memory_used_mb": 6396.59375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 665.2568359375,
+      "network_recv_mb": 4357.552734375
+    },
+    {
+      "timestamp": 218.84168100357056,
+      "round": 3,
+      "cpu_percent": 71.0,
+      "memory_percent": 82.8,
+      "memory_used_mb": 6505.265625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 665.2724609375,
+      "network_recv_mb": 4357.5693359375
+    },
+    {
+      "timestamp": 219.8470311164856,
+      "round": 3,
+      "cpu_percent": 71.8,
+      "memory_percent": 82.2,
+      "memory_used_mb": 6391.8125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 665.3037109375,
+      "network_recv_mb": 4357.6064453125
+    },
+    {
+      "timestamp": 220.85190200805664,
+      "round": 3,
+      "cpu_percent": 73.3,
+      "memory_percent": 82.9,
+      "memory_used_mb": 6478.609375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 665.318359375,
+      "network_recv_mb": 4357.6259765625
+    },
+    {
+      "timestamp": 221.85688185691833,
+      "round": 3,
+      "cpu_percent": 74.0,
+      "memory_percent": 82.3,
+      "memory_used_mb": 6360.796875,
+      "disk_percent": 6.7,
+      "network_sent_mb": 665.3369140625,
+      "network_recv_mb": 4357.6572265625
+    },
+    {
+      "timestamp": 222.86061787605286,
+      "round": 3,
+      "cpu_percent": 71.6,
+      "memory_percent": 83.4,
+      "memory_used_mb": 6400.8125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 665.353515625,
+      "network_recv_mb": 4357.6748046875
+    },
+    {
+      "timestamp": 223.86587595939636,
+      "round": 3,
+      "cpu_percent": 77.0,
+      "memory_percent": 82.2,
+      "memory_used_mb": 6396.6875,
+      "disk_percent": 6.7,
+      "network_sent_mb": 665.3681640625,
+      "network_recv_mb": 4357.6943359375
+    },
+    {
+      "timestamp": 224.86856389045715,
+      "round": 3,
+      "cpu_percent": 72.1,
+      "memory_percent": 83.4,
+      "memory_used_mb": 6391.109375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 665.3818359375,
+      "network_recv_mb": 4357.712890625
+    },
+    {
+      "timestamp": 225.8702290058136,
+      "round": 3,
+      "cpu_percent": 72.1,
+      "memory_percent": 82.4,
+      "memory_used_mb": 6335.15625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 665.3984375,
+      "network_recv_mb": 4357.734375
+    },
+    {
+      "timestamp": 226.8753080368042,
+      "round": 3,
+      "cpu_percent": 73.9,
+      "memory_percent": 83.2,
+      "memory_used_mb": 6436.359375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 665.423828125,
+      "network_recv_mb": 4357.7666015625
+    },
+    {
+      "timestamp": 227.87697100639343,
+      "round": 3,
+      "cpu_percent": 71.2,
+      "memory_percent": 82.6,
+      "memory_used_mb": 6328.21875,
+      "disk_percent": 6.7,
+      "network_sent_mb": 665.4375,
+      "network_recv_mb": 4357.78515625
+    },
+    {
+      "timestamp": 228.88220500946045,
+      "round": 3,
+      "cpu_percent": 71.0,
+      "memory_percent": 83.3,
+      "memory_used_mb": 6409.4375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 665.4541015625,
+      "network_recv_mb": 4357.8056640625
+    },
+    {
+      "timestamp": 229.8852937221527,
+      "round": 3,
+      "cpu_percent": 70.8,
+      "memory_percent": 82.1,
+      "memory_used_mb": 6320.515625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 665.470703125,
+      "network_recv_mb": 4357.826171875
+    },
+    {
+      "timestamp": 230.88635802268982,
+      "round": 3,
+      "cpu_percent": 71.7,
+      "memory_percent": 82.1,
+      "memory_used_mb": 6356.65625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 665.490234375,
+      "network_recv_mb": 4357.8515625
+    },
+    {
+      "timestamp": 231.88738298416138,
+      "round": 3,
+      "cpu_percent": 70.4,
+      "memory_percent": 82.8,
+      "memory_used_mb": 6527.3125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 665.5048828125,
+      "network_recv_mb": 4357.8720703125
+    },
+    {
+      "timestamp": 232.8926568031311,
+      "round": 3,
+      "cpu_percent": 71.4,
+      "memory_percent": 81.8,
+      "memory_used_mb": 6431.8125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 665.5205078125,
+      "network_recv_mb": 4357.8935546875
+    },
+    {
+      "timestamp": 233.8943498134613,
+      "round": 3,
+      "cpu_percent": 70.1,
+      "memory_percent": 81.7,
+      "memory_used_mb": 6432.328125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 665.537109375,
+      "network_recv_mb": 4357.9150390625
+    },
+    {
+      "timestamp": 234.89659190177917,
+      "round": 3,
+      "cpu_percent": 73.3,
+      "memory_percent": 82.5,
+      "memory_used_mb": 6562.0,
+      "disk_percent": 6.7,
+      "network_sent_mb": 665.5556640625,
+      "network_recv_mb": 4357.9931640625
+    },
+    {
+      "timestamp": 235.89982390403748,
+      "round": 3,
+      "cpu_percent": 70.7,
+      "memory_percent": 81.9,
+      "memory_used_mb": 6504.3125,
+      "disk_percent": 6.7,
+      "network_sent_mb": 665.5703125,
+      "network_recv_mb": 4358.013671875
+    },
+    {
+      "timestamp": 236.90535712242126,
+      "round": 3,
+      "cpu_percent": 74.5,
+      "memory_percent": 82.5,
+      "memory_used_mb": 6561.375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 665.5986328125,
+      "network_recv_mb": 4358.041015625
+    },
+    {
+      "timestamp": 237.91040802001953,
+      "round": 3,
+      "cpu_percent": 71.2,
+      "memory_percent": 82.6,
+      "memory_used_mb": 6551.265625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 665.61328125,
+      "network_recv_mb": 4358.05859375
+    },
+    {
+      "timestamp": 238.92125797271729,
+      "round": 3,
+      "cpu_percent": 71.9,
+      "memory_percent": 82.5,
+      "memory_used_mb": 6632.40625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 665.62890625,
+      "network_recv_mb": 4358.080078125
+    },
+    {
+      "timestamp": 239.9266538619995,
+      "round": 3,
+      "cpu_percent": 50.0,
+      "memory_percent": 81.2,
+      "memory_used_mb": 6357.25,
+      "disk_percent": 6.7,
+      "network_sent_mb": 665.6455078125,
+      "network_recv_mb": 4358.099609375
+    },
+    {
+      "timestamp": 240.92902874946594,
+      "round": 3,
+      "cpu_percent": 52.7,
+      "memory_percent": 81.6,
+      "memory_used_mb": 6543.4375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 666.3046875,
+      "network_recv_mb": 4358.7646484375
+    },
+    {
+      "timestamp": 241.93410396575928,
+      "round": 3,
+      "cpu_percent": 47.6,
+      "memory_percent": 81.4,
+      "memory_used_mb": 6546.984375,
+      "disk_percent": 6.7,
+      "network_sent_mb": 666.318359375,
+      "network_recv_mb": 4358.7841796875
+    },
+    {
+      "timestamp": 242.9366579055786,
+      "round": 3,
+      "cpu_percent": 52.4,
+      "memory_percent": 81.7,
+      "memory_used_mb": 6633.140625,
+      "disk_percent": 6.7,
+      "network_sent_mb": 666.333984375,
+      "network_recv_mb": 4358.80859375
+    }
+  ]
+}

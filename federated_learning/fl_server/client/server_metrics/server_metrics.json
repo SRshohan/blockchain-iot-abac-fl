@@ -1,0 +1,83 @@
+{
+  "start_time": "2025-03-27T14:10:37.260094",
+  "rounds": [
+    {
+      "round": 1,
+      "start_time": "2025-03-27T14:14:52.273829",
+      "client_metrics": [
+        {
+          "client_id": "client_a5f9cd5ad86a43c2a349543317b22e88",
+          "num_examples": 50000,
+          "metrics": {}
+        },
+        {
+          "client_id": "client_bce5aefb78bc46409d0113c0194ea6a7",
+          "num_examples": 50000,
+          "metrics": {}
+        }
+      ],
+      "aggregated_metrics": {
+        "mean_loss": 1.4653058052062988,
+        "std_loss": 0.0,
+        "mean_accuracy": 0.4918000102043152,
+        "std_accuracy": 0.0
+      },
+      "evaluation_metrics": [
+        {
+          "client_id": "client_a5f9cd5ad86a43c2a349543317b22e88",
+          "loss": 1.4653058052062988,
+          "num_examples": 10000,
+          "metrics": {
+            "accuracy": 0.4918000102043152
+          }
+        },
+        {
+          "client_id": "client_bce5aefb78bc46409d0113c0194ea6a7",
+          "loss": 1.4653058052062988,
+          "num_examples": 10000,
+          "metrics": {
+            "accuracy": 0.4918000102043152
+          }
+        }
+      ],
+      "end_time": "2025-03-27T14:14:53.378637",
+      "duration_seconds": 1.104808
+    }
+  ],
+  "clients": {
+    "client_a5f9cd5ad86a43c2a349543317b22e88": [
+      {
+        "round": 1,
+        "fit_metrics": {},
+        "num_examples": 50000,
+        "evaluation": {
+          "loss": 1.4653058052062988,
+          "metrics": {
+            "accuracy": 0.4918000102043152
+          }
+        }
+      }
+    ],
+    "client_bce5aefb78bc46409d0113c0194ea6a7": [
+      {
+        "round": 1,
+        "fit_metrics": {},
+        "num_examples": 50000,
+        "evaluation": {
+          "loss": 1.4653058052062988,
+          "metrics": {
+            "accuracy": 0.4918000102043152
+          }
+        }
+      }
+    ]
+  },
+  "global_metrics": [
+    {
+      "round": 1,
+      "timestamp": "2025-03-27T14:14:53.378586",
+      "mean_loss": 1.4653058052062988,
+      "mean_accuracy": 0.4918000102043152
+    }
+  ]
+}
