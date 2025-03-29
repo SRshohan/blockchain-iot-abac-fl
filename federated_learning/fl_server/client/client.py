@@ -9,9 +9,10 @@ import psutil
 import threading
 import time
 import platform
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
 from flask_cors import CORS
 from flask_restful import Api, Resource
+import sys
 
 # For SSL certificate issues
 ssl._create_default_https_context = ssl._create_unverified_context
@@ -20,33 +21,43 @@ ssl._create_default_https_context = ssl._create_unverified_context
 os.makedirs("client_metrics", exist_ok=True)
 os.makedirs("resource_metrics", exist_ok=True)
 
-# Client ID - unique for each device
-CLIENT_ID = input("Enter client ID: ")
-location = input("Enter location: ")
-timezone = time.time()
+# Client ID - using environment variables or command line args instead of input
+CLIENT_ID = "pi_1"
+location = "home1"
+status = "active"
 
-# Function to get client information
-def client_info():
-    return{
-        "client_id": CLIENT_ID,
-        "location": location,
-        "timezone": timezone,
-        "status"  : "active"
-    }
-
-class sendData(Resource):
-    def post(self, data):
-        print(data)
-        return jsonify(data)
+# Create Flask app
 app = Flask(__name__)
 CORS(app)
 api = Api(app)
 
-api.add_resource(sendData, '/sendData')
+# Fixed ModelTraining endpoint to match smart contract endpoint
+class ModelTraining(Resource):
+    def get(self):
+        data = request.get_json()
+        # client_id = data.get('client')
+        # location = data.get('location')
+        # status = data.get('status')
+        
+        print(f"Received data: {data}")
+        
+        # Return the same data for verification in the smart contract
+        return jsonify({
+            "client": CLIENT_ID,
+            "location": location,
+            "status": status
+        })
 
-app.run(host='0.0.0.0', port=5000)
+api.add_resource(ModelTraining, '/ModelTraining')
 
+# Create a thread for the Flask app
+def run_flask():
+    app.run(host='0.0.0.0', port=5000, threaded=True)
 
+flask_thread = threading.Thread(target=run_flask)
+flask_thread.daemon = True  # Make thread terminate when main program exits
+flask_thread.start()
+print("Flask server started in background thread")
 
 # Define and compile the model
 model = tf.keras.models.Sequential([
@@ -306,12 +317,13 @@ class CifarClient(fl.client.NumPyClient):
 
 if __name__ == "__main__":
     try:
+        print(f"Starting Flower client with CLIENT_ID: {CLIENT_ID}, Location: {location}")
+        
         # Start Flower client
         fl.client.start_numpy_client(
             server_address="127.0.0.1:8080",
             client=CifarClient()
         )
-
 
     except KeyboardInterrupt:
         print("\nClient stopped by user")
@@ -321,3 +333,5 @@ if __name__ == "__main__":
         # Make sure resource monitoring is stopped
         if hasattr(resource_monitor, 'running') and resource_monitor.running:
             resource_monitor.stop_monitoring()
+        
+        print("Client shutdown complete")
