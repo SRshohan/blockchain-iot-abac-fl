@@ -146,7 +146,7 @@ openssl x509 -in organizations/peerOrganizations/org1.example.com/users/creator3
 
 ## Todo
 
-Checkout the FireFly with favric-samples test-network
+Checkout the FireFly with fabric-samples test-network
 
 [FireFly](https://hyperledger.github.io/firefly/latest/tutorials/chains/fabric_test_network/#start-firefly-stack)
 

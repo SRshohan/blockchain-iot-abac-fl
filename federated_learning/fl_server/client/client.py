@@ -9,6 +9,9 @@ import psutil
 import threading
 import time
 import platform
+from flask import Flask, jsonify
+from flask_cors import CORS
+from flask_restful import Api, Resource
 
 # For SSL certificate issues
 ssl._create_default_https_context = ssl._create_unverified_context
@@ -19,6 +22,31 @@ os.makedirs("resource_metrics", exist_ok=True)
 
 # Client ID - unique for each device
 CLIENT_ID = input("Enter client ID: ")
+location = input("Enter location: ")
+timezone = time.time()
+
+# Function to get client information
+def client_info():
+    return{
+        "client_id": CLIENT_ID,
+        "location": location,
+        "timezone": timezone,
+        "status"  : "active"
+    }
+
+class sendData(Resource):
+    def post(self, data):
+        print(data)
+        return jsonify(data)
+app = Flask(__name__)
+CORS(app)
+api = Api(app)
+
+api.add_resource(sendData, '/sendData')
+
+app.run(host='0.0.0.0', port=5000)
+
+
 
 # Define and compile the model
 model = tf.keras.models.Sequential([
@@ -283,6 +311,8 @@ if __name__ == "__main__":
             server_address="127.0.0.1:8080",
             client=CifarClient()
         )
+
+
     except KeyboardInterrupt:
         print("\nClient stopped by user")
     except Exception as e:
