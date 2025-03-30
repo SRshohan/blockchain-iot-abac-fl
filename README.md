@@ -79,7 +79,6 @@ docker system prune -a --volumes
 ```sh
 ./network.sh up createChannel -ca
 ./network.sh deployCC -ccn abac -ccp ../asset-transfer-abac/chaincode-go/ -ccl go
-
 ```
 
 ### General Step for ABAC
@@ -142,7 +141,6 @@ peer chaincode invoke "${TARGET_TLS_OPTIONS[@]}" -C mychannel -n abac -c '{"func
 ```bash
 openssl x509 -in organizations/peerOrganizations/org1.example.com/users/creator3@org1.example.com/msp/signcerts/cert.pem -text -noout
 ```
-
 
 ## Todo
 
