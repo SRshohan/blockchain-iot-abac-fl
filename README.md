@@ -104,7 +104,7 @@ export FABRIC_CA_CLIENT_HOME=${PWD}/organizations/peerOrganizations/org1.example
 
 1. Step 1: For registration
 ```bash
-fabric-ca-client register --id.name creator3 --id.secret creator1pw --id.type client --id.affiliation org1 --id.attrs 'abac.location=home1backyard:ecert,abac.creator=true:ecert,abac.status=true:ecert' --tls.certfiles "${PWD}/organizations/fabric-ca/org1/tls-cert.pem"
+fabric-ca-client register --id.name creator3 --id.secret creator1pw --id.type client --id.affiliation org1 --id.attrs 'abac.clientid=pi1:ecert,abac.location=home1:ecert,abac.trainer=true:ecert,abac.status=active:ecert' --tls.certfiles "${PWD}/organizations/fabric-ca/org1/tls-cert.pem"
 ```
 
 Step 2: For Enrollment: 
