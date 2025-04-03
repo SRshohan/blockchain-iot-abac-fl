@@ -74,35 +74,43 @@ def modelTraining(client_id, location, status):
 
         
 
-class Train_model(Resource):
-    def post(self):
-        try:
-            data = request.get_json()
-            ip = data.get("ip")
+# class Train_model(Resource):
+#     def post(self):
+#         try:
+#             data = request.get_json()
+#             ip = data.get("ip")
 
-            if not ip:
-                return jsonify({"error": "Missing ip"})
+#             if not ip:
+#                 return jsonify({"error": "Missing ip"})
             
-            if ip == "192.168.1.217":
-                return 
+#             if ip == "192.168.1.217":
+#                 return 
 
-            network_directory = "../hyperledger_fabric/fabric-samples/test-network"
+#             network_directory = "../hyperledger_fabric/fabric-samples/test-network"
             
-            # Setup variables for device identity
-            identity_variables = {
-                "PATH": f"{network_directory}/../bin:{network_directory}:${{PATH}}",
-                "FABRIC_CFG_PATH": f"{network_directory}/../config/",
-                "FABRIC_CA_CLIENT_HOME": f"{network_directory}/organizations/peerOrganizations/org1.example.com/",
-                "CORE_PEER_TLS_ENABLED" : "true",
-                "CORE_PEER_LOCALMSPID" : "Org1MSP",
-                "CORE_PEER_MSPCONFIGPATH" : f"{network_directory}/organizations/peerOrganizations/org1.example.com/users/{id}@org1.example.com/msp",
-                "CORE_PEER_TLS_ROOTCERT_FILE" : f"{network_directory}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt",
-                "CORE_PEER_ADDRESS" : "localhost:7051",
-                "TARGET_TLS_OPTIONS" : f"""(-o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile "{network_directory}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem" --peerAddresses localhost:7051 --tlsRootCertFiles "{network_directory}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt" --peerAddresses localhost:9051 --tlsRootCertFiles "{network_directory}/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt")"""
-            }
+#             # Setup variables for device identity
+#             identity_variables = {
+#                 "PATH": f"{network_directory}/../bin:{network_directory}:${{PATH}}",
+#                 "FABRIC_CFG_PATH": f"{network_directory}/../config/",
+#                 "FABRIC_CA_CLIENT_HOME": f"{network_directory}/organizations/peerOrganizations/org1.example.com/",
+#                 "CORE_PEER_TLS_ENABLED" : "true",
+#                 "CORE_PEER_LOCALMSPID" : "Org1MSP",
+#                 "CORE_PEER_MSPCONFIGPATH" : f"{network_directory}/organizations/peerOrganizations/org1.example.com/users/{id}@org1.example.com/msp",
+#                 "CORE_PEER_TLS_ROOTCERT_FILE" : f"{network_directory}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt",
+#                 "CORE_PEER_ADDRESS" : "localhost:7051",
+#                 "TARGET_TLS_OPTIONS" : f"""(-o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --tls --cafile "{network_directory}/organizations/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem" --peerAddresses localhost:7051 --tlsRootCertFiles "{network_directory}/organizations/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt" --peerAddresses localhost:9051 --tlsRootCertFiles "{network_directory}/organizations/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt")"""
+#             }
 
-        except Exception as e:
-            pass
+#         except Exception as e:
+#             pass
+
+import requests
+
+url = "https://7abc-2600-4041-5592-500-cf8b-dcef-644-172f.ngrok-free.app/ModelTraining"
+
+response = requests.get(url).json()
+
+
 
 if __name__ == "__main__":
-    print(modelTraining("pi1", "home1", "active"))
+    print(modelTraining("pi1", response["location"], response["status"]))
