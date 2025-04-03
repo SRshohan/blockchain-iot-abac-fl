@@ -1,0 +1,770 @@
+{
+    "metadata": {
+      "dataset_name": "Enhanced Smart Home ABAC Dataset",
+      "version": "1.2",
+      "description": "A comprehensive dataset for smart home environments using ABAC with attributes ranging from common to unique",
+      "created_date": "2025-04-01"
+    },
+    "subject_attributes": [
+      {
+        "attribute_id": "sa001",
+        "attribute_name": "role",
+        "description": "User's primary role in the system",
+        "attribute_type": "common",
+        "data_type": "string",
+        "possible_values": ["owner", "family_member", "guest", "caregiver", "child", "service_provider"]
+      },
+      {
+        "attribute_id": "sa002",
+        "attribute_name": "trust_level",
+        "description": "System-assigned trust level of user",
+        "attribute_type": "common",
+        "data_type": "string",
+        "possible_values": ["high", "medium", "low", "untrusted"]
+      },
+      {
+        "attribute_id": "sa003",
+        "attribute_name": "age_group",
+        "description": "Age category of the user",
+        "attribute_type": "common",
+        "data_type": "string",
+        "possible_values": ["adult", "teen", "child"]
+      },
+      {
+        "attribute_id": "sa004",
+        "attribute_name": "authentication_method",
+        "description": "Method used to authenticate the user",
+        "attribute_type": "common",
+        "data_type": "string",
+        "possible_values": ["biometric", "multi_factor", "password", "pin", "none"]
+      },
+      {
+        "attribute_id": "sa005",
+        "attribute_name": "relationship",
+        "description": "User's relationship to home owner",
+        "attribute_type": "common",
+        "data_type": "string",
+        "possible_values": ["immediate_family", "extended_family", "friend", "professional", "stranger"]
+      },
+      {
+        "attribute_id": "sa006",
+        "attribute_name": "certification_level",
+        "description": "Professional certification level for service providers",
+        "attribute_type": "specialized",
+        "data_type": "string",
+        "possible_values": ["none", "basic", "advanced", "expert"]
+      },
+      {
+        "attribute_id": "sa007",
+        "attribute_name": "time_constraints",
+        "description": "Time of day when user is allowed access",
+        "attribute_type": "specialized",
+        "data_type": "object",
+        "possible_values": [
+          {"start_time": "00:00", "end_time": "23:59"},
+          {"start_time": "08:00", "end_time": "20:00"},
+          {"start_time": "09:00", "end_time": "17:00"}
+        ]
+      },
+      {
+        "attribute_id": "sa008",
+        "attribute_name": "physical_proximity",
+        "description": "Whether user is physically present at home",
+        "attribute_type": "specialized",
+        "data_type": "boolean",
+        "possible_values": [true, false]
+      },
+      {
+        "attribute_id": "sa009",
+        "attribute_name": "training_completed",
+        "description": "Specific training modules completed by user",
+        "attribute_type": "unique",
+        "data_type": "array",
+        "possible_values": ["basic_security", "advanced_security", "device_operations", "emergency_procedures", "privacy_guidelines"]
+      },
+      {
+        "attribute_id": "sa010",
+        "attribute_name": "temporary_elevation",
+        "description": "Temporary elevated permissions during special circumstances",
+        "attribute_type": "unique",
+        "data_type": "object",
+        "possible_values": [
+          {"elevated": true, "reason": "emergency", "expiration": "2025-04-02T12:00:00"},
+          {"elevated": false, "reason": "normal", "expiration": null}
+        ]
+      }
+    ],
+    "resource_attributes": [
+      {
+        "attribute_id": "ra001",
+        "attribute_name": "device_type",
+        "description": "Primary function of the device",
+        "attribute_type": "common",
+        "data_type": "string",
+        "possible_values": ["security", "environmental", "entertainment", "kitchen", "utility", "health"]
+      },
+      {
+        "attribute_id": "ra002",
+        "attribute_name": "data_sensitivity",
+        "description": "Sensitivity level of data handled by device",
+        "attribute_type": "common",
+        "data_type": "string",
+        "possible_values": ["critical", "high", "medium", "low"]
+      },
+      {
+        "attribute_id": "ra003",
+        "attribute_name": "location",
+        "description": "Physical location of device in home",
+        "attribute_type": "common",
+        "data_type": "string",
+        "possible_values": ["entrance", "living_room", "kitchen", "bedroom", "bathroom", "outdoor"]
+      },
+      {
+        "attribute_id": "ra004",
+        "attribute_name": "criticality",
+        "description": "Importance of device to home operations",
+        "attribute_type": "common",
+        "data_type": "string",
+        "possible_values": ["critical", "important", "standard"]
+      },
+      {
+        "attribute_id": "ra005",
+        "attribute_name": "firmware_status",
+        "description": "Status of device firmware",
+        "attribute_type": "specialized",
+        "data_type": "string",
+        "possible_values": ["up_to_date", "outdated", "vulnerable", "patching_required"]
+      },
+      {
+        "attribute_id": "ra006",
+        "attribute_name": "connectivity",
+        "description": "Network connectivity types of device",
+        "attribute_type": "specialized",
+        "data_type": "array",
+        "possible_values": ["internet", "local_network", "bluetooth", "zigbee", "z-wave", "offline"]
+      },
+      {
+        "attribute_id": "ra007",
+        "attribute_name": "energy_impact",
+        "description": "Energy consumption impact of device",
+        "attribute_type": "specialized",
+        "data_type": "string",
+        "possible_values": ["high", "medium", "low"]
+      },
+      {
+        "attribute_id": "ra008",
+        "attribute_name": "privacy_zone",
+        "description": "Privacy designation of area where device operates",
+        "attribute_type": "specialized",
+        "data_type": "string",
+        "possible_values": ["public", "family", "personal", "intimate"]
+      },
+      {
+        "attribute_id": "ra009",
+        "attribute_name": "maintenance_schedule",
+        "description": "Scheduled maintenance requirements",
+        "attribute_type": "unique",
+        "data_type": "object",
+        "possible_values": [
+          {"last_maintenance": "2025-03-15", "next_maintenance": "2025-06-15", "maintenance_type": "routine"},
+          {"last_maintenance": "2025-02-10", "next_maintenance": "2025-04-10", "maintenance_type": "critical"}
+        ]
+      },
+      {
+        "attribute_id": "ra010",
+        "attribute_name": "data_retention_policy",
+        "description": "How long device stores personal data",
+        "attribute_type": "unique",
+        "data_type": "string",
+        "possible_values": ["24_hours", "7_days", "30_days", "90_days", "indefinite"]
+      }
+    ],
+    "action_attributes": [
+      {
+        "attribute_id": "aa001",
+        "attribute_name": "operation_type",
+        "description": "Type of operation being performed",
+        "attribute_type": "common",
+        "data_type": "string",
+        "possible_values": ["read", "write", "execute", "configure", "delete"]
+      },
+      {
+        "attribute_id": "aa002",
+        "attribute_name": "impact_level",
+        "description": "Level of impact the action has on the system",
+        "attribute_type": "common",
+        "data_type": "string",
+        "possible_values": ["high", "medium", "low"]
+      },
+      {
+        "attribute_id": "aa003",
+        "attribute_name": "authentication_required",
+        "description": "Whether authentication is required for action",
+        "attribute_type": "common",
+        "data_type": "boolean",
+        "possible_values": [true, false]
+      },
+      {
+        "attribute_id": "aa004",
+        "attribute_name": "logging_level",
+        "description": "Detail level of action logging",
+        "attribute_type": "common",
+        "data_type": "string",
+        "possible_values": ["detailed", "standard", "minimal", "none"]
+      },
+      {
+        "attribute_id": "aa005",
+        "attribute_name": "reversibility",
+        "description": "Whether action can be undone",
+        "attribute_type": "specialized",
+        "data_type": "string",
+        "possible_values": ["reversible", "partially_reversible", "irreversible"]
+      },
+      {
+        "attribute_id": "aa006",
+        "attribute_name": "approval_required",
+        "description": "Whether action requires approval from another user",
+        "attribute_type": "specialized",
+        "data_type": "boolean",
+        "possible_values": [true, false]
+      },
+      {
+        "attribute_id": "aa007",
+        "attribute_name": "energy_consumption",
+        "description": "Expected energy consumption of action",
+        "attribute_type": "specialized",
+        "data_type": "string",
+        "possible_values": ["high", "medium", "low", "negligible"]
+      },
+      {
+        "attribute_id": "aa008",
+        "attribute_name": "scheduled_execution",
+        "description": "Whether action is executed immediately or scheduled",
+        "attribute_type": "unique",
+        "data_type": "string",
+        "possible_values": ["immediate", "scheduled", "recurring"]
+      },
+      {
+        "attribute_id": "aa009",
+        "attribute_name": "dependency_check",
+        "description": "Whether action requires checking dependencies",
+        "attribute_type": "unique",
+        "data_type": "boolean",
+        "possible_values": [true, false]
+      },
+      {
+        "attribute_id": "aa010",
+        "attribute_name": "privacy_impact",
+        "description": "Level of privacy impact of action",
+        "attribute_type": "unique",
+        "data_type": "string",
+        "possible_values": ["none", "minimal", "moderate", "significant", "severe"]
+      }
+    ],
+    "environment_attributes": [
+      {
+        "attribute_id": "ea001",
+        "attribute_name": "time_of_day",
+        "description": "Current time period",
+        "attribute_type": "common",
+        "data_type": "string",
+        "possible_values": ["morning", "afternoon", "evening", "night"]
+      },
+      {
+        "attribute_id": "ea002",
+        "attribute_name": "day_type",
+        "description": "Type of day",
+        "attribute_type": "common",
+        "data_type": "string",
+        "possible_values": ["weekday", "weekend", "holiday"]
+      },
+      {
+        "attribute_id": "ea003",
+        "attribute_name": "home_occupancy",
+        "description": "Whether anyone is home",
+        "attribute_type": "common",
+        "data_type": "string",
+        "possible_values": ["occupied", "partially_occupied", "empty"]
+      },
+      {
+        "attribute_id": "ea004",
+        "attribute_name": "security_mode",
+        "description": "Current security system mode",
+        "attribute_type": "common",
+        "data_type": "string",
+        "possible_values": ["normal", "away", "vacation", "lockdown"]
+      },
+      {
+        "attribute_id": "ea005",
+        "attribute_name": "network_security_status",
+        "description": "Current security status of home network",
+        "attribute_type": "specialized",
+        "data_type": "string",
+        "possible_values": ["normal", "suspicious", "under_attack", "compromised"]
+      },
+      {
+        "attribute_id": "ea006",
+        "attribute_name": "emergency_status",
+        "description": "Current emergency status",
+        "attribute_type": "specialized",
+        "data_type": "string",
+        "possible_values": ["normal", "alert", "emergency", "recovery"]
+      },
+      {
+        "attribute_id": "ea007",
+        "attribute_name": "weather_conditions",
+        "description": "Current local weather conditions",
+        "attribute_type": "specialized",
+        "data_type": "string",
+        "possible_values": ["clear", "cloudy", "rain", "snow", "severe"]
+      },
+      {
+        "attribute_id": "ea008",
+        "attribute_name": "power_status",
+        "description": "Current power supply status",
+        "attribute_type": "specialized",
+        "data_type": "string",
+        "possible_values": ["normal", "backup", "low", "critical", "outage"]
+      },
+      {
+        "attribute_id": "ea009",
+        "attribute_name": "local_threat_level",
+        "description": "Local area threat assessment",
+        "attribute_type": "unique",
+        "data_type": "object",
+        "possible_values": [
+          {"level": "low", "source": "police_api", "last_updated": "2025-04-01T08:00:00"},
+          {"level": "medium", "source": "security_service", "last_updated": "2025-04-01T12:00:00"},
+          {"level": "high", "source": "community_alert", "last_updated": "2025-04-01T16:00:00"}
+        ]
+      },
+      {
+        "attribute_id": "ea010",
+        "attribute_name": "maintenance_mode",
+        "description": "Whether system is in maintenance mode",
+        "attribute_type": "unique",
+        "data_type": "object",
+        "possible_values": [
+          {"active": true, "reason": "scheduled_update", "expires": "2025-04-01T22:00:00"},
+          {"active": true, "reason": "diagnostics", "expires": "2025-04-01T18:30:00"},
+          {"active": false, "reason": null, "expires": null}
+        ]
+      }
+    ],
+    "users": [
+      {
+        "user_id": "u001",
+        "username": "john_owner",
+        "full_name": "John Smith",
+        "subject_attributes": {
+          "role": "owner",
+          "trust_level": "high",
+          "age_group": "adult",
+          "authentication_method": "biometric",
+          "relationship": "immediate_family",
+          "certification_level": "none",
+          "time_constraints": {"start_time": "00:00", "end_time": "23:59"},
+          "physical_proximity": true,
+          "training_completed": ["basic_security", "advanced_security", "privacy_guidelines"],
+          "temporary_elevation": {"elevated": false, "reason": "normal", "expiration": null}
+        }
+      },
+      {
+        "user_id": "u002",
+        "username": "mary_family",
+        "full_name": "Mary Smith",
+        "subject_attributes": {
+          "role": "family_member",
+          "trust_level": "high",
+          "age_group": "adult",
+          "authentication_method": "multi_factor",
+          "relationship": "immediate_family",
+          "certification_level": "none",
+          "time_constraints": {"start_time": "00:00", "end_time": "23:59"},
+          "physical_proximity": true,
+          "training_completed": ["basic_security", "device_operations"],
+          "temporary_elevation": {"elevated": false, "reason": "normal", "expiration": null}
+        }
+      },
+      {
+        "user_id": "u003",
+        "username": "emma_teen",
+        "full_name": "Emma Smith",
+        "subject_attributes": {
+          "role": "child",
+          "trust_level": "medium",
+          "age_group": "teen",
+          "authentication_method": "password",
+          "relationship": "immediate_family",
+          "certification_level": "none",
+          "time_constraints": {"start_time": "08:00", "end_time": "20:00"},
+          "physical_proximity": true,
+          "training_completed": ["basic_security"],
+          "temporary_elevation": {"elevated": false, "reason": "normal", "expiration": null}
+        }
+      },
+      {
+        "user_id": "u004",
+        "username": "tom_guest",
+        "full_name": "Tom Jones",
+        "subject_attributes": {
+          "role": "guest",
+          "trust_level": "low",
+          "age_group": "adult",
+          "authentication_method": "pin",
+          "relationship": "friend",
+          "certification_level": "none",
+          "time_constraints": {"start_time": "08:00", "end_time": "20:00"},
+          "physical_proximity": true,
+          "training_completed": [],
+          "temporary_elevation": {"elevated": false, "reason": "normal", "expiration": null}
+        }
+      },
+      {
+        "user_id": "u005",
+        "username": "sarah_nurse",
+        "full_name": "Sarah Johnson",
+        "subject_attributes": {
+          "role": "caregiver",
+          "trust_level": "medium",
+          "age_group": "adult",
+          "authentication_method": "multi_factor",
+          "relationship": "professional",
+          "certification_level": "advanced",
+          "time_constraints": {"start_time": "09:00", "end_time": "17:00"},
+          "physical_proximity": true,
+          "training_completed": ["basic_security", "emergency_procedures", "privacy_guidelines"],
+          "temporary_elevation": {"elevated": false, "reason": "normal", "expiration": null}
+        }
+      },
+      {
+        "user_id": "u006",
+        "username": "tech_support",
+        "full_name": "Technical Support",
+        "subject_attributes": {
+          "role": "service_provider",
+          "trust_level": "medium",
+          "age_group": "adult",
+          "authentication_method": "multi_factor",
+          "relationship": "professional",
+          "certification_level": "expert",
+          "time_constraints": {"start_time": "09:00", "end_time": "17:00"},
+          "physical_proximity": false,
+          "training_completed": ["basic_security", "advanced_security", "device_operations", "privacy_guidelines"],
+          "temporary_elevation": {"elevated": true, "reason": "scheduled_maintenance", "expiration": "2025-04-01T17:00:00"}
+        }
+      },
+      {
+        "user_id": "u007",
+        "username": "emergency_response",
+        "full_name": "Emergency Response Team",
+        "subject_attributes": {
+          "role": "service_provider",
+          "trust_level": "high",
+          "age_group": "adult",
+          "authentication_method": "multi_factor",
+          "relationship": "professional",
+          "certification_level": "expert",
+          "time_constraints": {"start_time": "00:00", "end_time": "23:59"},
+          "physical_proximity": false,
+          "training_completed": ["basic_security", "advanced_security", "emergency_procedures"],
+          "temporary_elevation": {"elevated": true, "reason": "emergency", "expiration": "2025-04-02T12:00:00"}
+        }
+      }
+    ],
+    "devices": [
+      {
+        "device_id": "d001",
+        "device_name": "Living Room Thermostat",
+        "resource_attributes": {
+          "device_type": "environmental",
+          "data_sensitivity": "medium",
+          "location": "living_room",
+          "criticality": "important",
+          "firmware_status": "up_to_date",
+          "connectivity": ["internet", "local_network", "zigbee"],
+          "energy_impact": "medium",
+          "privacy_zone": "public",
+          "maintenance_schedule": {"last_maintenance": "2025-03-15", "next_maintenance": "2025-06-15", "maintenance_type": "routine"},
+          "data_retention_policy": "7_days"
+        }
+      },
+      {
+        "device_id": "d002",
+        "device_name": "Front Door Lock",
+        "resource_attributes": {
+          "device_type": "security",
+          "data_sensitivity": "critical",
+          "location": "entrance",
+          "criticality": "critical",
+          "firmware_status": "up_to_date",
+          "connectivity": ["local_network", "zigbee"],
+          "energy_impact": "low",
+          "privacy_zone": "public",
+          "maintenance_schedule": {"last_maintenance": "2025-03-01", "next_maintenance": "2025-06-01", "maintenance_type": "critical"},
+          "data_retention_policy": "30_days"
+        }
+      },
+      {
+        "device_id": "d003",
+        "device_name": "Backyard Camera",
+        "resource_attributes": {
+          "device_type": "security",
+          "data_sensitivity": "high",
+          "location": "outdoor",
+          "criticality": "important",
+          "firmware_status": "up_to_date",
+          "connectivity": ["internet", "local_network"],
+          "energy_impact": "medium",
+          "privacy_zone": "public",
+          "maintenance_schedule": {"last_maintenance": "2025-03-10", "next_maintenance": "2025-06-10", "maintenance_type": "routine"},
+          "data_retention_policy": "30_days"
+        }
+      },
+      {
+        "device_id": "d004",
+        "device_name": "Bedroom Camera",
+        "resource_attributes": {
+          "device_type": "security",
+          "data_sensitivity": "critical",
+          "location": "bedroom",
+          "criticality": "important",
+          "firmware_status": "up_to_date",
+          "connectivity": ["local_network"],
+          "energy_impact": "medium",
+          "privacy_zone": "intimate",
+          "maintenance_schedule": {"last_maintenance": "2025-03-10", "next_maintenance": "2025-06-10", "maintenance_type": "routine"},
+          "data_retention_policy": "24_hours"
+        }
+      },
+      {
+        "device_id": "d005",
+        "device_name": "Kitchen Lights",
+        "resource_attributes": {
+          "device_type": "utility",
+          "data_sensitivity": "low",
+          "location": "kitchen",
+          "criticality": "standard",
+          "firmware_status": "up_to_date",
+          "connectivity": ["zigbee", "local_network"],
+          "energy_impact": "medium",
+          "privacy_zone": "public",
+          "maintenance_schedule": {"last_maintenance": "2025-02-15", "next_maintenance": "2025-08-15", "maintenance_type": "routine"},
+          "data_retention_policy": "none"
+        }
+      },
+      {
+        "device_id": "d006",
+        "device_name": "Living Room Entertainment System",
+        "resource_attributes": {
+          "device_type": "entertainment",
+          "data_sensitivity": "medium",
+          "location": "living_room",
+          "criticality": "standard",
+          "firmware_status": "outdated",
+          "connectivity": ["internet", "local_network", "bluetooth"],
+          "energy_impact": "high",
+          "privacy_zone": "public",
+          "maintenance_schedule": {"last_maintenance": "2025-01-15", "next_maintenance": "2025-04-15", "maintenance_type": "routine"},
+          "data_retention_policy": "30_days"
+        }
+      },
+      {
+        "device_id": "d007",
+        "device_name": "Medical Monitor",
+        "resource_attributes": {
+          "device_type": "health",
+          "data_sensitivity": "critical",
+          "location": "bedroom",
+          "criticality": "critical",
+          "firmware_status": "up_to_date",
+          "connectivity": ["local_network", "bluetooth"],
+          "energy_impact": "low",
+          "privacy_zone": "personal",
+          "maintenance_schedule": {"last_maintenance": "2025-03-01", "next_maintenance": "2025-04-01", "maintenance_type": "critical"},
+          "data_retention_policy": "90_days"
+        }
+      },
+      {
+        "device_id": "d008",
+        "device_name": "Smart Refrigerator",
+        "resource_attributes": {
+          "device_type": "kitchen",
+          "data_sensitivity": "medium",
+          "location": "kitchen",
+          "criticality": "important",
+          "firmware_status": "outdated",
+          "connectivity": ["internet", "local_network"],
+          "energy_impact": "high",
+          "privacy_zone": "family",
+          "maintenance_schedule": {"last_maintenance": "2025-02-10", "next_maintenance": "2025-05-10", "maintenance_type": "routine"},
+          "data_retention_policy": "30_days"
+        }
+      }
+    ],
+    "actions": [
+      {
+        "action_id": "act001",
+        "action_name": "view_status",
+        "action_attributes": {
+          "operation_type": "read",
+          "impact_level": "low",
+          "authentication_required": true,
+          "logging_level": "standard",
+          "reversibility": "reversible",
+          "approval_required": false,
+          "energy_consumption": "negligible",
+          "scheduled_execution": "immediate",
+          "dependency_check": false,
+          "privacy_impact": "minimal"
+        }
+      },
+      {
+        "action_id": "act002",
+        "action_name": "adjust_settings",
+        "action_attributes": {
+          "operation_type": "write",
+          "impact_level": "medium",
+          "authentication_required": true,
+          "logging_level": "detailed",
+          "reversibility": "reversible",
+          "approval_required": false,
+          "energy_consumption": "low",
+          "scheduled_execution": "immediate",
+          "dependency_check": true,
+          "privacy_impact": "minimal"
+        }
+      },
+      {
+        "action_id": "act003",
+        "action_name": "firmware_update",
+        "action_attributes": {
+          "operation_type": "execute",
+          "impact_level": "high",
+          "authentication_required": true,
+          "logging_level": "detailed",
+          "reversibility": "irreversible",
+          "approval_required": true,
+          "energy_consumption": "high",
+          "scheduled_execution": "scheduled",
+          "dependency_check": true,
+          "privacy_impact": "moderate"
+        }
+      },
+      {
+        "action_id": "act004",
+        "action_name": "add_remove_user",
+        "action_attributes": {
+          "operation_type": "configure",
+          "impact_level": "high",
+          "authentication_required": true,
+          "logging_level": "detailed",
+          "reversibility": "reversible",
+          "approval_required": false,
+          "energy_consumption": "negligible",
+          "scheduled_execution": "immediate",
+          "dependency_check": false,
+          "privacy_impact": "significant"
+        }
+      },
+      {
+        "action_id": "act005",
+        "action_name": "unlock_door",
+        "action_attributes": {
+          "operation_type": "execute",
+          "impact_level": "high",
+          "authentication_required": true,
+          "logging_level": "detailed",
+          "reversibility": "reversible",
+          "approval_required": false,
+          "energy_consumption": "low",
+          "scheduled_execution": "immediate",
+          "dependency_check": true,
+          "privacy_impact": "moderate"
+        }
+      },
+      {
+        "action_id": "act006",
+        "action_name": "view_camera",
+        "action_attributes": {
+          "operation_type": "read",
+          "impact_level": "medium",
+          "authentication_required": true,
+          "logging_level": "detailed",
+          "reversibility": "reversible",
+          "approval_required": false,
+          "energy_consumption": "medium",
+          "scheduled_execution": "immediate",
+          "dependency_check": false,
+          "privacy_impact": "significant"
+        }
+      },
+      {
+        "action_id": "act007",
+        "action_name": "access_health_data",
+        "action_attributes": {
+          "operation_type": "read",
+          "impact_level": "high",
+          "authentication_required": true,
+          "logging_level": "detailed",
+          "reversibility": "reversible",
+          "approval_required": true,
+          "energy_consumption": "negligible",
+          "scheduled_execution": "immediate",
+          "dependency_check": false,
+          "privacy_impact": "severe"
+        }
+      },
+      {
+        "action_id": "act008",
+        "action_name": "factory_reset",
+        "action_attributes": {
+          "operation_type": "execute",
+          "impact_level": "high",
+          "authentication_required": true,
+          "logging_level": "detailed",
+          "reversibility": "irreversible",
+          "approval_required": true,
+          "energy_consumption": "medium",
+          "scheduled_execution": "immediate",
+          "dependency_check": true,
+          "privacy_impact": "severe"
+        }
+      }
+    ],
+    "environment_contexts": [
+      {
+        "context_id": "ctx001",
+        "description": "Normal weekday morning",
+        "environment_attributes": {
+          "time_of_day": "morning",
+          "day_type": "weekday",
+          "home_occupancy": "occupied",
+          "security_mode": "normal",
+          "network_security_status": "normal",
+          "emergency_status": "normal",
+          "weather_conditions": "clear",
+          "power_status": "normal",
+          "local_threat_level": {"level": "low", "source": "police_api", "last_updated": "2025-04-01T08:00:00"},
+          "maintenance_mode": {"active": false, "reason": null, "expires": null}
+        }
+      },
+      {
+        "context_id": "ctx002",
+        "description": "Weekend afternoon with guests",
+        "environment_attributes": {
+          "time_of_day": "afternoon",
+          "day_type": "weekend",
+          "home_occupancy": "occupied",
+          "security_mode": "normal",
+          "network_security_status": "normal",
+          "emergency_status": "normal",
+          "weather_conditions": "clear",
+          "power_status": "normal",
+          "local_threat_level": {"level": "low", "source": "police_api", "last_updated": "2025-04-01T14:00:00"},
+          "maintenance_mode": {"active": false, "reason": null, "expires": null}
+        }
+      }
+    ]
+  }
+      
