@@ -1,83 +1,69 @@
 {
-  "start_time": "2025-03-29T16:28:18.008996",
+  "start_time": "2025-04-08T05:21:38.831424",
   "rounds": [
     {
       "round": 1,
-      "start_time": "2025-03-29T17:17:41.866344",
+      "start_time": "2025-04-08T07:28:26.628621",
       "client_metrics": [
         {
-          "client_id": "client_2ba44b4e50b04ed5a2e2e5ba94ec7dc8",
+          "client_id": "client_609c7f2920504f86a3245c4fa9776ee6",
           "num_examples": 50000,
           "metrics": {}
         },
         {
-          "client_id": "client_e1bbabc6433f4aa9b26953627b95d5ef",
+          "client_id": "client_e737117acfb44d08b25f3014dfab5a44",
           "num_examples": 50000,
           "metrics": {}
         }
       ],
       "aggregated_metrics": {
-        "mean_loss": 1.8492439985275269,
+        "mean_loss": 1.6218456029891968,
         "std_loss": 0.0,
-        "mean_accuracy": 0.3303999900817871,
+        "mean_accuracy": 0.4812999963760376,
         "std_accuracy": 0.0
       },
       "evaluation_metrics": [
         {
-          "client_id": "client_2ba44b4e50b04ed5a2e2e5ba94ec7dc8",
-          "loss": 1.8492439985275269,
-          "num_examples": 10000,
+          "client_id": "client_609c7f2920504f86a3245c4fa9776ee6",
+          "loss": 1.6218456029891968,
+          "num_examples": 50000,
           "metrics": {
-            "accuracy": 0.3303999900817871
-          }
-        },
-        {
-          "client_id": "client_e1bbabc6433f4aa9b26953627b95d5ef",
-          "loss": 1.8492439985275269,
-          "num_examples": 10000,
-          "metrics": {
-            "accuracy": 0.3303999900817871
+            "accuracy": 0.4812999963760376
           }
         }
       ],
-      "end_time": "2025-03-29T17:17:54.022417",
-      "duration_seconds": 12.156073
+      "end_time": "2025-04-08T07:30:01.858573",
+      "duration_seconds": 95.229952
     }
   ],
   "clients": {
-    "client_2ba44b4e50b04ed5a2e2e5ba94ec7dc8": [
+    "client_609c7f2920504f86a3245c4fa9776ee6": [
       {
         "round": 1,
         "fit_metrics": {},
         "num_examples": 50000,
         "evaluation": {
-          "loss": 1.8492439985275269,
+          "loss": 1.6218456029891968,
           "metrics": {
-            "accuracy": 0.3303999900817871
+            "accuracy": 0.4812999963760376
           }
         }
       }
     ],
-    "client_e1bbabc6433f4aa9b26953627b95d5ef": [
+    "client_e737117acfb44d08b25f3014dfab5a44": [
       {
         "round": 1,
         "fit_metrics": {},
-        "num_examples": 50000,
-        "evaluation": {
-          "loss": 1.8492439985275269,
-          "metrics": {
-            "accuracy": 0.3303999900817871
-          }
-        }
+        "num_examples": 50000
       }
     ]
   },
   "global_metrics": [
     {
       "round": 1,
-      "timestamp": "2025-03-29T17:17:54.022226",
-      "mean_loss": 1.8492439985275269,
-      "mean_accuracy": 0.3303999900817871
+      "timestamp": "2025-04-08T07:30:01.857306",
+      "mean_loss": 1.6218456029891968,
+      "mean_accuracy": 0.4812999963760376
     }
   ]
 }

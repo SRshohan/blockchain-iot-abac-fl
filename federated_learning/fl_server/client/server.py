@@ -220,7 +220,7 @@ if __name__ == "__main__":
         # Start the server
         fl.server.start_server(
             server_address="192.168.1.14:8080",
-            config=fl.server.ServerConfig(num_rounds=1),
+            config=fl.server.ServerConfig(num_rounds=3),
             strategy=strategy
         )
         

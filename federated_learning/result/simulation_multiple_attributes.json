@@ -1,0 +1,544 @@
+[
+    {
+        "attributes": {
+            "client": "pi_1",
+            "status": "active",
+            "location": "home1"
+        },
+        "response": {
+            "payload": {
+                "client": "pi_1",
+                "status": "active",
+                "timestamp": "2025-04-08T19:19:40.642875",
+                "location": "home1"
+            },
+            "status_code": 200,
+            "response": {
+                "client": "pi_1",
+                "location": "home1",
+                "status": "active"
+            },
+            "timestamp": "2025-04-08T19:19:40.773424"
+        }
+    },
+    {
+        "attributes": {
+            "client": "pi_1",
+            "status": "inactive",
+            "location": "home1"
+        },
+        "response": {
+            "payload": {
+                "client": "pi_1",
+                "status": "inactive",
+                "timestamp": "2025-04-08T19:19:40.773653",
+                "location": "home1"
+            },
+            "status_code": 500,
+            "response": {
+                "message": "Internal Server Error"
+            },
+            "timestamp": "2025-04-08T19:19:40.904903"
+        }
+    },
+    {
+        "attributes": {
+            "client": "pi_1",
+            "status": "error",
+            "location": "home1"
+        },
+        "response": {
+            "payload": {
+                "client": "pi_1",
+                "status": "error",
+                "timestamp": "2025-04-08T19:19:40.905116",
+                "location": "home1"
+            },
+            "status_code": 500,
+            "response": {
+                "message": "Internal Server Error"
+            },
+            "timestamp": "2025-04-08T19:19:41.042620"
+        }
+    },
+    {
+        "attributes": {
+            "client": "pi_1",
+            "status": "active",
+            "location": "unauthorized_location"
+        },
+        "response": {
+            "payload": {
+                "client": "pi_1",
+                "status": "active",
+                "timestamp": "2025-04-08T19:19:41.042838",
+                "location": "unauthorized_location"
+            },
+            "status_code": 500,
+            "response": {
+                "message": "Internal Server Error"
+            },
+            "timestamp": "2025-04-08T19:19:41.174222"
+        }
+    },
+    {
+        "attributes": {
+            "client": "pi_1",
+            "status": "inactive",
+            "location": "unauthorized_location"
+        },
+        "response": {
+            "payload": {
+                "client": "pi_1",
+                "status": "inactive",
+                "timestamp": "2025-04-08T19:19:41.174464",
+                "location": "unauthorized_location"
+            },
+            "status_code": 500,
+            "response": {
+                "message": "Internal Server Error"
+            },
+            "timestamp": "2025-04-08T19:19:41.315208"
+        }
+    },
+    {
+        "attributes": {
+            "client": "pi_1",
+            "status": "error",
+            "location": "unauthorized_location"
+        },
+        "response": {
+            "payload": {
+                "client": "pi_1",
+                "status": "error",
+                "timestamp": "2025-04-08T19:19:41.315573",
+                "location": "unauthorized_location"
+            },
+            "status_code": 500,
+            "response": {
+                "message": "Internal Server Error"
+            },
+            "timestamp": "2025-04-08T19:19:41.452990"
+        }
+    },
+    {
+        "attributes": {
+            "client": "pi_1",
+            "status": "active",
+            "location": "home2"
+        },
+        "response": {
+            "payload": {
+                "client": "pi_1",
+                "status": "active",
+                "timestamp": "2025-04-08T19:19:41.453199",
+                "location": "home2"
+            },
+            "status_code": 500,
+            "response": {
+                "message": "Internal Server Error"
+            },
+            "timestamp": "2025-04-08T19:19:41.594804"
+        }
+    },
+    {
+        "attributes": {
+            "client": "pi_1",
+            "status": "inactive",
+            "location": "home2"
+        },
+        "response": {
+            "payload": {
+                "client": "pi_1",
+                "status": "inactive",
+                "timestamp": "2025-04-08T19:19:41.595267",
+                "location": "home2"
+            },
+            "status_code": 500,
+            "response": {
+                "message": "Internal Server Error"
+            },
+            "timestamp": "2025-04-08T19:19:41.743775"
+        }
+    },
+    {
+        "attributes": {
+            "client": "pi_1",
+            "status": "error",
+            "location": "home2"
+        },
+        "response": {
+            "payload": {
+                "client": "pi_1",
+                "status": "error",
+                "timestamp": "2025-04-08T19:19:41.743995",
+                "location": "home2"
+            },
+            "status_code": 500,
+            "response": {
+                "message": "Internal Server Error"
+            },
+            "timestamp": "2025-04-08T19:19:41.886200"
+        }
+    },
+    {
+        "attributes": {
+            "client": "pi_2",
+            "status": "active",
+            "location": "home1"
+        },
+        "response": {
+            "payload": {
+                "client": "pi_2",
+                "status": "active",
+                "timestamp": "2025-04-08T19:19:41.886356",
+                "location": "home1"
+            },
+            "status_code": 500,
+            "response": {
+                "message": "Internal Server Error"
+            },
+            "timestamp": "2025-04-08T19:19:42.025530"
+        }
+    },
+    {
+        "attributes": {
+            "client": "pi_2",
+            "status": "inactive",
+            "location": "home1"
+        },
+        "response": {
+            "payload": {
+                "client": "pi_2",
+                "status": "inactive",
+                "timestamp": "2025-04-08T19:19:42.025639",
+                "location": "home1"
+            },
+            "status_code": 500,
+            "response": {
+                "message": "Internal Server Error"
+            },
+            "timestamp": "2025-04-08T19:19:42.165621"
+        }
+    },
+    {
+        "attributes": {
+            "client": "pi_2",
+            "status": "error",
+            "location": "home1"
+        },
+        "response": {
+            "payload": {
+                "client": "pi_2",
+                "status": "error",
+                "timestamp": "2025-04-08T19:19:42.165761",
+                "location": "home1"
+            },
+            "status_code": 500,
+            "response": {
+                "message": "Internal Server Error"
+            },
+            "timestamp": "2025-04-08T19:19:42.298752"
+        }
+    },
+    {
+        "attributes": {
+            "client": "pi_2",
+            "status": "active",
+            "location": "unauthorized_location"
+        },
+        "response": {
+            "payload": {
+                "client": "pi_2",
+                "status": "active",
+                "timestamp": "2025-04-08T19:19:42.298983",
+                "location": "unauthorized_location"
+            },
+            "status_code": 500,
+            "response": {
+                "message": "Internal Server Error"
+            },
+            "timestamp": "2025-04-08T19:19:42.436154"
+        }
+    },
+    {
+        "attributes": {
+            "client": "pi_2",
+            "status": "inactive",
+            "location": "unauthorized_location"
+        },
+        "response": {
+            "payload": {
+                "client": "pi_2",
+                "status": "inactive",
+                "timestamp": "2025-04-08T19:19:42.436334",
+                "location": "unauthorized_location"
+            },
+            "status_code": 500,
+            "response": {
+                "message": "Internal Server Error"
+            },
+            "timestamp": "2025-04-08T19:19:42.574539"
+        }
+    },
+    {
+        "attributes": {
+            "client": "pi_2",
+            "status": "error",
+            "location": "unauthorized_location"
+        },
+        "response": {
+            "payload": {
+                "client": "pi_2",
+                "status": "error",
+                "timestamp": "2025-04-08T19:19:42.574707",
+                "location": "unauthorized_location"
+            },
+            "status_code": 500,
+            "response": {
+                "message": "Internal Server Error"
+            },
+            "timestamp": "2025-04-08T19:19:42.714650"
+        }
+    },
+    {
+        "attributes": {
+            "client": "pi_2",
+            "status": "active",
+            "location": "home2"
+        },
+        "response": {
+            "payload": {
+                "client": "pi_2",
+                "status": "active",
+                "timestamp": "2025-04-08T19:19:42.714808",
+                "location": "home2"
+            },
+            "status_code": 500,
+            "response": {
+                "message": "Internal Server Error"
+            },
+            "timestamp": "2025-04-08T19:19:42.853369"
+        }
+    },
+    {
+        "attributes": {
+            "client": "pi_2",
+            "status": "inactive",
+            "location": "home2"
+        },
+        "response": {
+            "payload": {
+                "client": "pi_2",
+                "status": "inactive",
+                "timestamp": "2025-04-08T19:19:42.853592",
+                "location": "home2"
+            },
+            "status_code": 500,
+            "response": {
+                "message": "Internal Server Error"
+            },
+            "timestamp": "2025-04-08T19:19:42.987675"
+        }
+    },
+    {
+        "attributes": {
+            "client": "pi_2",
+            "status": "error",
+            "location": "home2"
+        },
+        "response": {
+            "payload": {
+                "client": "pi_2",
+                "status": "error",
+                "timestamp": "2025-04-08T19:19:42.987879",
+                "location": "home2"
+            },
+            "status_code": 500,
+            "response": {
+                "message": "Internal Server Error"
+            },
+            "timestamp": "2025-04-08T19:19:43.122429"
+        }
+    },
+    {
+        "attributes": {
+            "client": "pi_3",
+            "status": "active",
+            "location": "home1"
+        },
+        "response": {
+            "payload": {
+                "client": "pi_3",
+                "status": "active",
+                "timestamp": "2025-04-08T19:19:43.122897",
+                "location": "home1"
+            },
+            "status_code": 500,
+            "response": {
+                "message": "Internal Server Error"
+            },
+            "timestamp": "2025-04-08T19:19:43.264341"
+        }
+    },
+    {
+        "attributes": {
+            "client": "pi_3",
+            "status": "inactive",
+            "location": "home1"
+        },
+        "response": {
+            "payload": {
+                "client": "pi_3",
+                "status": "inactive",
+                "timestamp": "2025-04-08T19:19:43.264553",
+                "location": "home1"
+            },
+            "status_code": 500,
+            "response": {
+                "message": "Internal Server Error"
+            },
+            "timestamp": "2025-04-08T19:19:43.402476"
+        }
+    },
+    {
+        "attributes": {
+            "client": "pi_3",
+            "status": "error",
+            "location": "home1"
+        },
+        "response": {
+            "payload": {
+                "client": "pi_3",
+                "status": "error",
+                "timestamp": "2025-04-08T19:19:43.402925",
+                "location": "home1"
+            },
+            "status_code": 500,
+            "response": {
+                "message": "Internal Server Error"
+            },
+            "timestamp": "2025-04-08T19:19:43.543959"
+        }
+    },
+    {
+        "attributes": {
+            "client": "pi_3",
+            "status": "active",
+            "location": "unauthorized_location"
+        },
+        "response": {
+            "payload": {
+                "client": "pi_3",
+                "status": "active",
+                "timestamp": "2025-04-08T19:19:43.544408",
+                "location": "unauthorized_location"
+            },
+            "status_code": 500,
+            "response": {
+                "message": "Internal Server Error"
+            },
+            "timestamp": "2025-04-08T19:19:43.682270"
+        }
+    },
+    {
+        "attributes": {
+            "client": "pi_3",
+            "status": "inactive",
+            "location": "unauthorized_location"
+        },
+        "response": {
+            "payload": {
+                "client": "pi_3",
+                "status": "inactive",
+                "timestamp": "2025-04-08T19:19:43.682608",
+                "location": "unauthorized_location"
+            },
+            "status_code": 500,
+            "response": {
+                "message": "Internal Server Error"
+            },
+            "timestamp": "2025-04-08T19:19:43.830323"
+        }
+    },
+    {
+        "attributes": {
+            "client": "pi_3",
+            "status": "error",
+            "location": "unauthorized_location"
+        },
+        "response": {
+            "payload": {
+                "client": "pi_3",
+                "status": "error",
+                "timestamp": "2025-04-08T19:19:43.830768",
+                "location": "unauthorized_location"
+            },
+            "status_code": 500,
+            "response": {
+                "message": "Internal Server Error"
+            },
+            "timestamp": "2025-04-08T19:19:43.963349"
+        }
+    },
+    {
+        "attributes": {
+            "client": "pi_3",
+            "status": "active",
+            "location": "home2"
+        },
+        "response": {
+            "payload": {
+                "client": "pi_3",
+                "status": "active",
+                "timestamp": "2025-04-08T19:19:43.963801",
+                "location": "home2"
+            },
+            "status_code": 500,
+            "response": {
+                "message": "Internal Server Error"
+            },
+            "timestamp": "2025-04-08T19:19:44.097965"
+        }
+    },
+    {
+        "attributes": {
+            "client": "pi_3",
+            "status": "inactive",
+            "location": "home2"
+        },
+        "response": {
+            "payload": {
+                "client": "pi_3",
+                "status": "inactive",
+                "timestamp": "2025-04-08T19:19:44.098248",
+                "location": "home2"
+            },
+            "status_code": 500,
+            "response": {
+                "message": "Internal Server Error"
+            },
+            "timestamp": "2025-04-08T19:19:44.244543"
+        }
+    },
+    {
+        "attributes": {
+            "client": "pi_3",
+            "status": "error",
+            "location": "home2"
+        },
+        "response": {
+            "payload": {
+                "client": "pi_3",
+                "status": "error",
+                "timestamp": "2025-04-08T19:19:44.244684",
+                "location": "home2"
+            },
+            "status_code": 500,
+            "response": {
+                "message": "Internal Server Error"
+            },
+            "timestamp": "2025-04-08T19:19:44.375921"
+        }
+    }
+]
