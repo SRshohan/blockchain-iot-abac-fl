@@ -1,0 +1,964 @@
+{
+    "unauthorized_access": [
+        {
+            "payload": {
+                "client": "pi_2",
+                "status": "active",
+                "timestamp": "2025-04-08T19:19:33.783667",
+                "location": "home1"
+            },
+            "status_code": 500,
+            "response": {
+                "message": "Internal Server Error"
+            },
+            "timestamp": "2025-04-08T19:19:33.978725"
+        },
+        {
+            "payload": {
+                "client": "pi_2",
+                "status": "active",
+                "timestamp": "2025-04-08T19:19:34.544245",
+                "location": "home1"
+            },
+            "status_code": 500,
+            "response": {
+                "message": "Internal Server Error"
+            },
+            "timestamp": "2025-04-08T19:19:34.686975"
+        },
+        {
+            "payload": {
+                "client": "pi_2",
+                "status": "active",
+                "timestamp": "2025-04-08T19:19:35.246348",
+                "location": "home1"
+            },
+            "status_code": 500,
+            "response": {
+                "message": "Internal Server Error"
+            },
+            "timestamp": "2025-04-08T19:19:35.381691"
+        },
+        {
+            "payload": {
+                "client": "pi_2",
+                "status": "active",
+                "timestamp": "2025-04-08T19:19:35.934654",
+                "location": "home1"
+            },
+            "status_code": 500,
+            "response": {
+                "message": "Internal Server Error"
+            },
+            "timestamp": "2025-04-08T19:19:36.073965"
+        },
+        {
+            "payload": {
+                "client": "pi_2",
+                "status": "active",
+                "timestamp": "2025-04-08T19:19:36.590575",
+                "location": "home1"
+            },
+            "status_code": 500,
+            "response": {
+                "message": "Internal Server Error"
+            },
+            "timestamp": "2025-04-08T19:19:36.731781"
+        },
+        {
+            "payload": {
+                "client": "pi_2",
+                "status": "active",
+                "timestamp": "2025-04-08T19:19:37.282428",
+                "location": "home1"
+            },
+            "status_code": 500,
+            "response": {
+                "message": "Internal Server Error"
+            },
+            "timestamp": "2025-04-08T19:19:37.417746"
+        },
+        {
+            "payload": {
+                "client": "pi_2",
+                "status": "active",
+                "timestamp": "2025-04-08T19:19:37.967413",
+                "location": "home1"
+            },
+            "status_code": 500,
+            "response": {
+                "message": "Internal Server Error"
+            },
+            "timestamp": "2025-04-08T19:19:38.104697"
+        },
+        {
+            "payload": {
+                "client": "pi_2",
+                "status": "active",
+                "timestamp": "2025-04-08T19:19:38.625048",
+                "location": "home1"
+            },
+            "status_code": 500,
+            "response": {
+                "message": "Internal Server Error"
+            },
+            "timestamp": "2025-04-08T19:19:38.758660"
+        },
+        {
+            "payload": {
+                "client": "pi_2",
+                "status": "active",
+                "timestamp": "2025-04-08T19:19:39.290451",
+                "location": "home1"
+            },
+            "status_code": 500,
+            "response": {
+                "message": "Internal Server Error"
+            },
+            "timestamp": "2025-04-08T19:19:39.427881"
+        },
+        {
+            "payload": {
+                "client": "pi_2",
+                "status": "active",
+                "timestamp": "2025-04-08T19:19:39.971882",
+                "location": "home1"
+            },
+            "status_code": 500,
+            "response": {
+                "message": "Internal Server Error"
+            },
+            "timestamp": "2025-04-08T19:19:40.105040"
+        }
+    ],
+    "model_poisoning": {
+        "legit": [
+            {
+                "payload": {
+                    "client": "pi_1",
+                    "status": "active",
+                    "update": [
+                        0.052517369830372584,
+                        0.750901429518227,
+                        0.07500008438966022,
+                        0.3983545076851839,
+                        0.6905221599437013,
+                        0.04229374658996177,
+                        0.4223849417469021,
+                        0.3527445126605374,
+                        0.8343113025764681,
+                        0.0016273805184120471
+                    ],
+                    "timestamp": "2025-04-08T19:19:33.979218",
+                    "location": "home1"
+                },
+                "status_code": 200,
+                "response": {
+                    "client": "pi_1",
+                    "location": "home1",
+                    "status": "active"
+                },
+                "timestamp": "2025-04-08T19:19:34.133372"
+            },
+            {
+                "payload": {
+                    "client": "pi_1",
+                    "status": "active",
+                    "update": [
+                        0.6325926056277941,
+                        0.5115099850691245,
+                        0.6668165837261723,
+                        0.8027302366927864,
+                        0.5266769493238521,
+                        0.46788105897654864,
+                        0.8426489791144235,
+                        0.9128178477147145,
+                        0.07512736700837352,
+                        0.8270305602359597
+                    ],
+                    "timestamp": "2025-04-08T19:19:34.687546",
+                    "location": "home1"
+                },
+                "status_code": 200,
+                "response": {
+                    "client": "pi_1",
+                    "location": "home1",
+                    "status": "active"
+                },
+                "timestamp": "2025-04-08T19:19:34.818507"
+            },
+            {
+                "payload": {
+                    "client": "pi_1",
+                    "status": "active",
+                    "update": [
+                        0.6353331381915633,
+                        0.8313809995136062,
+                        0.9579960301599152,
+                        0.2739575510826677,
+                        0.6652068810802731,
+                        0.008111921979223613,
+                        0.1005076356711968,
+                        0.8601248723183679,
+                        0.22481290013695154,
+                        0.5549063416602447
+                    ],
+                    "timestamp": "2025-04-08T19:19:35.382263",
+                    "location": "home1"
+                },
+                "status_code": 200,
+                "response": {
+                    "client": "pi_1",
+                    "location": "home1",
+                    "status": "active"
+                },
+                "timestamp": "2025-04-08T19:19:35.524421"
+            },
+            {
+                "payload": {
+                    "client": "pi_1",
+                    "status": "active",
+                    "update": [
+                        0.25091856767007026,
+                        0.42280247051965536,
+                        0.5921296510277616,
+                        0.7089731959584175,
+                        0.10601397669219403,
+                        0.25585790316855783,
+                        0.47434350635272626,
+                        0.09101505925844233,
+                        0.639063665796524,
+                        0.255620824603369
+                    ],
+                    "timestamp": "2025-04-08T19:19:36.074347",
+                    "location": "home1"
+                },
+                "status_code": 200,
+                "response": {
+                    "client": "pi_1",
+                    "location": "home1",
+                    "status": "active"
+                },
+                "timestamp": "2025-04-08T19:19:36.200883"
+            },
+            {
+                "payload": {
+                    "client": "pi_1",
+                    "status": "active",
+                    "update": [
+                        0.26602014765622906,
+                        0.236381187411271,
+                        0.7127019190865412,
+                        0.37467159789879323,
+                        0.1419260849570123,
+                        0.5889988604789941,
+                        0.5914090526838077,
+                        0.23182339389494755,
+                        0.5007037682458051,
+                        0.4105184144923264
+                    ],
+                    "timestamp": "2025-04-08T19:19:36.732174",
+                    "location": "home1"
+                },
+                "status_code": 200,
+                "response": {
+                    "client": "pi_1",
+                    "location": "home1",
+                    "status": "active"
+                },
+                "timestamp": "2025-04-08T19:19:36.861727"
+            },
+            {
+                "payload": {
+                    "client": "pi_1",
+                    "status": "active",
+                    "update": [
+                        0.9009437336744569,
+                        0.8375591625360885,
+                        0.26651911062398104,
+                        0.04096425092635114,
+                        0.2489713503052382,
+                        0.2576980261189835,
+                        0.2221977571059347,
+                        0.5322809696043196,
+                        0.4717360548965228,
+                        0.2926644038104298
+                    ],
+                    "timestamp": "2025-04-08T19:19:37.417942",
+                    "location": "home1"
+                },
+                "status_code": 200,
+                "response": {
+                    "client": "pi_1",
+                    "location": "home1",
+                    "status": "active"
+                },
+                "timestamp": "2025-04-08T19:19:37.547179"
+            },
+            {
+                "payload": {
+                    "client": "pi_1",
+                    "status": "active",
+                    "update": [
+                        0.2850569791592168,
+                        0.734442941285872,
+                        0.4204736146541861,
+                        0.35289929186058255,
+                        0.8225968170907434,
+                        0.25913907850046713,
+                        0.3927847378699191,
+                        0.6139056920924746,
+                        0.41532040903667267,
+                        0.859740488519201
+                    ],
+                    "timestamp": "2025-04-08T19:19:38.104858",
+                    "location": "home1"
+                },
+                "status_code": 200,
+                "response": {
+                    "client": "pi_1",
+                    "location": "home1",
+                    "status": "active"
+                },
+                "timestamp": "2025-04-08T19:19:38.238443"
+            },
+            {
+                "payload": {
+                    "client": "pi_1",
+                    "status": "active",
+                    "update": [
+                        0.3026790243865001,
+                        0.8248101036514229,
+                        0.09207791595959736,
+                        0.2958056612591248,
+                        0.7306981121516158,
+                        0.9478221918907025,
+                        0.10348952144241041,
+                        0.6468375946929966,
+                        0.575735763614759,
+                        0.5015192903128116
+                    ],
+                    "timestamp": "2025-04-08T19:19:38.758886",
+                    "location": "home1"
+                },
+                "status_code": 200,
+                "response": {
+                    "client": "pi_1",
+                    "location": "home1",
+                    "status": "active"
+                },
+                "timestamp": "2025-04-08T19:19:38.886673"
+            },
+            {
+                "payload": {
+                    "client": "pi_1",
+                    "status": "active",
+                    "update": [
+                        0.690013264936749,
+                        0.46496693116931787,
+                        0.8714375433697964,
+                        0.900753965168429,
+                        0.32460687920049125,
+                        0.20894834686016361,
+                        0.8977876881374817,
+                        0.2213739811950841,
+                        0.8639429069124815,
+                        0.754801247943959
+                    ],
+                    "timestamp": "2025-04-08T19:19:39.428095",
+                    "location": "home1"
+                },
+                "status_code": 200,
+                "response": {
+                    "client": "pi_1",
+                    "location": "home1",
+                    "status": "active"
+                },
+                "timestamp": "2025-04-08T19:19:39.564527"
+            },
+            {
+                "payload": {
+                    "client": "pi_1",
+                    "status": "active",
+                    "update": [
+                        0.7178663942905914,
+                        0.07509866503742979,
+                        0.726385684078872,
+                        0.3887612144910674,
+                        0.560313576889546,
+                        0.12560822556167173,
+                        0.1622208681217605,
+                        0.17934311834371452,
+                        0.9399312964170745,
+                        0.7187784274280973
+                    ],
+                    "timestamp": "2025-04-08T19:19:40.105205",
+                    "location": "home1"
+                },
+                "status_code": 200,
+                "response": {
+                    "client": "pi_1",
+                    "location": "home1",
+                    "status": "active"
+                },
+                "timestamp": "2025-04-08T19:19:40.236133"
+            }
+        ],
+        "poison": [
+            {
+                "payload": {
+                    "client": "pi_1",
+                    "status": "active",
+                    "update": [
+                        1.0911934283955287,
+                        1.0503767613114596,
+                        0.31665486433113615,
+                        0.43940416417172085,
+                        0.3777403792821891,
+                        0.29186701001213966,
+                        0.42014224065984446,
+                        0.65348253164573,
+                        0.40958843285353935,
+                        1.2573986655408003
+                    ],
+                    "timestamp": "2025-04-08T19:19:33.979233",
+                    "location": "home1"
+                },
+                "status_code": 200,
+                "response": {
+                    "client": "pi_1",
+                    "location": "home1",
+                    "status": "active"
+                },
+                "timestamp": "2025-04-08T19:19:34.264515"
+            },
+            {
+                "payload": {
+                    "client": "pi_1",
+                    "status": "active",
+                    "update": [
+                        0.8183796067464202,
+                        0.12175234834898685,
+                        0.6897135047608942,
+                        0.015857711909417982,
+                        0.5352391851216975,
+                        1.1863892046756335,
+                        1.3949435785736979,
+                        1.2556757886466554,
+                        0.9361626815892715,
+                        0.934862380594713
+                    ],
+                    "timestamp": "2025-04-08T19:19:34.687566",
+                    "location": "home1"
+                },
+                "status_code": 200,
+                "response": {
+                    "client": "pi_1",
+                    "location": "home1",
+                    "status": "active"
+                },
+                "timestamp": "2025-04-08T19:19:34.955995"
+            },
+            {
+                "payload": {
+                    "client": "pi_1",
+                    "status": "active",
+                    "update": [
+                        0.008548569275387607,
+                        1.1306135026417037,
+                        0.814259570628485,
+                        0.13150217891582977,
+                        0.8446411838548207,
+                        1.2592531813220567,
+                        0.345898549380079,
+                        0.8921645385777907,
+                        1.4633630320392599,
+                        0.4821419774070214
+                    ],
+                    "timestamp": "2025-04-08T19:19:35.382307",
+                    "location": "home1"
+                },
+                "status_code": 200,
+                "response": {
+                    "client": "pi_1",
+                    "location": "home1",
+                    "status": "active"
+                },
+                "timestamp": "2025-04-08T19:19:35.657849"
+            },
+            {
+                "payload": {
+                    "client": "pi_1",
+                    "status": "active",
+                    "update": [
+                        0.1752403705757004,
+                        0.1211198747087624,
+                        0.2854633142133777,
+                        0.14000738297060944,
+                        1.2374975420331822,
+                        1.0783503051362147,
+                        0.8948937960761217,
+                        0.5886656879319458,
+                        1.4042474086731556,
+                        1.1666844459107706
+                    ],
+                    "timestamp": "2025-04-08T19:19:36.074364",
+                    "location": "home1"
+                },
+                "status_code": 200,
+                "response": {
+                    "client": "pi_1",
+                    "location": "home1",
+                    "status": "active"
+                },
+                "timestamp": "2025-04-08T19:19:36.327924"
+            },
+            {
+                "payload": {
+                    "client": "pi_1",
+                    "status": "active",
+                    "update": [
+                        1.4688323458196981,
+                        1.0264626004223691,
+                        0.9098454834487054,
+                        1.4135943374789615,
+                        1.3281206208169787,
+                        1.2880541126823388,
+                        0.6454029786924456,
+                        0.4580378010649539,
+                        0.8349600014913832,
+                        0.9106634934313772
+                    ],
+                    "timestamp": "2025-04-08T19:19:36.732189",
+                    "location": "home1"
+                },
+                "status_code": 200,
+                "response": {
+                    "client": "pi_1",
+                    "location": "home1",
+                    "status": "active"
+                },
+                "timestamp": "2025-04-08T19:19:37.001165"
+            },
+            {
+                "payload": {
+                    "client": "pi_1",
+                    "status": "active",
+                    "update": [
+                        0.8481416914999746,
+                        0.45242309894272903,
+                        0.47236579874788337,
+                        1.0567817138596527,
+                        0.20773590355433486,
+                        0.15414749327206545,
+                        1.033449706262075,
+                        1.4562172321075275,
+                        0.4681922027864464,
+                        0.04081312337556309
+                    ],
+                    "timestamp": "2025-04-08T19:19:37.417950",
+                    "location": "home1"
+                },
+                "status_code": 200,
+                "response": {
+                    "client": "pi_1",
+                    "location": "home1",
+                    "status": "active"
+                },
+                "timestamp": "2025-04-08T19:19:37.683890"
+            },
+            {
+                "payload": {
+                    "client": "pi_1",
+                    "status": "active",
+                    "update": [
+                        0.3072938771197485,
+                        0.9345209941568569,
+                        1.1983878764626774,
+                        0.5348899595861283,
+                        0.16833208492641916,
+                        1.2372624089506157,
+                        0.9357203809650712,
+                        0.40999525512470564,
+                        0.04321178979036988,
+                        0.8364837014946295
+                    ],
+                    "timestamp": "2025-04-08T19:19:38.104864",
+                    "location": "home1"
+                },
+                "status_code": 200,
+                "response": {
+                    "client": "pi_1",
+                    "location": "home1",
+                    "status": "active"
+                },
+                "timestamp": "2025-04-08T19:19:38.365134"
+            },
+            {
+                "payload": {
+                    "client": "pi_1",
+                    "status": "active",
+                    "update": [
+                        0.39093776762931737,
+                        0.4995845730674284,
+                        1.4614777890589945,
+                        0.4421072898293348,
+                        0.9185544968201156,
+                        0.40237203541166416,
+                        1.1993492207393708,
+                        0.33251934659590515,
+                        0.5697630958486455,
+                        0.33046934612158746
+                    ],
+                    "timestamp": "2025-04-08T19:19:38.758892",
+                    "location": "home1"
+                },
+                "status_code": 200,
+                "response": {
+                    "client": "pi_1",
+                    "location": "home1",
+                    "status": "active"
+                },
+                "timestamp": "2025-04-08T19:19:39.025413"
+            },
+            {
+                "payload": {
+                    "client": "pi_1",
+                    "status": "active",
+                    "update": [
+                        1.2646810678668752,
+                        0.9248282027019268,
+                        0.028082290327250792,
+                        0.8296868832811726,
+                        0.5153995654995411,
+                        1.4886210925975383,
+                        1.0676208057266554,
+                        1.4057768586936557,
+                        0.8161397603279151,
+                        0.7347190909101982
+                    ],
+                    "timestamp": "2025-04-08T19:19:39.428102",
+                    "location": "home1"
+                },
+                "status_code": 200,
+                "response": {
+                    "client": "pi_1",
+                    "location": "home1",
+                    "status": "active"
+                },
+                "timestamp": "2025-04-08T19:19:39.698269"
+            },
+            {
+                "payload": {
+                    "client": "pi_1",
+                    "status": "active",
+                    "update": [
+                        1.119453655616523,
+                        0.1635145817545648,
+                        0.9603250102294303,
+                        0.07413505382113211,
+                        1.4945111258213275,
+                        1.0758353350837742,
+                        0.22624282568166398,
+                        0.8364470476517266,
+                        1.3405881323180295,
+                        0.8609772036601528
+                    ],
+                    "timestamp": "2025-04-08T19:19:40.105213",
+                    "location": "home1"
+                },
+                "status_code": 200,
+                "response": {
+                    "client": "pi_1",
+                    "location": "home1",
+                    "status": "active"
+                },
+                "timestamp": "2025-04-08T19:19:40.371759"
+            }
+        ]
+    },
+    "time_based_violation": [
+        {
+            "payload": {
+                "client": "pi_1",
+                "status": "active",
+                "timestamp": "2025-04-08T03:00:00",
+                "location": "home1"
+            },
+            "status_code": 200,
+            "response": {
+                "client": "pi_1",
+                "location": "home1",
+                "status": "active"
+            },
+            "timestamp": "2025-04-08T19:19:34.397629"
+        },
+        {
+            "payload": {
+                "client": "pi_1",
+                "status": "active",
+                "timestamp": "2025-04-08T03:00:00",
+                "location": "home1"
+            },
+            "status_code": 200,
+            "response": {
+                "client": "pi_1",
+                "location": "home1",
+                "status": "active"
+            },
+            "timestamp": "2025-04-08T19:19:35.103453"
+        },
+        {
+            "payload": {
+                "client": "pi_1",
+                "status": "active",
+                "timestamp": "2025-04-08T03:00:00",
+                "location": "home1"
+            },
+            "status_code": 200,
+            "response": {
+                "client": "pi_1",
+                "location": "home1",
+                "status": "active"
+            },
+            "timestamp": "2025-04-08T19:19:35.797692"
+        },
+        {
+            "payload": {
+                "client": "pi_1",
+                "status": "active",
+                "timestamp": "2025-04-08T03:00:00",
+                "location": "home1"
+            },
+            "status_code": 200,
+            "response": {
+                "client": "pi_1",
+                "location": "home1",
+                "status": "active"
+            },
+            "timestamp": "2025-04-08T19:19:36.460967"
+        },
+        {
+            "payload": {
+                "client": "pi_1",
+                "status": "active",
+                "timestamp": "2025-04-08T03:00:00",
+                "location": "home1"
+            },
+            "status_code": 200,
+            "response": {
+                "client": "pi_1",
+                "location": "home1",
+                "status": "active"
+            },
+            "timestamp": "2025-04-08T19:19:37.140977"
+        },
+        {
+            "payload": {
+                "client": "pi_1",
+                "status": "active",
+                "timestamp": "2025-04-08T03:00:00",
+                "location": "home1"
+            },
+            "status_code": 200,
+            "response": {
+                "client": "pi_1",
+                "location": "home1",
+                "status": "active"
+            },
+            "timestamp": "2025-04-08T19:19:37.816012"
+        },
+        {
+            "payload": {
+                "client": "pi_1",
+                "status": "active",
+                "timestamp": "2025-04-08T03:00:00",
+                "location": "home1"
+            },
+            "status_code": 200,
+            "response": {
+                "client": "pi_1",
+                "location": "home1",
+                "status": "active"
+            },
+            "timestamp": "2025-04-08T19:19:38.496591"
+        },
+        {
+            "payload": {
+                "client": "pi_1",
+                "status": "active",
+                "timestamp": "2025-04-08T03:00:00",
+                "location": "home1"
+            },
+            "status_code": 200,
+            "response": {
+                "client": "pi_1",
+                "location": "home1",
+                "status": "active"
+            },
+            "timestamp": "2025-04-08T19:19:39.153868"
+        },
+        {
+            "payload": {
+                "client": "pi_1",
+                "status": "active",
+                "timestamp": "2025-04-08T03:00:00",
+                "location": "home1"
+            },
+            "status_code": 200,
+            "response": {
+                "client": "pi_1",
+                "location": "home1",
+                "status": "active"
+            },
+            "timestamp": "2025-04-08T19:19:39.828420"
+        },
+        {
+            "payload": {
+                "client": "pi_1",
+                "status": "active",
+                "timestamp": "2025-04-08T03:00:00",
+                "location": "home1"
+            },
+            "status_code": 200,
+            "response": {
+                "client": "pi_1",
+                "location": "home1",
+                "status": "active"
+            },
+            "timestamp": "2025-04-08T19:19:40.499391"
+        }
+    ],
+    "location_spoofing": [
+        {
+            "payload": {
+                "client": "pi_1",
+                "status": "active",
+                "timestamp": "2025-04-08T19:19:34.398020",
+                "location": "unauthorized_location"
+            },
+            "status_code": 500,
+            "response": {
+                "message": "Internal Server Error"
+            },
+            "timestamp": "2025-04-08T19:19:34.543700"
+        },
+        {
+            "payload": {
+                "client": "pi_1",
+                "status": "active",
+                "timestamp": "2025-04-08T19:19:35.103959",
+                "location": "unauthorized_location"
+            },
+            "status_code": 500,
+            "response": {
+                "message": "Internal Server Error"
+            },
+            "timestamp": "2025-04-08T19:19:35.245955"
+        },
+        {
+            "payload": {
+                "client": "pi_1",
+                "status": "active",
+                "timestamp": "2025-04-08T19:19:35.797840",
+                "location": "unauthorized_location"
+            },
+            "status_code": 500,
+            "response": {
+                "message": "Internal Server Error"
+            },
+            "timestamp": "2025-04-08T19:19:35.934040"
+        },
+        {
+            "payload": {
+                "client": "pi_1",
+                "status": "active",
+                "timestamp": "2025-04-08T19:19:36.461131",
+                "location": "unauthorized_location"
+            },
+            "status_code": 500,
+            "response": {
+                "message": "Internal Server Error"
+            },
+            "timestamp": "2025-04-08T19:19:36.590257"
+        },
+        {
+            "payload": {
+                "client": "pi_1",
+                "status": "active",
+                "timestamp": "2025-04-08T19:19:37.141309",
+                "location": "unauthorized_location"
+            },
+            "status_code": 500,
+            "response": {
+                "message": "Internal Server Error"
+            },
+            "timestamp": "2025-04-08T19:19:37.282192"
+        },
+        {
+            "payload": {
+                "client": "pi_1",
+                "status": "active",
+                "timestamp": "2025-04-08T19:19:37.816150",
+                "location": "unauthorized_location"
+            },
+            "status_code": 500,
+            "response": {
+                "message": "Internal Server Error"
+            },
+            "timestamp": "2025-04-08T19:19:37.967064"
+        },
+        {
+            "payload": {
+                "client": "pi_1",
+                "status": "active",
+                "timestamp": "2025-04-08T19:19:38.496754",
+                "location": "unauthorized_location"
+            },
+            "status_code": 500,
+            "response": {
+                "message": "Internal Server Error"
+            },
+            "timestamp": "2025-04-08T19:19:38.624866"
+        },
+        {
+            "payload": {
+                "client": "pi_1",
+                "status": "active",
+                "timestamp": "2025-04-08T19:19:39.153995",
+                "location": "unauthorized_location"
+            },
+            "status_code": 500,
+            "response": {
+                "message": "Internal Server Error"
+            },
+            "timestamp": "2025-04-08T19:19:39.290185"
+        },
+        {
+            "payload": {
+                "client": "pi_1",
+                "status": "active",
+                "timestamp": "2025-04-08T19:19:39.828803",
+                "location": "unauthorized_location"
+            },
+            "status_code": 500,
+            "response": {
+                "message": "Internal Server Error"
+            },
+            "timestamp": "2025-04-08T19:19:39.971609"
+        },
+        {
+            "payload": {
+                "client": "pi_1",
+                "status": "active",
+                "timestamp": "2025-04-08T19:19:40.499552",
+                "location": "unauthorized_location"
+            },
+            "status_code": 500,
+            "response": {
+                "message": "Internal Server Error"
+            },
+            "timestamp": "2025-04-08T19:19:40.637486"
+        }
+    ]
+}

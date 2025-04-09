@@ -1,8 +1,6 @@
 from flask import Flask, request, jsonify
 from flask_restful import Resource, Api
 import subprocess
-
-
 import os
 
 def modelTraining(client_id, location, status):
