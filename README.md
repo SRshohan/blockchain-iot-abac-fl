@@ -317,5 +317,3 @@ POST `http://localhost:5000/api/v1/namespaces/default/apis/asset_transfer/invoke
   }
 }
 ```
-
-Contribution
